@@ -12,15 +12,7 @@
 
 <script lang="ts">
 import { GithubRepo } from "~/composables/github";
-
-function api<T>(url: string): Promise<T> {
-  return fetch(url).then((response) => {
-    if (!response.ok) {
-      throw new Error(response.statusText);
-    }
-    return response.json();
-  });
-}
+import { fetchApi } from "~~/composables/api";
 
 export default {
   props: ["username", "latestN"],
@@ -30,17 +22,10 @@ export default {
     };
   },
   mounted() {
-    console.log("Loading repos from Github");
-    console.log("Username: " + this.username);
-    console.log("Number of repos: " + this.latestN);
-
     const fetchUrl: string = `https://api.github.com/users/${this.username}/repos`;
-
-    console.log("Fetching repos");
-    api<GithubRepo[]>(fetchUrl)
+    fetchApi<GithubRepo[]>(fetchUrl)
       .then((data) => {
-        console.log(data);
-        data = data
+        this.repos = data
           .sort((a, b) => {
             return a.pushed_at > b.pushed_at
               ? -1
@@ -48,11 +33,8 @@ export default {
               ? 1
               : 0;
           })
-          .filter((repo) => repo.name != "phundrak");
-        data.forEach((repo) => {
-          console.log(repo.name);
-        });
-        this.repos = data.splice(0, this.latestN);
+          .filter((repo) => repo.name != "phundrak")
+          .splice(0, this.latestN);
       })
       .catch((error) => console.log("Error: " + error));
   },

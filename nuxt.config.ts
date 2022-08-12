@@ -7,7 +7,15 @@ export default defineNuxtConfig({
       'composables/**'
     ]
   },
+  css: [
+    '@fortawesome/fontawesome-svg-core/styles.css'
+  ],
   modules: ['@nuxt/content'],
+  content: {
+    navigation: {
+      fields: ['faIcon']
+    },
+  },
   components: {
     dirs: ["~/components"],
     global: true,
@@ -20,5 +28,10 @@ export default defineNuxtConfig({
       { hid: 'description', name: 'description', content: 'Meta description' },
       { noscript: [{ innerHTML: 'This website requires JavaScript.' }] },
     ],
+  },
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
   },
 });
