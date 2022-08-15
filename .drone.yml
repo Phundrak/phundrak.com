@@ -36,6 +36,8 @@ steps:
     commands:
       - yarn install
       - yarn generate
+    depends_on:
+      - "restore cache"
 
   - name: rebuild cache
     image: drillster/drone-volume-cache
