@@ -138,30 +138,30 @@ nav {
 export default {
   data() {
     return {
-      directory: '',
-      uri: '',
-      themeIcon: '',
+      directory: "",
+      uri: "",
+      themeIcon: "",
     };
   },
   mounted() {
+    this.themeIcon = "fa-solid fa-" + this.isDarkTheme() ? "sun" : "moon";
     this.uri = window.location.pathname;
-    this.directory = this.uri.replace(/[^/]+$/g, '');
-    this.themeIcon = 'fa-solid fa-' + this.isDarkTheme() ? 'sun' : 'moon';
+    this.directory = this.uri.replace(/[^/]+$/g, "");
   },
   methods: {
     rootPage() {
-      return this.directory == '' || this.directory == '/';
+      return this.directory == "" || this.directory == "/";
     },
     isDarkTheme() {
       return true;
     },
     toggleMenu() {
-      var menu = document.getElementsByTagName('nav')[0];
+      var menu = document.getElementsByTagName("nav")[0];
       const navClass = menu.className;
-      menu.className = navClass == '' ? 'menu-opened' : '';
+      menu.className = navClass == "" ? "menu-opened" : "";
     },
     closeMenu() {
-      document.getElementsByTagName('nav')[0].className = '';
+      document.getElementsByTagName("nav")[0].className = "";
     },
   },
 };
