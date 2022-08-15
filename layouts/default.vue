@@ -7,9 +7,12 @@
 <style lang="scss">
 @import 'node_modules/nord/src/sass/nord.scss';
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
 body {
   margin: 0;
   font-size: 16px;
+  font-family: 'Noto Sans', sans-serif;
   background-color: $nord2;
   color: $nord5;
 }
@@ -23,11 +26,6 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: #6649b8;
-}
-
-main {
-  margin: 5rem;
-  padding: 0 2rem;
 }
 
 a {

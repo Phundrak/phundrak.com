@@ -1,31 +1,138 @@
 <template>
   <nav>
-    <ul class="nav-links nav-local">
-      <ContentList :path="uri" v-slot="{ list }">
-        <li v-for="page in list" :key="page._path" class="nav-link">
-          <NuxtLink :to="page._path">
-            <span class="nav-icon">
-              <font-awesome-icon :icon="page.faIcon" v-if="page.faIcon" />
-            </span>
-            <span class="nav-text">{{ page.navTitle || page.title }}</span>
-          </NuxtLink>
-        </li>
-      </ContentList>
-    </ul>
-    <ul class="nav-links nav-global">
-      <ContentNavigation v-slot="{ navigation }">
-        <li class="nav-link" v-for="page in navigation" :key="page._path">
-          <NuxtLink :to="page._path">
-            <span class="nav-icon">
-              <font-awesome-icon :icon="page.faIcon" v-if="page.faIcon" />
-            </span>
-            <span class="nav-text">{{ page.navTitle || page.title }}</span>
-          </NuxtLink>
-        </li>
-      </ContentNavigation>
-    </ul>
+    <button id="open-menu" @click="toggleMenu">
+      <font-awesome-icon icon="fa-solid fa-bars" size="lg" fixed-width />
+    </button>
+    <div id="nav-global" @click="closeMenu">
+      <h3>Navigation</h3>
+      <ul class="nav-links">
+        <ContentNavigation v-slot="{ navigation }">
+          <li class="nav-link" v-for="page in navigation" :key="page._path">
+            <IconLink :icon="page.faIcon" :path="page._path">
+              {{ page.navTitle || page.title }}
+            </IconLink>
+          </li>
+        </ContentNavigation>
+      </ul>
+    </div>
+    <div id="nav-local" @click="closeMenu"></div>
+    <div id="theme" @click="closeMenu">
+      <button id="theme-switcher">
+        <span class="nav-icon">
+          <font-awesome-icon :icon="themeIcon" size="lg" fixed-width />
+        </span>
+        <span class="nav-text">Change Theme</span>
+      </button>
+    </div>
   </nav>
 </template>
+
+<style lang="scss">
+@import 'node_modules/nord/src/sass/nord.scss';
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 2.5em;
+  background-color: $nord1;
+  height: 100%;
+  z-index: 2;
+  padding: 1em 1em;
+  white-space: nowrap;
+  overflow-y: auto;
+
+  transition: width 0.3s ease;
+
+  h3,
+  .nav-text {
+    /* display: none; */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &.menu-opened {
+    width: 100%;
+    h3,
+    .nav-text {
+      opacity: 1;
+    }
+  }
+}
+
+/* Medium screens */
+@media screen and (min-width: 600px) {
+  nav.menu-opened {
+    width: 12em;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  nav {
+    width: 12em;
+    h3,
+    .nav-text {
+      opacity: 1;
+    }
+
+    #open-menu {
+      display: none;
+      transition: display 0.6s ease;
+    }
+  }
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  list-style: none;
+  padding: 0;
+  text-decoration: none;
+
+  .nav-link {
+    &:hover {
+      background-color: $nord2;
+    }
+  }
+
+  a {
+    display: flex;
+    flex-direction: row;
+    box-shadow: none;
+    padding: 0.5em;
+
+    &:hover {
+      background: $nord2;
+      box-shadow: none;
+    }
+  }
+}
+
+.nav-icon {
+  display: block;
+  height: 2em;
+  padding-right: 1.5em;
+}
+
+#open-menu,
+#theme-switcher {
+  position: relative;
+  background: inherit;
+  color: inherit;
+  border: none;
+  font-size: inherit;
+  display: flex;
+  flex-direction: row;
+}
+
+#open-menu {
+  padding-left: 0.5em;
+}
+
+#theme-switcher {
+  bottom: 0;
+}
+</style>
 
 <script lang="ts">
 export default {
@@ -33,21 +140,29 @@ export default {
     return {
       directory: '',
       uri: '',
+      themeIcon: '',
     };
   },
   mounted() {
     this.uri = window.location.pathname;
     this.directory = this.uri.replace(/[^/]+$/g, '');
-    console.log(`URI: ${this.uri}, DIRECTORY: ${this.directory}`);
+    this.themeIcon = 'fa-solid fa-' + this.isDarkTheme() ? 'sun' : 'moon';
   },
   methods: {
     rootPage() {
       return this.directory == '' || this.directory == '/';
     },
+    isDarkTheme() {
+      return true;
+    },
+    toggleMenu() {
+      var menu = document.getElementsByTagName('nav')[0];
+      const navClass = menu.className;
+      menu.className = navClass == '' ? 'menu-opened' : '';
+    },
+    closeMenu() {
+      document.getElementsByTagName('nav')[0].className = '';
+    },
   },
 };
 </script>
-
-<style lang="scss">
-@import 'node_modules/nord/src/sass/nord.scss';
-</style>
