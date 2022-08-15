@@ -138,20 +138,14 @@ nav {
 export default {
   data() {
     return {
-      directory: "",
       uri: "",
       themeIcon: "",
     };
   },
   created() {
     this.themeIcon = "fa-solid fa-" + this.isDarkTheme() ? "sun" : "moon";
-    this.uri = window.location.pathname;
-    this.directory = this.uri.replace(/[^/]+$/g, "");
   },
   methods: {
-    rootPage() {
-      return this.directory == "" || this.directory == "/";
-    },
     isDarkTheme() {
       return true;
     },
