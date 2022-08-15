@@ -1,7 +1,7 @@
 <template>
   <footer>
     Source code available
-    <NuxtLink to="https://github.com/Phundrak/phundrak.com">on Github</NuxtLink
+    <NuxtLink to="https://labs.phundrak.com/phundrak/phundrak.com">on Gitea</NuxtLink
     >.
   </footer>
 </template>
