@@ -5,7 +5,7 @@ name: CI
 
 steps:
   - name: run gitleaks
-    image: plugins/getleaks
+    image: plugins/gitleaks
     settings:
       path: .
 
