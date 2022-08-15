@@ -11,9 +11,6 @@
 </template>
 
 <script lang="ts">
-import { GithubRepo } from "~/composables/github";
-import { fetchApi } from "~~/composables/api";
-
 export default {
   props: ["username", "latestN"],
   data() {

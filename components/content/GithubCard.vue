@@ -14,8 +14,6 @@
 </template>
 
 <script lang="ts">
-import { GithubRepo } from "~~/composables/github";
-import { PropType } from "vue";
 export default {
   props: {
     repo: {
