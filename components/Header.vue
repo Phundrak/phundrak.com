@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav @mouseleave="closeMenu">
     <button id="open-menu" @click="toggleMenu">
       <font-awesome-icon icon="fa-solid fa-bars" size="lg" fixed-width />
     </button>
@@ -154,7 +154,7 @@ export default {
       const navClass = menu.className;
       menu.className = navClass == "" ? "menu-opened" : "";
     },
-    closeMenu() {
+    closeMenu(_: Event) {
       document.getElementsByTagName("nav")[0].className = "";
     },
   },
