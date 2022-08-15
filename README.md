@@ -1,8 +1,14 @@
+[![Build Status](https://drone.phundrak.com/api/badges/phundrak/phundrak.com/status.svg)](https://drone.phundrak.com/phundrak/phundrak.com)
+
 # My Personal Website
 
 This personal website is written with Nuxt based on its module
-[Content](https://content-v2.nuxtjs.org/). It will soon be available
-at [phundrak.com](https://phundrak.com).
+[Content](https://content-v2.nuxtjs.org/).
+
+I plan making it available on [phundrak.com](https://phundrak.com). It
+is for now available at
+[beta.phundrak.com](https://beta.phundrak.com), though it doesn’t look
+great yet.
 
 ## Setup
 
