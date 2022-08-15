@@ -9,6 +9,12 @@ steps:
     settings:
       path: .
 
+trigger:
+  branch:
+    - master
+  event:
+    - push
+
 ---
 kind: pipeline
 type: docker
@@ -40,6 +46,8 @@ steps:
       rebuild: true
       mount:
         - ./node_modules
+    depends_on:
+      - build
 
   - name: deploy
     image: appleboy/drone-scp
@@ -56,9 +64,11 @@ steps:
         from_secret: ssh_password
       port:
         from_secret: ssh_port
+    depends_on:
+      - build
     when:
       branch:
-        - main
+        - master
       event:
         exclude:
           - pull_request
@@ -67,3 +77,9 @@ volumes:
   - name: cache
     host:
       path: /tmp/cache
+
+trigger:
+  branch:
+    - master
+  event:
+    - push
