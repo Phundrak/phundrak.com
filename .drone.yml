@@ -49,7 +49,7 @@ steps:
       target:
         from_secret: ssh_target
       source: dist/*
-      strip-components: 1
+      strip_components: 1
       username:
         from_secret: ssh_username
       password:
