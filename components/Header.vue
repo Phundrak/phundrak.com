@@ -28,16 +28,16 @@
 </template>
 
 <style lang="scss">
-@import 'node_modules/nord/src/sass/nord.scss';
+@import "node_modules/nord/src/sass/nord.scss";
 
 nav {
   position: fixed;
   top: 0;
-  width: 2.5em;
+  width: 2.5rem;
   background-color: $nord1;
   height: 100%;
   z-index: 2;
-  padding: 1em 1em;
+  padding: 1rem 1rem;
   white-space: nowrap;
   overflow-y: auto;
 
@@ -62,13 +62,13 @@ nav {
 /* Medium screens */
 @media screen and (min-width: 600px) {
   nav.menu-opened {
-    width: 12em;
+    width: 14rem;
   }
 }
 
 @media screen and (min-width: 1300px) {
   nav {
-    width: 12em;
+    width: 14rem;
     h3,
     .nav-text {
       opacity: 1;
@@ -99,7 +99,7 @@ nav {
     display: flex;
     flex-direction: row;
     box-shadow: none;
-    padding: 0.5em;
+    padding: 0.5rem;
 
     &:hover {
       background: $nord2;
@@ -110,8 +110,8 @@ nav {
 
 .nav-icon {
   display: block;
-  height: 2em;
-  padding-right: 1.5em;
+  height: 2rem;
+  padding-right: 1.5rem;
 }
 
 #open-menu,
@@ -126,7 +126,7 @@ nav {
 }
 
 #open-menu {
-  padding-left: 0.5em;
+  padding-left: 0.5rem;
 }
 
 #theme-switcher {

@@ -72,7 +72,7 @@ h4 {
 
 @media screen and (min-width: 1300px) {
   main {
-    padding-left: 16rem;
+    padding-left: 18rem;
   }
 }
 </style>
