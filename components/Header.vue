@@ -143,7 +143,7 @@ export default {
       themeIcon: "",
     };
   },
-  mounted() {
+  created() {
     this.themeIcon = "fa-solid fa-" + this.isDarkTheme() ? "sun" : "moon";
     this.uri = window.location.pathname;
     this.directory = this.uri.replace(/[^/]+$/g, "");
