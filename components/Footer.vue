@@ -8,18 +8,17 @@
   </footer>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "node_modules/nord/src/sass/nord.scss";
-
 footer {
   position: fixed;
+  width: 100vw;
+  height: 2rem;
   bottom: 0;
   background-color: $nord1;
-  z-index: 2;
-  width: 100vw;
-  height: 2.5rem;
-  line-height: 2.5rem;
   text-align: center;
-  vertical-align: middle;
+  line-height: 2rem;
+  z-index: 10;
+  box-shadow: 0 -0.2rem 0.5rem $nord0;
 }
 </style>

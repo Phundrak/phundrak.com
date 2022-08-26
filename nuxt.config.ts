@@ -93,13 +93,13 @@ export default defineNuxtConfig({
     },
   },
   autoImports: {
-    // dirs: ['composables/**'],
     global: true,
   },
   components: {
     dirs: ["~/components"],
     global: true,
   },
+  css: ["@/assets/main.scss"],
   imports: {
     global: true,
     dirs: ["~/composables"],
@@ -122,21 +122,10 @@ export default defineNuxtConfig({
       fallbackLocale: "fr",
     },
   },
-
   nitro: {
     prerender: {
       routes: ["/sitemap.xml"],
     },
   },
   telemetry: false,
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@use "@/assets/main.scss" as *;',
-        },
-      },
-    },
-    mode: "production",
-  },
 });

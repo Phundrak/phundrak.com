@@ -27,25 +27,3 @@ if (repository === undefined) {
   repository = data.value;
 }
 </script>
-
-<style lang="scss" scoped>
-@import "node_modules/nord/src/sass/nord.scss";
-
-.github-card {
-  width: min(400px, 90%);
-  border-radius: 12px;
-  padding: 1em;
-  background: $nord3;
-  margin: 20px auto;
-  box-shadow: 5px 5px 5px 3px $nord0;
-
-  h3 {
-    font-size: 1.5em;
-  }
-
-  h4 {
-    font-weight: normal;
-    font-size: 1.2em;
-  }
-}
-</style>
