@@ -30,15 +30,5 @@ export default {
       this.$router.go(-1);
     },
   },
-  // computed: {
-  //   // currentLocale() {
-  // //   return this.$i18n.locale;
-  // // },
-  //   // path() {
-  // //   const localePath = localePath(this.$route.path);
-  // //   console.log("LOCALE PATH:", localePath);
-  // //   return localePath;
-  // // },
-  // },
 };
 </script>
