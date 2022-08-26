@@ -6,13 +6,11 @@
     <div id="nav-global" @click="closeMenu">
       <h3>Navigation</h3>
       <ul class="nav-links">
-        <ContentNavigation v-slot="{ navigation }">
-          <div v-for="link of navigation" :key="link._path">
-            <IconLink :icon="link.icon" :to="localePath(link._path)">{{
-              link.navTitle || link.title
-            }}</IconLink>
-          </div>
-        </ContentNavigation>
+        <div v-for="link of pages" :key="link._page">
+          <IconLink :icon="link.icon" :to="localePath(link._path)">
+            {{ link.navTitlo || link.title }}
+          </IconLink>
+        </div>
       </ul>
     </div>
     <div id="nav-local" @click="closeMenu"></div>
@@ -34,7 +32,19 @@
   </nav>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const lang = useCookie('lang');
+const homeQuery =
+  lang.value === 'fr' ? queryContent() : queryContent('/' + lang.value);
+const pages = await homeQuery.find().then((pages) =>
+  pages.filter((page) => {
+    if (lang.value === 'fr') {
+      return !page._path.startsWith('/en');
+    }
+    return page._path.startsWith('/' + lang.value);
+  })
+);
+</script>
 
 <script lang="ts">
 export default {
@@ -55,8 +65,17 @@ export default {
   },
   computed: {
     availableLocales() {
-      return this.$i18n.locales;
+      return this.$i18n.locales.filter(
+        (lang) => lang.code !== this.$i18n.locale
+      );
     },
+  },
+  created() {
+    const fallbackLocale = this.$i18n.fallbackLocale;
+    const locale = this.$i18n.locale;
+    if (fallbackLocale != locale) {
+      this.query = queryContent('en');
+    }
   },
 };
 </script>

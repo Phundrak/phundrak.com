@@ -118,6 +118,9 @@ export default defineNuxtConfig({
       redirectOn: "all",
     },
     strategy: "prefix_except_default",
+    vueI18n: {
+      fallbackLocale: "fr",
+    },
   },
 
   nitro: {

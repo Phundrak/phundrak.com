@@ -1,7 +1,6 @@
 <template>
   <Transition>
-    <div>
-      <pre>{{ $route.path }}, {{ localePath($route.path) }}</pre>
+    <div class="content">
       <ContentDoc :path="localePath($route.path)">
         <template #not-found>
           <h1>I don’t know what you mean</h1>
