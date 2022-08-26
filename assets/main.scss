@@ -12,20 +12,33 @@ a {
   }
 }
 
+@mixin smooth-colors {
+  @each $attr in color, background-color {
+      transition: $attr 0.5s ease-in-out;
+  }
+}
+
 body {
   margin: 0;
   font-size: 16px;
   font-family: "Noto Sans", sans-serif;
-  background-color: $nord2;
   color: $nord5;
+  background-color: $nord2;
+  @include smooth-colors;
+
+  &[color-scheme="light"] {
+      background-color: $nord5;
+      color: $nord1;
+      @include smooth-colors;
+  }
 
   &::-webkit-scrollbar {
     width: 0.25rem;
   }
   &::-webkit-scrollbar-track {
-    background: $nord2;
+    background-color: $nord2;
   }
   &::-webkit-scrollbar-thumb {
-    background: $nord4;
+    background-color: $nord4;
   }
 }

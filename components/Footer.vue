@@ -9,16 +9,18 @@
 </template>
 
 <style lang="scss" scoped>
-@import "node_modules/nord/src/sass/nord.scss";
+@use 'sass:color';
+@import 'node_modules/nord/src/sass/nord.scss';
 footer {
-  position: fixed;
   width: 100vw;
-  height: 2rem;
-  bottom: 0;
+  height: 4vh;
   background-color: $nord1;
   text-align: center;
-  line-height: 2rem;
+  line-height: 4vh;
   z-index: 10;
-  box-shadow: 0 -0.2rem 0.5rem $nord0;
+
+  [color-scheme='light'] & {
+    background-color: $nord4;
+  }
 }
 </style>

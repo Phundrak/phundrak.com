@@ -21,7 +21,7 @@
         </IconLink>
       </li>
       <li id="theme" class="nav-link" @click="closeMenu">
-        <button id="theme-switcher">
+        <button id="theme-switcher" @click="toggleDark()">
           <span class="nav-icon">
             <Icon icon="theme" />
           </span>
@@ -32,21 +32,43 @@
   </nav>
 </template>
 
+<style lang="scss" scoped>
+@use 'sass:color';
+@import 'node_modules/nord/src/sass/nord.scss';
+
+nav {
+  width: 5rem;
+  background-color: $nord1;
+
+  body[color-scheme='light'] & {
+    background-color: $nord4;
+  }
+}
+</style>
+
 <script setup lang="ts">
 const lang = useCookie('lang');
 const homeQuery =
   lang.value === 'fr' ? queryContent() : queryContent('/' + lang.value);
 const pages = await homeQuery.find().then((pages) =>
   pages.filter((page) => {
-    if (lang.value === 'fr') {
-      return !page._path.startsWith('/en');
-    }
-    return page._path.startsWith('/' + lang.value);
+    return lang.value === 'fr'
+      ? !page._path.startsWith('/en')
+      : page._path.startsWith('/' + lang.value);
   })
 );
+const isDark = useDark({
+  selector: 'body',
+  attribute: 'color-scheme',
+  valueDark: '',
+  valueLight: 'light',
+});
+const toggleDark = useToggle(isDark);
 </script>
 
 <script lang="ts">
+import { LocaleInfo } from 'node_modules/@nuxtjs/i18n/dist/module';
+
 export default {
   data() {
     return {
@@ -66,7 +88,7 @@ export default {
   computed: {
     availableLocales() {
       return this.$i18n.locales.filter(
-        (lang) => lang.code !== this.$i18n.locale
+        (lang: LocaleInfo) => lang.code !== this.$i18n.locale
       );
     },
   },
@@ -79,12 +101,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-@import 'node_modules/nord/src/sass/nord.scss';
-
-nav {
-  width: 5rem;
-  background-color: $nord1;
-}
-</style>
