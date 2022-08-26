@@ -1,7 +1,7 @@
 ---
 title: BSUP01 KEINE Tashi
 description: 'Official page of my UTAU vocal library BSUP01 KEINE Tashi'
-faIcon: fa-solid fa-image-portrait
+icon: mic-lines
 ---
 
 # Introduction
@@ -165,9 +165,3 @@ to the Karmapa is strictly forbidden until said controversy has been
 officially resolved. This is also applicable to Shamar Rinpoche and to
 Tai Situ Rinpoche. If you have any question or if you are unsure,
 please send me an email.
-
-::LocalLinks
----
-path: resume
----
-::

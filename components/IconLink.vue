@@ -1,9 +1,9 @@
 <template>
   <NuxtLink :to="path">
-    <span class="nav-icon">
-      <font-awesome-icon :icon="icon" v-if="icon" size="lg" fixed-width />
+    <Icon :icon="icon"></Icon>
+    <span class="nav-text">
+      <slot />
     </span>
-    <span class="nav-text"><slot></slot></span>
   </NuxtLink>
 </template>
 

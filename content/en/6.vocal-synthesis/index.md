@@ -1,7 +1,6 @@
 ---
-faIcon: fa-solid fa-microphone-lines
+icon: mic-lines
 title: Vocal Synthesis
-subdir: true
 ---
 
 # My works in vocal synthesis
@@ -62,9 +61,3 @@ building ALYS for Alter/Ego have been made available.
 
 More information on open-sourcing ALYS
 [here](https://blog.phundrak.com/open-sourcing-alys/).
-
-::LocalLinks
----
-path: vocal-synthesis
----
-::

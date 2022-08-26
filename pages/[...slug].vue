@@ -1,29 +1,53 @@
 <template>
-  <main>
-    <ContentDoc>
-      <template #not-found>
-        <h1>I don’t know what you mean</h1>
-        <p>Looks like the path {{ $route.path }} does not exist here.</p>
-        <button class="link-back" @click="back">Take me back!</button>
-      </template>
-    </ContentDoc>
-  </main>
+  <Transition>
+    <div>
+      <pre>{{ $route.path }}, {{ localePath($route.path) }}</pre>
+      <ContentDoc :path="localePath($route.path)">
+        <template #not-found>
+          <h1>I don’t know what you mean</h1>
+          <p>
+            Looks like the path
+            <code>{{ path }}</code>
+            (internal
+            <code>{{ $route.path }}</code>
+            ) does not exist here.
+          </p>
+          <button class="link-back" @click="back">Take me back!</button>
+        </template>
+      </ContentDoc>
+    </div>
+  </Transition>
 </template>
 
 <script lang="ts">
 export default {
+  data() {
+    return {
+      path: null,
+    };
+  },
   methods: {
     back() {
       this.$router.go(-1);
     },
   },
+  // computed: {
+  //   // currentLocale() {
+  // //   return this.$i18n.locale;
+  // // },
+  //   // path() {
+  // //   const localePath = localePath(this.$route.path);
+  // //   console.log("LOCALE PATH:", localePath);
+  // //   return localePath;
+  // // },
+  // },
 };
 </script>
 
 <style lang="scss">
-@import 'node_modules/nord/src/sass/nord.scss';
+@import "node_modules/nord/src/sass/nord.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Mono&display=swap");
 
 main {
   margin: 0;
@@ -41,12 +65,15 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Noto Sans Mono', monospace;
+  font-family: "Noto Sans Mono", monospace;
+
   a {
     box-shadow: none;
+
     &:after {
-      content: ' §';
+      content: " §";
     }
+
     &:hover {
       box-shadow: none;
     }

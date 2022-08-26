@@ -1,35 +1,46 @@
 <template>
   <div>
-    <Header />
-    <slot />
-    <Footer />
+    <Header id="header" />
+    <main id="content">
+      <slot />
+    </main>
+    <Footer id="footer" />
   </div>
 </template>
 
 <style lang="scss">
-@import 'node_modules/nord/src/sass/nord.scss';
+@import "node_modules/nord/src/sass/nord.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 body {
   margin: 0;
   font-size: 16px;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   background-color: $nord2;
   color: $nord5;
+
+  &::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  &::-webkit-scrollbar-track {
+    background: $nord2;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $nord4;
+  }
 }
-body::-webkit-scrollbar {
+
+-webkit-scrollbar {
   width: 0.25rem;
 }
 
-body::-webkit-scrollbar-track {
-  background: #1e1e24;
+-webkit-scrollbar-track {
+  background: $nord2;
 }
 
-body::-webkit-scrollbar-thumb {
-  background: #6649b8;
+-webkit-scrollbar-thumb {
+  background: $nord4;
 }
-
 a {
   text-decoration: none;
   box-shadow: inset 0 -3px 0 $nord7;

@@ -1,31 +1,65 @@
 <template>
   <nav @mouseleave="closeMenu">
     <button id="open-menu" @click="toggleMenu">
-      <font-awesome-icon icon="fa-solid fa-bars" size="lg" fixed-width />
+      <Icon icon="bars" />
     </button>
     <div id="nav-global" @click="closeMenu">
       <h3>Navigation</h3>
       <ul class="nav-links">
         <ContentNavigation v-slot="{ navigation }">
-          <li class="nav-link" v-for="page in navigation" :key="page._path">
-            <IconLink :icon="page.faIcon" :path="page._path">
-              {{ page.navTitle || page.title }}
-            </IconLink>
-          </li>
+          <div v-for="link of navigation" :key="link._path">
+            <IconLink :icon="link.icon" :to="localePath(link._path)">{{
+              link.navTitle || link.title
+            }}</IconLink>
+          </div>
         </ContentNavigation>
       </ul>
     </div>
     <div id="nav-local" @click="closeMenu"></div>
-    <div id="theme" @click="closeMenu">
-      <button id="theme-switcher">
-        <span class="nav-icon">
-          <font-awesome-icon :icon="themeIcon" size="lg" fixed-width />
-        </span>
-        <span class="nav-text">Change Theme</span>
-      </button>
-    </div>
+    <ul id="bottom-items" class="nav-links">
+      <li v-for="locale in availableLocales" :key="locale.code">
+        <IconLink :to="switchLocalePath(locale.code)">
+          {{ locale.name }}
+        </IconLink>
+      </li>
+      <li id="theme" class="nav-link" @click="closeMenu">
+        <button id="theme-switcher">
+          <span class="nav-icon">
+            <Icon icon="theme" />
+          </span>
+          <span class="nav-text">Change Theme</span>
+        </button>
+      </li>
+    </ul>
   </nav>
 </template>
+
+<script setup lang="ts"></script>
+
+<script lang="ts">
+export default {
+  data() {
+    return {
+      query: null,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      var menu = document.getElementsByTagName("nav")[0];
+      const navClass = menu.className;
+      menu.className = navClass == "" ? "menu-opened" : "";
+    },
+    closeMenu(_: Event) {
+      document.getElementsByTagName("nav")[0].className = "";
+    },
+  },
+  computed: {
+    availableLocales() {
+      return this.$i18n.locales;
+    },
+  },
+};
+</script>
 
 <style lang="scss">
 @import "node_modules/nord/src/sass/nord.scss";
@@ -36,7 +70,7 @@ nav {
   width: 2.5rem;
   background-color: $nord1;
   height: 100%;
-  z-index: 2;
+  z-index: 1;
   padding: 1rem 1rem;
   white-space: nowrap;
   overflow-y: auto;
@@ -45,13 +79,13 @@ nav {
 
   h3,
   .nav-text {
-    /* display: none; */
     opacity: 0;
     transition: opacity 0.3s ease;
   }
 
   &.menu-opened {
     width: 100%;
+
     h3,
     .nav-text {
       opacity: 1;
@@ -69,6 +103,7 @@ nav {
 @media screen and (min-width: 1300px) {
   nav {
     width: 14rem;
+
     h3,
     .nav-text {
       opacity: 1;
@@ -115,7 +150,8 @@ nav {
 }
 
 #open-menu,
-#theme-switcher {
+#theme-switcher,
+#lang-switcher {
   position: relative;
   background: inherit;
   color: inherit;
@@ -129,34 +165,8 @@ nav {
   padding-left: 0.5rem;
 }
 
-#theme-switcher {
-  bottom: 0;
+#bottom-items {
+  position: fixed;
+  bottom: 2.5rem;
 }
 </style>
-
-<script lang="ts">
-export default {
-  data() {
-    return {
-      uri: "",
-      themeIcon: "",
-    };
-  },
-  created() {
-    this.themeIcon = "fa-solid fa-" + this.isDarkTheme() ? "sun" : "moon";
-  },
-  methods: {
-    isDarkTheme() {
-      return true;
-    },
-    toggleMenu() {
-      var menu = document.getElementsByTagName("nav")[0];
-      const navClass = menu.className;
-      menu.className = navClass == "" ? "menu-opened" : "";
-    },
-    closeMenu(_: Event) {
-      document.getElementsByTagName("nav")[0].className = "";
-    },
-  },
-};
-</script>
