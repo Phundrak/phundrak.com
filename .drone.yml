@@ -10,8 +10,9 @@ steps:
       path: .
 
 trigger:
-  branch:
-    - master
+  ref:
+    include:
+      - refs/heads/master
   event:
     - push
 
