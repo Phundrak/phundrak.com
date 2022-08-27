@@ -51,7 +51,6 @@ nav {
 
 @media only screen and (min-width: $large-screen) {
   nav {
-    width: 16rem;
     .nav-text,
     h3 {
       @include transition(100%);
@@ -66,6 +65,8 @@ nav {
 
 $small-screen: 600px;
 $large-screen: 1200px;
+$width-menu-open: 35rem;
+$width-menu-collapsed: 5rem;
 
 @mixin transition($property) {
   transition: #{$property} 0.3s ease-in-out;
@@ -115,15 +116,11 @@ h3 {
 }
 
 #nav-global {
-  flex-grow: 4;
-}
-
-#container {
-  grid-template-columns: 5rem auto;
+  flex-grow: 1;
 }
 
 nav {
-  width: 5rem;
+  width: $width-menu-collapsed;
   height: 100%;
   background-color: $nord1;
   @include transition(width);
@@ -138,7 +135,7 @@ nav {
   }
 
   &.open {
-    width: 16rem;
+    width: $width-menu-open;
     @include transition(width);
   }
 }
@@ -151,7 +148,7 @@ nav {
 
 @media only screen and (min-width: $large-screen) {
   nav {
-    width: 16rem;
+    width: $width-menu-open;
   }
 }
 </style>
