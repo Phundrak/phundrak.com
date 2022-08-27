@@ -1,47 +1,157 @@
 <template>
   <nav @mouseleave="closeMenu">
-    <button id="open-menu" @click="toggleMenu">
-      <Icon icon="bars" />
-    </button>
+    <ul class="nav-links">
+      <li class="nav-link">
+        <IconLink to="#" icon="bars" @click="toggleMenu">Menu</IconLink>
+      </li>
+    </ul>
     <div id="nav-global" @click="closeMenu">
       <h3>Navigation</h3>
       <ul class="nav-links">
-        <div v-for="link of pages" :key="link._page">
+        <li v-for="link of pages" :key="link._page" class="nav-link">
           <IconLink :icon="link.icon" :to="localePath(link._path)">
             {{ link.navTitlo || link.title }}
           </IconLink>
-        </div>
+        </li>
       </ul>
     </div>
-    <div id="nav-local" @click="closeMenu"></div>
     <ul id="bottom-items" class="nav-links">
       <li v-for="locale in availableLocales" :key="locale.code">
-        <IconLink :to="switchLocalePath(locale.code)">
+        <IconLink :to="switchLocalePath(locale.code)" icon="language">
           {{ locale.name }}
         </IconLink>
       </li>
       <li id="theme" class="nav-link" @click="closeMenu">
-        <button id="theme-switcher" @click="toggleDark()">
-          <span class="nav-icon">
-            <Icon icon="theme" />
-          </span>
-          <span class="nav-text">Change Theme</span>
-        </button>
+        <IconLink to="#" icon="theme" @click="toggleDark()"> Theme </IconLink>
       </li>
     </ul>
   </nav>
 </template>
 
+<style lang="scss">
+$large-screen: 1200px;
+
+@mixin transition($opacity) {
+  filter: opacity($opacity);
+  transition: filter 0.3s ease-in-out;
+}
+
+nav {
+  .nav-text,
+  h3 {
+    @include transition(0%);
+  }
+  &.open {
+    .nav-text,
+    h3 {
+      @include transition(100%);
+    }
+  }
+}
+
+@media only screen and (min-width: $large-screen) {
+  nav {
+    width: 16rem;
+    .nav-text,
+    h3 {
+      @include transition(100%);
+    }
+  }
+}
+</style>
+
 <style lang="scss" scoped>
 @use 'sass:color';
 @import 'node_modules/nord/src/sass/nord.scss';
 
+$small-screen: 600px;
+$large-screen: 1200px;
+
+@mixin transition($property) {
+  transition: #{$property} 0.3s ease-in-out;
+}
+
+h3 {
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 1rem;
+
+  li {
+    height: 3rem;
+    border-radius: 0.2rem;
+    @include transition(background-color);
+
+    &:hover {
+      background-color: $nord3;
+      @include transition(background-color);
+
+      [color-scheme='light'] & {
+        background-color: $nord5;
+        transition: background-color 0.3s ease-in-out;
+      }
+    }
+
+    a {
+      box-shadow: none;
+      padding: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 1rem;
+    }
+  }
+}
+
+.nav-text {
+  overflow-x: hidden;
+}
+
+#nav-global {
+  flex-grow: 4;
+}
+
+#container {
+  grid-template-columns: 5rem auto;
+}
+
 nav {
   width: 5rem;
+  height: 100%;
   background-color: $nord1;
+  @include transition(width);
+  @include transition(background-color);
+
+  display: flex;
+  flex-direction: column;
 
   body[color-scheme='light'] & {
     background-color: $nord4;
+    @include transition(background-color);
+  }
+
+  &.open {
+    width: 16rem;
+    @include transition(width);
+  }
+}
+
+@media only screen and (max-width: $small-screen) {
+  nav.open {
+    width: 100vw;
+  }
+}
+
+@media only screen and (min-width: $large-screen) {
+  nav {
+    width: 16rem;
   }
 }
 </style>
@@ -79,7 +189,7 @@ export default {
     toggleMenu() {
       var menu = document.getElementsByTagName('nav')[0];
       const navClass = menu.className;
-      menu.className = navClass == '' ? 'menu-opened' : '';
+      menu.className = navClass == '' ? 'open' : '';
     },
     closeMenu(_: Event) {
       document.getElementsByTagName('nav')[0].className = '';

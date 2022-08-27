@@ -1,6 +1,6 @@
 <template>
   <NuxtLink :to="path">
-    <Icon :icon="icon"></Icon>
+    <Icon class="nav-icon" :icon="icon"></Icon>
     <span class="nav-text">
       <slot />
     </span>

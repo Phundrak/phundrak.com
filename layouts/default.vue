@@ -16,6 +16,7 @@
   display: grid;
   grid-template-areas: 'sidebar content' 'footer footer';
   height: 100vh;
+  grid-template-columns: min-content auto;
 }
 
 main {

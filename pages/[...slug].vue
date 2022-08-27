@@ -37,7 +37,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Mono&display=swap');
 
 .content {
-  padding: 2rem 4rem;
+  padding: 2rem max(4rem, 3%);
 }
 </style>
 

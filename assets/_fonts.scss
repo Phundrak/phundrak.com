@@ -59,5 +59,8 @@ $icons: ("at": "\e906",
 @each $name, $glyph in $icons {
     .phunic-#{$name}:before {
         content: $glyph;
+        display: inline-block;
+        width: 1rem;
+        text-align: center;
     }
 }

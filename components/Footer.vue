@@ -18,9 +18,11 @@ footer {
   text-align: center;
   line-height: 4vh;
   z-index: 10;
+  transition: background-color 0.3s ease-in-out;
 
   [color-scheme='light'] & {
     background-color: $nord4;
+    transition: background-color 0.3s ease-in-out;
   }
 }
 </style>
