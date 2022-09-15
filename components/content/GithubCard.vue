@@ -42,11 +42,12 @@ if (repository === undefined) {
 </script>
 
 <style scoped lang="scss">
+@use "sass:color";
 @import "node_modules/nord/src/sass/nord.scss";
-@import "~/assets/fonts";
 
 .github-card {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   background-color: $nord3;
   padding: 1rem;
   width: 25rem;
@@ -54,8 +55,17 @@ if (repository === undefined) {
   box-shadow: 0.2rem 0.2rem 0.4rem $nord0;
   transition: box-shadow 150ms ease-in-out;
 
+  [color-scheme="light"] & {
+    background-color: $nord4;
+    box-shadow: 0.2rem 0.2rem 0.4rem color.adjust($nord3, $alpha: -0.3);
+  }
+
   &:hover {
     box-shadow: 0.5rem 0.5rem 1rem $nord0;
+
+    [color-scheme="light"] & {
+      box-shadow: 0.5rem 0.5rem 1rem color.adjust($nord3, $alpha: -0.7);
+    }
   }
 }
 
