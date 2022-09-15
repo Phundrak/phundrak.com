@@ -1,88 +1,53 @@
 ---
 kind: pipeline
 type: docker
-name: CI
-
-steps:
-  - name: run gitleaks
-    image: plugins/gitleaks
-    settings:
-      path: .
-
-trigger:
-  ref:
-    include:
-      - refs/heads/master
-  event:
-    - push
-
----
-kind: pipeline
-type: docker
 name: CD
 
 steps:
-  - name: restore cache
-    image: drillster/drone-volume-cache
-    volumes:
-      - name: cache
-        path: /cache
-    settings:
-      restore: true
-      mount:
-        - ./node_modules
+- name: restore cache
+  image: drillster/drone-volume-cache
+  volumes:
+    - name: cache
+      path: /cache
+  settings:
+    restore: true
+    mount:
+      - ./node_modules
 
-  - name: build
-    image: node:18-alpine
-    commands:
-      - yarn install
-      - yarn generate
-    depends_on:
-      - "restore cache"
+- name: generate
+  image: node:18-alpine
+  commands:
+    - yarn install
+    - yarn generate
 
-  - name: rebuild cache
-    image: drillster/drone-volume-cache
-    volumes:
-      - name: cache
-        path: /cache
-    settings:
-      rebuild: true
-      mount:
-        - ./node_modules
-    depends_on:
-      - build
+- name: rebuild cache
+  image: drillster/drone-volume-cache
+  volumes:
+    - name: cache
+      path: /cache
+  settings:
+    rebuild: true
+    mount:
+      - ./node_modules
 
-  - name: deploy
-    image: appleboy/drone-scp
-    settings:
-      host:
-        from_secret: ssh_host
-      target:
-        from_secret: ssh_target
-      source: dist/*
-      strip_components: 1
-      username:
-        from_secret: ssh_username
-      password:
-        from_secret: ssh_password
-      port:
-        from_secret: ssh_port
-    depends_on:
-      - build
-    when:
-      branch:
-        - master
-      event:
-        exclude:
-          - pull_request
-
-volumes:
-  - name: cache
+- name: deploy
+  image: appleboy/drone-scp
+  settings:
     host:
-      path: /tmp/cache
-
-trigger:
-  branch:
+      from_secret: ssh_host
+    target:
+      from_secret: ssh_target
+    source: dist/*
+    strip_components: 1
+    username:
+      from_secret: ssh_username
+    password:
+      from_secret: ssh_password
+    port:
+      from_secret: ssh_port
+  when:
+    branch:
     - master
-  event:
-    - push
+    event:
+      exclude:
+      - pull_request
