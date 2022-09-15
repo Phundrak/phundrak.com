@@ -41,6 +41,7 @@ nav {
   h3 {
     @include transition(0%);
   }
+
   &.open {
     .nav-text,
     h3 {
@@ -156,43 +157,54 @@ nav {
 
 <script setup lang="ts">
 import { useDark, useToggle } from "@vueuse/core";
+import { ParsedContent } from "@nuxt/content/dist/runtime/types";
 
-const lang = useCookie("lang");
-const homeQuery =
-  lang.value === 'fr' ? queryContent() : queryContent('/' + lang.value);
-const pages = await homeQuery.find().then((pages) =>
-  pages.filter((page) => {
-    return lang.value === 'fr'
-      ? !page._path.startsWith('/en')
-      : page._path.startsWith('/' + lang.value);
-  })
-);
+const route = useRoute();
+
+async function updatePages(route: string): Promise<ParsedContent[]> {
+  const english = route.startsWith("/en");
+  const query = english ? queryContent("/en") : queryContent();
+  const pages = await query.find().then((pages) =>
+    pages.filter((page) => {
+      return english
+        ? page._path.startsWith("/en")
+        : !page._path.startsWith("/en");
+    })
+  );
+  return pages;
+}
+
+let pages = ref(await updatePages(route.fullPath));
+
 const isDark = useDark({
-  selector: 'body',
-  attribute: 'color-scheme',
-  valueDark: '',
-  valueLight: 'light',
+  selector: "body",
+  attribute: "color-scheme",
+  valueDark: "",
+  valueLight: "light",
 });
+
 const toggleDark = useToggle(isDark);
+
+watch(
+  () => route.fullPath,
+  async (route) => {
+    pages.value = await updatePages(route);
+  }
+);
 </script>
 
 <script lang="ts">
-import { LocaleInfo } from 'node_modules/@nuxtjs/i18n/dist/module';
+import { LocaleInfo } from "node_modules/@nuxtjs/i18n/dist/module";
 
 export default {
-  data() {
-    return {
-      query: null,
-    };
-  },
   methods: {
     toggleMenu() {
-      var menu = document.getElementsByTagName('nav')[0];
+      var menu = document.getElementsByTagName("nav")[0];
       const navClass = menu.className;
-      menu.className = navClass == '' ? 'open' : '';
+      menu.className = navClass == "" ? "open" : "";
     },
     closeMenu(_: Event) {
-      document.getElementsByTagName('nav')[0].className = '';
+      document.getElementsByTagName("nav")[0].className = "";
     },
   },
   computed: {
@@ -201,13 +213,6 @@ export default {
         (lang: LocaleInfo) => lang.code !== this.$i18n.locale
       );
     },
-  },
-  created() {
-    const fallbackLocale = this.$i18n.fallbackLocale;
-    const locale = this.$i18n.locale;
-    if (fallbackLocale != locale) {
-      this.query = queryContent('en');
-    }
   },
 };
 </script>
