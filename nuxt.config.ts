@@ -92,9 +92,6 @@ export default defineNuxtConfig({
       noscript: [{ children: 'Javascript is required' }],
     },
   },
-  autoImports: {
-    global: true,
-  },
   components: {
     dirs: ['~/components'],
     global: true,
@@ -128,4 +125,11 @@ export default defineNuxtConfig({
     },
   },
   telemetry: false,
+  vite: {
+    define: {
+      "__VUE_I18N_FULL_INSTALL__": true,
+      "__VUE_I18N_LEGACY_API__": false,
+      "__INTLIFY_PROD_DEVTOOLS__": false,
+    }
+  }
 });
