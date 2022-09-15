@@ -60,12 +60,12 @@ nav {
 </style>
 
 <style lang="scss" scoped>
-@use 'sass:color';
-@import 'node_modules/nord/src/sass/nord.scss';
+@use "sass:color";
+@import "node_modules/nord/src/sass/nord.scss";
 
 $small-screen: 600px;
 $large-screen: 1200px;
-$width-menu-open: 35rem;
+$width-menu-open: 18rem;
 $width-menu-collapsed: 5rem;
 
 @mixin transition($property) {
@@ -84,6 +84,7 @@ h3 {
   list-style-type: none;
   margin: 0;
   padding: 1rem;
+  white-space: nowrap;
 
   li {
     height: 3rem;
@@ -94,7 +95,7 @@ h3 {
       background-color: $nord3;
       @include transition(background-color);
 
-      [color-scheme='light'] & {
+      [color-scheme="light"] & {
         background-color: $nord5;
         transition: background-color 0.3s ease-in-out;
       }
@@ -129,7 +130,7 @@ nav {
   display: flex;
   flex-direction: column;
 
-  body[color-scheme='light'] & {
+  body[color-scheme="light"] & {
     background-color: $nord4;
     @include transition(background-color);
   }
@@ -154,7 +155,9 @@ nav {
 </style>
 
 <script setup lang="ts">
-const lang = useCookie('lang');
+import { useDark, useToggle } from "@vueuse/core";
+
+const lang = useCookie("lang");
 const homeQuery =
   lang.value === 'fr' ? queryContent() : queryContent('/' + lang.value);
 const pages = await homeQuery.find().then((pages) =>
