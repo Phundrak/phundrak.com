@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'phunic';
-  src:  url('~/assets/fonts/phunic.eot?vi5inp');
-  src:  url('~/assets/fonts/phunic.eot?vi5inp#iefix') format('embedded-opentype'),
-    url('~/assets/fonts/phunic.ttf?vi5inp') format('truetype'),
-    url('~/assets/fonts/phunic.woff?vi5inp') format('woff'),
-    url('~/assets/fonts/phunic.svg?vi5inp#phunic') format('svg');
+  src:  url('~/assets/fonts/phunic.eot?ec9x0');
+  src:  url('~/assets/fonts/phunic.eot?ec9x0#iefix') format('embedded-opentype'),
+    url('~/assets/fonts/phunic.ttf?ec9x0') format('truetype'),
+    url('~/assets/fonts/phunic.woff?ec9x0') format('woff'),
+    url('~/assets/fonts/phunic.svg?ec9x0#phunic') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,6 +24,8 @@ i.icon {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
 
 $icons: ("at": "\e906",
          "bars": "\e909",
@@ -48,6 +50,7 @@ $icons: ("at": "\e906",
          "share": "\e904",
          "spinner2": "\e97b",
          "stackoverflow": "\ead0",
+         "star": "\e9d7",
          "terminal": "\e905",
          "theme": "\e9d6",
          "tux": "\eabd",
