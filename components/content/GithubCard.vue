@@ -2,11 +2,24 @@
   <div v-if="repository">
     <a :href="repository.html_url">
       <div class="github-card">
-        <h3>{{ repository.name }}</h3>
-        <h4>author: {{ repository.owner.login }}</h4>
+        <div class="info">
+          <div class="name">{{ repository.name }}</div>
+          <div class="author">{{ repository.owner.login }}</div>
+        </div>
         <p>
           {{ repository.description }}
         </p>
+        <div class="stats">
+          <span class="lang">
+            <Icon icon="code" /> {{ repository.language }}
+          </span>
+          <span class="stars">
+            <Icon icon="star" /> {{ repository.stargazers_count }}
+          </span>
+          <span class="forks">
+            <Icon icon="code-branch" /> {{ repository.forks_count }}
+          </span>
+        </div>
       </div>
     </a>
   </div>
@@ -27,3 +40,50 @@ if (repository === undefined) {
   repository = data.value;
 }
 </script>
+
+<style scoped lang="scss">
+@import "node_modules/nord/src/sass/nord.scss";
+@import "~/assets/fonts";
+
+.github-card {
+  display: inline-block;
+  background-color: $nord3;
+  padding: 1rem;
+  width: 25rem;
+  border-radius: 0.4rem;
+  box-shadow: 0.2rem 0.2rem 0.4rem $nord0;
+  transition: box-shadow 150ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0.5rem 0.5rem 1rem $nord0;
+  }
+}
+
+.stats,
+.info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.name,
+.code {
+  flex-grow: 1;
+}
+
+.info {
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 2rem;
+  font-family: "Noto Sans Mono", monospace;
+  color: $nord8;
+}
+
+.icon {
+  padding: 0.3rem;
+}
+</style>

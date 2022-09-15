@@ -22,7 +22,22 @@ const { data: repos } = await useFetch<GithubRepo[]>(fetchUrl, {
   transform: function (data: GithubRepo[]): GithubRepo[] {
     return data
       .filter((repo) => repo.name != "phundrak")
+      .sort(function (a, b) {
+        return a.updated_at < b.updated_at
+          ? 1
+          : a.updated_at > b.updated_at
+          ? -1
+          : 0;
+      })
       .splice(0, props.latestN);
   },
 });
+console.log(repos);
 </script>
+
+<style scoped lang="scss">
+#latest-github-repos {
+  display: flex;
+  flex-direction: row;
+}
+</style>
