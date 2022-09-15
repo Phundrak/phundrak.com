@@ -11,7 +11,6 @@
 
 <script setup lang="ts">
 import { GithubRepo } from "~~/composables/github";
-import { useFetch } from "#app";
 
 const props = defineProps<{
   username: string;
