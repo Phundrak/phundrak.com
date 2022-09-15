@@ -29,8 +29,10 @@ steps:
     rebuild: true
     mount:
       - ./node_modules
+  depends_on:
+    - generate
 
-- name: deploy
+- name: deploy-stable
   image: appleboy/drone-scp
   settings:
     host:
@@ -45,9 +47,35 @@ steps:
       from_secret: ssh_password
     port:
       from_secret: ssh_port
+  depends_on:
+    - generate
   when:
     branch:
     - master
+    event:
+      exclude:
+      - pull_request
+
+- name: deploy-devel
+  image: appleboy/drone-scp
+  settings:
+    host:
+      from_secret: ssh_host
+    target:
+      from_secret: ssh_target_devel
+    source: dist/*
+    strip_components: 1
+    username:
+      from_secret: ssh_username
+    password:
+      from_secret: ssh_password
+    port:
+      from_secret: ssh_port
+  depends_on:
+    - generate
+  when:
+    branch:
+    - devel
     event:
       exclude:
       - pull_request
