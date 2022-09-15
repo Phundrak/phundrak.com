@@ -28,6 +28,8 @@
 
 <script lang="ts" setup>
 import { GithubRepo } from "~/composables/github";
+import { useFetch } from "#app";
+
 const props = defineProps<{
   id?: string;
   repo?: GithubRepo;
