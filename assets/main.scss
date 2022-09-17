@@ -42,3 +42,44 @@ body {
     background-color: $nord4;
   }
 }
+
+.twitter-tweet {
+    margin: 0 auto;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 1rem;
+
+    th {
+        background-color: $nord1;
+    }
+    th, td {
+        padding: 1rem;
+        border: 1px solid $nord0;
+    }
+
+    /* Rounded tables */
+    $border-radius: .4rem;
+
+    thead {
+        border-top-left-radius: $border-radius;
+    }
+
+    tr {
+        &:first-child {
+            th:first-child { border-top-left-radius:  $border-radius; }
+            th:last-child  { border-top-right-radius: $border-radius; }
+        }
+        &:last-child {
+            td:first-child { border-bottom-left-radius:  $border-radius; }
+            td:last-child  { border-bottom-right-radius: $border-radius; }
+        }
+
+        &:nth-child(even) {
+            background-color: $nord3;
+        }
+    }
+
+}

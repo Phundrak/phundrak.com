@@ -26,8 +26,11 @@ charset="utf-8"></script>
 # Character and vocal libraries
 Here’s a copy and paste of some old pages describing KEINE Tashi:
 
+::PreviewImage{src="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_original.png"}
+Illustration de KEINE Tashi
+::
+
 ## Presentation
-![img](https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_original.png)
 
 -   **Codename:** BSUP01 恵音བཀྲ་ཤིས་ KEINE Tashi
 -   **First name:** Tashi (བཀྲ་ཤིས་), Tibetan name meaning “auspicious”
