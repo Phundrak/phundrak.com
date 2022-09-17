@@ -9,8 +9,8 @@
 </template>
 
 <style lang="scss" scoped>
-@use 'sass:color';
-@import 'node_modules/nord/src/sass/nord.scss';
+@use "sass:color";
+@import "~/assets/mixins.scss";
 
 #glob-container {
   display: grid;
@@ -18,6 +18,12 @@
   grid-template-columns: auto 1fr;
   height: 100vh;
   overflow: hidden;
+}
+
+@include small-screen {
+  #glob-container {
+    @include flex-col;
+  }
 }
 
 #header {
@@ -33,10 +39,20 @@ main {
   overflow-y: auto;
   overflow-x: hidden;
   height: 96vh;
-  box-shadow: inset 0.5rem -0.5rem 1rem color.adjust($nord0, $alpha: -0.3);
+  @include shadow-theme(inset 0.5rem -0.5rem 1rem, $nord0, $nord3);
+  box-sizing: content-box;
+}
 
-  [color-scheme="light"] & {
-    box-shadow: inset 0.5rem -0.5rem 1rem color.adjust($nord3, $alpha: -0.7);
+@include small-screen {
+  main {
+    box-shadow: none !important;
+  }
+
+  #header {
+    @include shadow-theme(0.5rem 0.5rem 1rem, $nord0, $nord3);
+  }
+  #footer {
+    @include shadow-theme(0.5rem -0.5rem 1rem, $nord0, $nord3);
   }
 }
 </style>

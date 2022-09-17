@@ -1,0 +1,112 @@
+@use "sass:color";
+@import "node_modules/nord/src/sass/nord.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Mono&display=swap");
+
+/* Global variables **********************************************************/
+
+$small-screen: 600px;
+$large-screen: 1200px;
+
+$short-transition: 0.3s;
+$medium-transition: 0.5s;
+$long-transition: 0.8s;
+
+/* Convenience ***************************************************************/
+
+@mixin small-screen {
+    @media only screen and (max-width: $small-screen) {
+        @content;
+    }
+}
+
+@mixin large-screen {
+    @media only screen and (min-width: $large-screen) {
+        @content;
+    }
+}
+
+/* Useful snippets ***********************************************************/
+
+@mixin flex-col() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row() {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin font-mono {
+    font-family: "Noto Sans Mono", monospace;
+}
+
+@mixin font-sans {
+    font-family: "Noto Sans", sans-serif;
+}
+
+/* Simplifying my life *******************************************************/
+
+@mixin transition($property, $speed: $short-transition) {
+  transition: #{$property} $speed ease-in-out;
+}
+
+@mixin element-theme($element, $dark, $light) {
+    #{$element}: $dark;
+    @include transition($element);
+
+    [color-scheme="light"] & {
+        #{$element}: $light;
+        @include transition($element);
+    }
+}
+
+@mixin shadow-theme($rules, $dark, $light) {
+  box-shadow: $rules color.adjust($dark, $alpha: -0.3);
+
+  [color-scheme="light"] & {
+    box-shadow: $rules color.adjust($light, $alpha: -0.7);
+  }
+}
+
+@mixin background-theme($dark, $light) {
+    @include element-theme(background-color, $dark, $light);
+}
+
+@mixin color-theme($dark, $light) {
+    @include element-theme(color, $dark, $light);
+}
+
+/* Overflowing lists */
+@mixin overflow-gradient($background, $shadow) {
+    background:
+        /* cover top */
+        linear-gradient(
+            $background 30%,
+            color.adjust($background, $alpha: 0)
+        ) center top,
+
+        /* cover bottom */
+        linear-gradient(
+            color.adjust($background, $alpha: 0),
+            $background 70%,
+        ) center bottom,
+
+        /* shadow top */
+        radial-gradient(
+            farthest-side at 50% 0,
+            $shadow,
+            rgba(0,0,0,0)
+        ) center top,
+
+        /* shadow bottom */
+        radial-gradient(
+            farthest-side at 50% 100%,
+            $shadow,
+            rgba(0,0,0,0)
+        ) center bottom;
+
+    background-repeat: no-repeat;
+    background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+    background-attachment: local, local, scroll, scroll;
+}

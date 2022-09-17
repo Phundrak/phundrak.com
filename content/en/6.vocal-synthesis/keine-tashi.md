@@ -135,7 +135,11 @@ Illustration de KEINE Tashi
 -   **Status:** abandonned
 
 ### ENG
-![img](https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_EN.png)
+
+::PreviewImage{src="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_EN.png"}
+Illustration de KEINE Tashi
+::
+
 -   **Status:** abandonned
 
 # Usage clause and license

@@ -1,7 +1,7 @@
 <template>
   <a class="no-decoration" :href="src">
-    <figure class="img-prev">
-      <img :src="src" :style="style" />
+    <figure class="img-prev" :style="style">
+      <img :src="src" />
       <figcaption><slot /></figcaption>
     </figure>
   </a>
@@ -27,9 +27,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "~/assets/mixins.scss";
+
 img {
+  height: auto;
   width: 100%;
-  max-width: 400px;
 }
 
 figure {
@@ -39,5 +41,18 @@ figure {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  max-width: 400px;
+}
+
+@include small-screen {
+  figure {
+    float: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  figure {
+    float: none;
+  }
 }
 </style>

@@ -34,15 +34,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Mono&display=swap");
-
+@import "~/assets/mixins.scss";
 .content {
-  padding: 2rem max(4rem, 3%);
+  padding: 2rem;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@include small-screen {
+  .content {
+    padding: 1rem;
+  }
 }
 </style>
 
 <style lang="scss">
-@import "node_modules/nord/src/sass/nord.scss";
+@import "~/assets/mixins.scss";
 
 @function repeat-str($str, $nbr) {
   $outstr: "";
@@ -53,12 +61,9 @@ export default {
 }
 
 .content {
-  max-width: 800px;
-  margin: 0 auto;
-
   @for $i from 1 through 6 {
     h#{$i} {
-      font-family: "Noto Sans Mono", monospace;
+      @include font-mono;
       color: $nord7;
 
       a {

@@ -43,36 +43,24 @@ if (repository === undefined) {
 
 <style scoped lang="scss">
 @use "sass:color";
-@import "node_modules/nord/src/sass/nord.scss";
+@import "~/assets/mixins.scss";
 
 .github-card {
-  display: flex;
-  flex-direction: column;
-  background-color: $nord3;
+  @include flex-col;
+  @include background-theme($nord3, $nord4);
+  @include shadow-theme(0.2rem 0.2rem 0.4rem, $nord0, $nord3);
   padding: 1rem;
   width: 25rem;
   border-radius: 0.4rem;
-  box-shadow: 0.2rem 0.2rem 0.4rem $nord0;
-  transition: box-shadow 150ms ease-in-out;
-
-  [color-scheme="light"] & {
-    background-color: $nord4;
-    box-shadow: 0.2rem 0.2rem 0.4rem color.adjust($nord3, $alpha: -0.3);
-  }
 
   &:hover {
-    box-shadow: 0.5rem 0.5rem 1rem $nord0;
-
-    [color-scheme="light"] & {
-      box-shadow: 0.5rem 0.5rem 1rem color.adjust($nord3, $alpha: -0.7);
-    }
+    @include shadow-theme(0.5rem 0.5rem 1rem, $nord0, $nord3);
   }
 }
 
 .stats,
 .info {
-  display: flex;
-  flex-direction: row;
+  @include flex-row;
   flex-wrap: nowrap;
   gap: 1rem;
   justify-content: space-between;
@@ -89,7 +77,7 @@ if (repository === undefined) {
 
 .name {
   font-size: 2rem;
-  font-family: "Noto Sans Mono", monospace;
+  @include font-mono;
   color: $nord8;
 }
 

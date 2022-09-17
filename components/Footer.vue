@@ -9,20 +9,19 @@
 </template>
 
 <style lang="scss" scoped>
-@use 'sass:color';
-@import 'node_modules/nord/src/sass/nord.scss';
+@use "sass:color";
+@import "~/assets/mixins.scss";
+
 footer {
   width: 100vw;
-  height: 4vh;
+  height: 2rem;
   background-color: $nord1;
   text-align: center;
-  line-height: 4vh;
+  line-height: 2rem;
   z-index: 10;
-  transition: background-color 0.3s ease-in-out;
 
-  [color-scheme='light'] & {
+  [color-scheme="light"] & {
     background-color: $nord4;
-    transition: background-color 0.3s ease-in-out;
   }
 }
 </style>

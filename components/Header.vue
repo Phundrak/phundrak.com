@@ -2,11 +2,12 @@
   <nav @mouseleave="closeMenu">
     <ul class="nav-links">
       <li class="nav-link">
-        <IconLink to="#" icon="bars" @click="toggleMenu">Menu</IconLink>
+        <IconLink to="#" icon="bars" class="menu-button" @click="toggleMenu"
+          >Menu</IconLink
+        >
       </li>
     </ul>
     <div id="nav-global" @click="closeMenu">
-      <h3>Navigation</h3>
       <ul class="nav-links">
         <li v-for="link of pages" :key="link._page" class="nav-link">
           <IconLink :icon="link.icon" :to="localePath(link._path)">
@@ -29,32 +30,33 @@
 </template>
 
 <style lang="scss">
-$large-screen: 1200px;
+@import "~/assets/mixins.scss";
 
-@mixin transition($opacity) {
+@mixin opacity-transform($opacity) {
   filter: opacity($opacity);
-  transition: filter 0.3s ease-in-out;
 }
 
 nav {
+  box-sizing: content-box;
+
   .nav-text,
   h3 {
-    @include transition(0%);
+    @include opacity-transform(0%);
   }
 
   &.open {
     .nav-text,
     h3 {
-      @include transition(100%);
+      @include opacity-transform(100%);
     }
   }
 }
 
-@media only screen and (min-width: $large-screen) {
+@include large-screen {
   nav {
     .nav-text,
     h3 {
-      @include transition(100%);
+      @include opacity-transform(100%);
     }
   }
 }
@@ -62,24 +64,17 @@ nav {
 
 <style lang="scss" scoped>
 @use "sass:color";
-@import "node_modules/nord/src/sass/nord.scss";
+@import "~/assets/mixins.scss";
 
-$small-screen: 600px;
-$large-screen: 1200px;
 $width-menu-open: 18rem;
 $width-menu-collapsed: 5rem;
-
-@mixin transition($property) {
-  transition: #{$property} 0.3s ease-in-out;
-}
 
 h3 {
   text-align: center;
 }
 
 .nav-links {
-  display: flex;
-  flex-direction: column;
+  @include flex-col();
   gap: 0.5rem;
 
   list-style-type: none;
@@ -90,16 +85,9 @@ h3 {
   li {
     height: 3rem;
     border-radius: 0.2rem;
-    @include transition(background-color);
 
     &:hover {
-      background-color: $nord3;
-      @include transition(background-color);
-
-      [color-scheme="light"] & {
-        background-color: $nord5;
-        transition: background-color 0.3s ease-in-out;
-      }
+      @include background-theme($nord3, $nord5);
     }
 
     a {
@@ -118,23 +106,22 @@ h3 {
 }
 
 #nav-global {
+  @include overflow-gradient($nord1, $nord0);
   flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  [color-scheme="light"] & {
+    @include overflow-gradient($nord4, $nord7);
+  }
 }
 
 nav {
-  width: $width-menu-collapsed;
   height: 100%;
-  background-color: $nord1;
+  width: $width-menu-collapsed;
+  overflow: hidden;
   @include transition(width);
-  @include transition(background-color);
-
-  display: flex;
-  flex-direction: column;
-
-  body[color-scheme="light"] & {
-    background-color: $nord4;
-    @include transition(background-color);
-  }
+  @include background-theme($nord1, $nord4);
+  @include flex-col();
 
   &.open {
     width: $width-menu-open;
@@ -142,13 +129,26 @@ nav {
   }
 }
 
-@media only screen and (max-width: $small-screen) {
-  nav.open {
+@include small-screen {
+  nav {
+    height: 5rem;
     width: 100vw;
+    @include transition(height, $speed: $medium-transition);
+    &.open {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      z-index: 100;
+      @include transition(height, $speed: $medium-transition);
+    }
+  }
+
+  .menu-button > .nav-text {
+    filter: opacity(100%) !important;
   }
 }
 
-@media only screen and (min-width: $large-screen) {
+@include large-screen {
   nav {
     width: $width-menu-open;
   }

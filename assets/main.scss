@@ -1,35 +1,26 @@
 @import 'fonts';
-@import "node_modules/nord/src/sass/nord.scss";
+@import "mixins.scss";
 
 a {
   text-decoration: none;
   color: inherit;
   box-shadow: inset 0 -3px 0 $nord7;
-  transition: box-shadow 150ms ease;
 
   &:hover {
     box-shadow: inset 0 (-1em * 1.1) 0 $nord7;
   }
 }
 
-@mixin smooth-colors {
-  @each $attr in color, background-color {
-      transition: $attr 0.5s ease-in-out;
-  }
-}
-
 body {
   margin: 0;
   font-size: 16px;
-  font-family: "Noto Sans", sans-serif;
+  @include font-sans;
   color: $nord5;
   background-color: $nord2;
-  @include smooth-colors;
 
   &[color-scheme="light"] {
       background-color: $nord5;
       color: $nord1;
-      @include smooth-colors;
   }
 
   &::-webkit-scrollbar {
@@ -53,11 +44,12 @@ table {
     margin: 1rem;
 
     th {
-        background-color: $nord1;
+        @include background-theme($nord1, $nord4)
     }
     th, td {
         padding: 1rem;
-        border: 1px solid $nord0;
+        border: 1px solid;
+        @include element-theme(border-color, $nord3, $nord4);
     }
 
     /* Rounded tables */
@@ -78,8 +70,13 @@ table {
         }
 
         &:nth-child(even) {
-            background-color: $nord3;
+            @include background-theme($nord3, $nord6);
         }
     }
 
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
 }
