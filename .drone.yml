@@ -17,6 +17,7 @@ steps:
 - name: generate
   image: node:18-alpine
   commands:
+    - yarn upgrade # very hacky, I hope to solve that soon
     - yarn install
     - yarn generate
   depends_on:
