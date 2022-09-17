@@ -3,12 +3,13 @@
 # My Personal Website
 
 This personal website is written with Nuxt based on its module
-[Content](https://content-v2.nuxtjs.org/).
+[Content](https://content.nuxtjs.org/).
 
-I plan making it available on [phundrak.com](https://phundrak.com). It
-is for now available at
-[beta.phundrak.com](https://beta.phundrak.com), though it doesn’t look
-great yet.
+I plan on making it available on [phundrak.com](https://phundrak.com).
+It is for now available at
+[beta.phundrak.com](https://beta.phundrak.com) (master branch) and at
+[alpha.phundrak.com](https://alpha.phundrak.com) (devel branch),
+though it doesn’t look great yet.
 
 ## Setup
 
@@ -27,7 +28,7 @@ pnpm install --shamefully-hoist
 
 ## Development Server
 
-Start the development server on http://localhost:3000
+Start the development server on [localhost:3000](http://localhost:3000):
 
 ```bash
 # yarn
