@@ -29,12 +29,12 @@ This series of vocal libraries also featured *BSUP01 KEINE Tashi TIB
 CVVC* and *BSUP02 Drolma TIB*, the two first Tibetan vocal libraries
 for singing vocal synthesis worldwide.
 
-I later created in UTAU *ALYS JPN 001*, *ALYS 001 FRA*, and *ALYS 002
+I later created in UTAU *ALYS 001 JPN*, *ALYS 001 FRA*, and *ALYS 002
 FRA* as prototypes, known as *ALYS for UTAU*, for our upcoming product
 while working at VoxWave.
 
 While all these vocal libraries have been discontinued, vocal
-libraries for *BSUP1 KEINE Tashi* and *ALYS* are available for
+libraries for *BSUP01 KEINE Tashi* and *ALYS* are available for
 download. Please refer to the following pages:
 - **BSUP01 KEINE Tashi**: [BSUP01 KEINE
   Tashi](/vocal-synthesis/keine-tashi)

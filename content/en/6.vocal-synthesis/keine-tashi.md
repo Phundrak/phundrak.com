@@ -10,26 +10,18 @@ KEINE Tashi is a character and set of vocal libraries developed for
 the shareware [UTAU](http://utau2008.web.fc2.com/), a singing voice
 synthesizer. I developed KEINE Tashi over the course of several years,
 from 2012 to 2015. Three vocal libraries have been released to the
-public, the most used one being his JPN Power Extend one. On March
+public, the most used one being his *JPN Power Extend* one. On March
 10th, 2017, I announced I would cease any kind of activity related to
 UTAU.
 
-<blockquote class="twitter-tweet" data-lang="en" data-dnt="true"><p
-lang="en" dir="ltr">I&#39;d like to also announce that from now on I
-am dropping my previous UTAU projects other than covers and won&#39;t
-develop any new UTAU library</p>&mdash; P&#39;undrak (@Phundrak) <a
+<blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><p
+lang="en" dir="ltr">I’d like to also announce that from now on I am
+dropping my previous UTAU projects other than covers and won’t develop
+any new UTAU library</p>— P’undrak (@Phundrak) <a
 href="https://twitter.com/Phundrak/status/840174634377105408?ref_src=twsrc%5Etfw">March
 10, 2017</a></blockquote> <script async
 src="https://platform.twitter.com/widgets.js"
 charset="utf-8"></script>
-
-::Tweet
-#tweet-id
-Phundrak/status/840174634377105408
-
-#divId
-my-tweet
-::
 
 # Character and vocal libraries
 Here’s a copy and paste of some old pages describing KEINE Tashi:
@@ -39,9 +31,9 @@ Here’s a copy and paste of some old pages describing KEINE Tashi:
 
 -   **Codename:** BSUP01 恵音བཀྲ་ཤིས་ KEINE Tashi
 -   **First name:** Tashi (བཀྲ་ཤིས་), Tibetan name meaning “auspicious”
--   **Last name :** Keine (恵音), Japanese name meaning “Blessing
-    sound”. It reads as “keine”, although its regular reading should be
-    “megumine”.
+-   **Last name:** Keine (恵音), Japanese name meaning “Blessing
+    sound”. It reads as “keine”, although its regular reading should
+    be “megumine”.
 -   **Model:** BSUP (Bödkay Shetang UTAU Project)
 -   **Number:** 01
 -   **Gender:** male
@@ -51,7 +43,6 @@ Here’s a copy and paste of some old pages describing KEINE Tashi:
 -   **Heigh:** 6′0″ / 182cm (very tall for a Tibetan)
 -   **Hair color:** black
 -   **Eyes color:** brown~black
--   **Headphones:** none
 -   **Appearance:** Tashi wears a modernized Tibetan suit from the
     Amdo Region (Chinese: 安多 Ānduō), colored in blue. He also wears
     some turquoise jeweleries.
@@ -61,24 +52,27 @@ Here’s a copy and paste of some old pages describing KEINE Tashi:
 -   **Likes :** to meditate, calligraphy, old books, manuscripts (is
     that a self-insert?)
 -   **Dislikes:** selfishness, lies, arrogance
--   **Homepage:** here
--   **Personality:** Tashi is somebody very calm, sweet&#x2026; He
-    really enjoy old books and manuscripts, and he LOVES meditate!
-    He's never hungry, so, he can stay meditating for 2~3 days
-    meditating, just like that, until he realizes that he should eat
-    something. And he always keep quiet, it's really hard to make him
-    angry.
+-   **Personality:** Tashi is somebody very calm, sweet. He really
+    enjoy old books and manuscripts, and he LOVES meditate! He's never
+    hungry, so, he can stay meditating for 2~3 days meditating, just
+    like that, until he realizes that he should eat something. And he
+    always keep quiet, it's really hard to make him angry.
 
-    But, when he is, be careful! He can use very rude words against
-    the person who made him angry, and it's very hard to calm him.
-    But, for an unexplained reason, his "victim"'s life become a lot
-    better after that. Some people think it's because he knew he had
-    to use rude words to help his "victims" in their life.
+    But when he is, his anger becomes wrath. Anyone who experienced it
+    can attest how complex and difficult it is to calm him down.
+    Strangely enough, shortly after being confronted by Tashi, the
+    victims of this wrath see their quality of life greatly improve.
+    Maybe these people needed to hear some truths they refused to face
+    before?
 
 ## Vocal libraries
 ### JPN VCV
 -   **Download link:**
-    <https://drive.google.com/file/d/0B2gIxlZGDdX_eUs1UUJfbmZfbHc/view>
+    | Extension | Size    | Link                                                                              |
+    |-----------|---------|-----------------------------------------------------------------------------------|
+    | 7z        | 25.7MiB | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_VCV.7z)     |
+    | tar.xz    | 32.5MiB | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_VCV.tar.xz) |
+    | zip       | 38.0MiB | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_VCV.zip)    |
 -   **File size:** 60.7MB
 -   **Total uncompressed size:** 94.4MB
 -   **Number of voice phonemes:** 1264 (253 audio files)
@@ -93,7 +87,11 @@ Here’s a copy and paste of some old pages describing KEINE Tashi:
 
 ### JPN Extend Power
 -   **Download link:**
-    <https://drive.google.com/file/d/0B2gIxlZGDdX_SnZqUTJVT0wxa2s/view?usp=drivesdk>
+    | Extension | Size   | Link                                                                                       |
+    |-----------|--------|--------------------------------------------------------------------------------------------|
+    | 7z        | 1.1Gio | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_Extend_Power.7z)     |
+    | tar.xz    | 1.1Gio | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_Extend_Power.tar.xz) |
+    | zip       | 1.2Gio | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_Extend_Power.zip)    |
 -   **File size:** 114MB
 -   **Total uncompressed size:** 155MB
 -   **Number of voice phonemes:** 3020 (546 audio files)
@@ -109,7 +107,11 @@ Here’s a copy and paste of some old pages describing KEINE Tashi:
 ### JPN Extend Youth
 
 -   **Download link:**
-    <https://drive.google.com/file/d/0B2gIxlZGDdX_STRzRTlwNmRVN0E/view?usp=drivesdk>
+    | Extension | Size     | Link                                                                                       |
+    |-----------|----------|--------------------------------------------------------------------------------------------|
+    | 7z        | 237.7Mio | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_Extend_Youth.7z)     |
+    | tar.xz    | 243.5Mio | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_Extend_Youth.tar.xz) |
+    | zip       | 268.7Mio | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_Extend_Youth.zip)    |
 -   **File size:** 36.9MB
 -   **Total uncompressed size:** 42.0MB
 -   **Number of voice phonemes:** 1954 (182 audio files)
@@ -146,7 +148,7 @@ you are free to:
 
 my work, on the condition of:
 
--   **Attribution :** You must give appropriate credit, provide a link
+-   **Attribution:** You must give appropriate credit, provide a link
     to the license, and indicate if changes were made. You may do so
     in any reasonable manner, but not in any way that suggests the
     licensor endorses you or your use.
