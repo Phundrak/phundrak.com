@@ -2,9 +2,9 @@
   <nav @mouseleave="closeMenu">
     <ul class="nav-links">
       <li class="nav-link">
-        <IconLink to="#" icon="bars" class="menu-button" @click="toggleMenu"
-          >Menu</IconLink
-        >
+        <IconButton icon="bars" class="menu-button" @click="toggleMenu">
+          Menu
+        </IconButton>
       </li>
     </ul>
     <div id="nav-global" @click="closeMenu">
@@ -23,7 +23,7 @@
         </IconLink>
       </li>
       <li id="theme" class="nav-link" @click="closeMenu">
-        <IconLink to="#" icon="theme" @click="toggleDark()"> Theme </IconLink>
+        <IconButton icon="theme" @click="toggleDark()">Theme</IconButton>
       </li>
     </ul>
   </nav>
@@ -86,15 +86,25 @@ h3 {
     height: 3rem;
     border-radius: 0.2rem;
 
-    &:hover {
+    button {
+      background-color: inherit;
+      @include font-sans;
+      font-size: inherit;
+      color: inherit;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    &:hover,
+    button:hover {
       @include background-theme($nord3, $nord5);
     }
 
-    a {
+    a,
+    button {
+      @include flex-row();
       box-shadow: none;
       padding: 1rem;
-      display: flex;
-      flex-direction: row;
       justify-content: flex-start;
       gap: 1rem;
     }
@@ -158,6 +168,7 @@ nav {
 <script setup lang="ts">
 import { useDark, useToggle } from "@vueuse/core";
 import { ParsedContent } from "@nuxt/content/dist/runtime/types";
+import IconButton from "./IconButton.vue";
 
 const route = useRoute();
 
