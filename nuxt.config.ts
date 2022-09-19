@@ -117,6 +117,14 @@ export default defineNuxtConfig({
     strategy: 'prefix_except_default',
     vueI18n: {
       fallbackLocale: 'fr',
+      messages: {
+        en: {
+          sourceCode: 'Source code available on',
+        },
+        fr: {
+          sourceCode: 'Code source disponible sur'
+        }
+      }
     },
   },
   nitro: {

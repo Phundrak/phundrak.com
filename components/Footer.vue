@@ -1,10 +1,9 @@
 <template>
   <footer>
-    Code source disponible sur
-    <NuxtLink to="https://labs.phundrak.com/phundrak/phundrak.com">
-      on Gitea
-    </NuxtLink>
-    .
+    {{ $t("sourceCode") }}
+    <NuxtLink to="https://labs.phundrak.com/phundrak/phundrak.com"
+      >Gitea</NuxtLink
+    >.
   </footer>
 </template>
 
