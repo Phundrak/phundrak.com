@@ -187,7 +187,6 @@ async function updatePages(route: string): Promise<ParsedContent[]> {
       })
       .filter((page) => page.toc != false)
   );
-  console.log(pages);
   return pages;
 }
 
