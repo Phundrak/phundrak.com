@@ -27,14 +27,19 @@ $long-transition: 0.8s;
 
 /* Useful snippets ***********************************************************/
 
-@mixin flex-col() {
+@mixin flex($gap: 1rem) {
   display: flex;
+  gap: $gap;
+}
+
+@mixin flex-col($gap: 1rem) {
+  @include flex($gap);
   flex-direction: column;
 }
 
-@mixin flex-row() {
-    display: flex;
-    flex-direction: row;
+@mixin flex-row($gap: 1rem) {
+  @include flex($gap);
+  flex-direction: row;
 }
 
 @mixin font-mono {

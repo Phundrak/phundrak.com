@@ -74,8 +74,7 @@ h3 {
 }
 
 .nav-links {
-  @include flex-col();
-  gap: 0.5rem;
+  @include flex-col(0.5rem);
 
   list-style-type: none;
   margin: 0;
@@ -106,7 +105,6 @@ h3 {
       box-shadow: none;
       padding: 1rem;
       justify-content: flex-start;
-      gap: 1rem;
     }
   }
 }
@@ -131,7 +129,7 @@ nav {
   overflow: hidden;
   @include transition(width);
   @include background-theme($nord1, $nord4);
-  @include flex-col();
+  @include flex-col(0);
 
   &.open {
     width: $width-menu-open;

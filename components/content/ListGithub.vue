@@ -59,10 +59,10 @@ const { data: repos } = await useFetch<GithubRepo[]>(fetchUrl, {
 </script>
 
 <style lang="scss">
+@import "~/assets/mixins.scss";
+
 .repos > div {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
+  @include flex-row(2rem);
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;
