@@ -176,12 +176,15 @@ async function updatePages(route: string): Promise<ParsedContent[]> {
   const english = route.startsWith("/en");
   const query = english ? queryContent("/en") : queryContent();
   const pages = await query.find().then((pages) =>
-    pages.filter((page) => {
-      return english
-        ? page._path.startsWith("/en")
-        : !page._path.startsWith("/en");
-    })
+    pages
+      .filter((page) => {
+        return english
+          ? page._path.startsWith("/en")
+          : !page._path.startsWith("/en");
+      })
+      .filter((page) => page.toc != false)
   );
+  console.log(pages);
   return pages;
 }
 

@@ -2,6 +2,7 @@
 title: BSUP01 KEINE Tashi
 description: 'Official page of my UTAU vocal library BSUP01 KEINE Tashi'
 icon: mic-lines
+toc: false
 ---
 
 # Introduction
