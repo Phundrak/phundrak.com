@@ -14,15 +14,15 @@ $long-transition: 0.8s;
 /* Convenience ***************************************************************/
 
 @mixin small-screen {
-    @media only screen and (max-width: $small-screen) {
-        @content;
-    }
+  @media only screen and (max-width: $small-screen) {
+    @content;
+  }
 }
 
 @mixin large-screen {
-    @media only screen and (min-width: $large-screen) {
-        @content;
-    }
+  @media only screen and (min-width: $large-screen) {
+    @content;
+  }
 }
 
 /* Useful snippets ***********************************************************/
@@ -43,11 +43,11 @@ $long-transition: 0.8s;
 }
 
 @mixin font-mono {
-    font-family: "Noto Sans Mono", monospace;
+  font-family: "Noto Sans Mono", monospace;
 }
 
 @mixin font-sans {
-    font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
 /* Simplifying my life *******************************************************/
@@ -57,11 +57,11 @@ $long-transition: 0.8s;
 }
 
 @mixin element-theme($element, $dark, $light) {
-    #{$element}: $dark;
+  #{$element}: $dark;
 
-    [color-scheme="light"] & {
-        #{$element}: $light;
-    }
+  [color-scheme="light"] & {
+    #{$element}: $light;
+  }
 }
 
 @mixin shadow-theme($rules, $dark, $light) {
@@ -73,43 +73,32 @@ $long-transition: 0.8s;
 }
 
 @mixin background-theme($dark, $light) {
-    @include element-theme(background-color, $dark, $light);
+  @include element-theme(background-color, $dark, $light);
 }
 
 @mixin color-theme($dark, $light) {
-    @include element-theme(color, $dark, $light);
+  @include element-theme(color, $dark, $light);
 }
 
 /* Overflowing lists */
 @mixin overflow-gradient($background, $shadow) {
-    background:
-        /* cover top */
-        linear-gradient(
-            $background 30%,
-            color.adjust($background, $alpha: 0)
-        ) center top,
+  background:
+        /* cover top */ linear-gradient(
+        $background 30%,
+        color.adjust($background, $alpha: 0)
+      )
+      center top,
+    /* cover bottom */
+      linear-gradient(color.adjust($background, $alpha: 0), $background 70%)
+      center bottom,
+    /* shadow top */
+      radial-gradient(farthest-side at 50% 0, $shadow, rgba(0, 0, 0, 0)) center
+      top,
+    /* shadow bottom */
+      radial-gradient(farthest-side at 50% 100%, $shadow, rgba(0, 0, 0, 0))
+      center bottom;
 
-        /* cover bottom */
-        linear-gradient(
-            color.adjust($background, $alpha: 0),
-            $background 70%,
-        ) center bottom,
-
-        /* shadow top */
-        radial-gradient(
-            farthest-side at 50% 0,
-            $shadow,
-            rgba(0,0,0,0)
-        ) center top,
-
-        /* shadow bottom */
-        radial-gradient(
-            farthest-side at 50% 100%,
-            $shadow,
-            rgba(0,0,0,0)
-        ) center bottom;
-
-    background-repeat: no-repeat;
-    background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
-    background-attachment: local, local, scroll, scroll;
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
 }

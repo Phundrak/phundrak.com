@@ -1,4 +1,4 @@
-@import 'fonts';
+@import "fonts";
 @import "mixins.scss";
 
 a {
@@ -19,8 +19,8 @@ body {
   background-color: $nord2;
 
   &[color-scheme="light"] {
-      background-color: $nord5;
-      color: $nord1;
+    background-color: $nord5;
+    color: $nord1;
   }
 
   &::-webkit-scrollbar {
@@ -35,48 +35,56 @@ body {
 }
 
 .twitter-tweet {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 table {
-    border-collapse: separate;
-    border-spacing: 0;
-    margin: 1rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1rem;
 
-    th {
-        @include background-theme($nord1, $nord4)
-    }
-    th, td {
-        padding: 1rem;
-        border: 1px solid;
-        @include element-theme(border-color, $nord3, $nord4);
-    }
+  th {
+    @include background-theme($nord1, $nord4);
+  }
+  th,
+  td {
+    padding: 1rem;
+    border: 1px solid;
+    @include element-theme(border-color, $nord3, $nord4);
+  }
 
-    /* Rounded tables */
-    $border-radius: .4rem;
+  /* Rounded tables */
+  $border-radius: 0.4rem;
 
-    thead {
+  thead {
+    border-top-left-radius: $border-radius;
+  }
+
+  tr {
+    &:first-child {
+      th:first-child {
         border-top-left-radius: $border-radius;
+      }
+      th:last-child {
+        border-top-right-radius: $border-radius;
+      }
+    }
+    &:last-child {
+      td:first-child {
+        border-bottom-left-radius: $border-radius;
+      }
+      td:last-child {
+        border-bottom-right-radius: $border-radius;
+      }
     }
 
-    tr {
-        &:first-child {
-            th:first-child { border-top-left-radius:  $border-radius; }
-            th:last-child  { border-top-right-radius: $border-radius; }
-        }
-        &:last-child {
-            td:first-child { border-bottom-left-radius:  $border-radius; }
-            td:last-child  { border-bottom-right-radius: $border-radius; }
-        }
-
-        &:nth-child(even) {
-            @include background-theme($nord3, $nord6);
-        }
+    &:nth-child(even) {
+      @include background-theme($nord3, $nord6);
     }
-
+  }
 }
 
 .content {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
