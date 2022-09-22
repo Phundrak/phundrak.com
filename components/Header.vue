@@ -172,7 +172,6 @@ nav {
 import { useDark, useToggle } from "@vueuse/core";
 import { ParsedContent } from "@nuxt/content/dist/runtime/types";
 import IconButton from "./IconButton.vue";
-import { localePath, switchLocalePath } from "vue-i18n-routing";
 
 const route = useRoute();
 
