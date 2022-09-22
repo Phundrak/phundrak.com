@@ -7,15 +7,13 @@
         </IconButton>
       </li>
     </ul>
-    <div id="nav-global" @click="closeMenu">
-      <ul class="nav-links">
-        <li v-for="link of pages" :key="link._page" class="nav-link">
-          <IconLink :icon="link.icon" :to="localePath(link._path)">
-            {{ link.navTitlo || link.title }}
-          </IconLink>
-        </li>
-      </ul>
-    </div>
+    <ul class="nav-links" @click="closeMenu" id="nav-global">
+      <li v-for="link of pages" :key="link._page" class="nav-link">
+        <IconLink :icon="link.icon" :to="localePath(link._path)">
+          {{ link.navTitlo || link.title }}
+        </IconLink>
+      </li>
+    </ul>
     <ul id="bottom-items" class="nav-links">
       <li v-for="locale in availableLocales" :key="locale.code">
         <IconLink :to="switchLocalePath(locale.code)" icon="language">
@@ -39,14 +37,12 @@
 nav {
   box-sizing: content-box;
 
-  .nav-text,
-  h3 {
+  .nav-text {
     @include opacity-transform(0%);
   }
 
   &.open {
-    .nav-text,
-    h3 {
+    .nav-text {
       @include opacity-transform(100%);
     }
   }
@@ -54,8 +50,7 @@ nav {
 
 @include large-screen {
   nav {
-    .nav-text,
-    h3 {
+    .nav-text {
       @include opacity-transform(100%);
     }
   }
@@ -68,10 +63,6 @@ nav {
 
 $width-menu-open: 18rem;
 $width-menu-collapsed: 5rem;
-
-h3 {
-  text-align: center;
-}
 
 .nav-links {
   @include flex-col(0.5rem);

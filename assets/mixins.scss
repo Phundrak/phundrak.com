@@ -58,11 +58,9 @@ $long-transition: 0.8s;
 
 @mixin element-theme($element, $dark, $light) {
     #{$element}: $dark;
-    @include transition($element);
 
     [color-scheme="light"] & {
         #{$element}: $light;
-        @include transition($element);
     }
 }
 
