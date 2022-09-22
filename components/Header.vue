@@ -161,6 +161,9 @@ nav {
 @include large-screen {
   nav {
     width: $width-menu-open;
+    & > ul:first-child {
+      display: none;
+    }
   }
 }
 </style>
