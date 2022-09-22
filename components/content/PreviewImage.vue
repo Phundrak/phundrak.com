@@ -1,29 +1,30 @@
 <template>
   <a class="no-decoration" :href="src">
     <figure class="img-prev" :style="style">
-      <img :src="src" />
-      <figcaption><slot /></figcaption>
+      <ResponsiveImage
+        :source="props.src"
+        :size="props.width"
+        :preview="props.preview"
+        :previewWidth="props.previewWidth"
+        :previewTheshold="props.maxwidth"
+      />
+      <figcaption>
+        <slot />
+      </figcaption>
     </figure>
   </a>
 </template>
 
-<script lang="ts">
-export default {
-  props: {
-    src: String,
-    maxwidth: String,
-  },
-  data() {
-    return {
-      style: "",
-    };
-  },
-  mounted() {
-    if (this.maxwidth) {
-      this.style = `max-width: ${this.maxwidth};`;
-    }
-  },
-};
+<script setup lang="ts">
+const props = defineProps<{
+  src: string;
+  width: number;
+  preview: string;
+  previewWidth: number;
+  maxwidth?: number;
+}>();
+
+const style = props.maxwidth ? `max-width: ${props.maxwidth}px` : "";
 </script>
 
 <style scoped lang="scss">
@@ -36,7 +37,7 @@ img {
 
 figure {
   float: left;
-  margin: 0.5rem;
+  margin: 0.5rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;

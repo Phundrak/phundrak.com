@@ -26,8 +26,15 @@ charset="utf-8"></script>
 # Character and vocal libraries
 Here’s a copy and paste of some old pages describing KEINE Tashi:
 
-::PreviewImage{src="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_original.png"}
-Illustration de KEINE Tashi
+::PreviewImage
+---
+src: https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_1024.webp
+width: 1024
+preview: https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_512.webp
+previewWidth: 512
+alt: Illustration of KEINE Tashi
+---
+Illustration of KEINE Tashi
 ::
 
 ## Presentation
@@ -134,11 +141,19 @@ Illustration de KEINE Tashi
 ### TIB CVVC
 -   **Status:** abandonned
 
-### ENG
-
-::PreviewImage{src="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_EN.png"}
-Illustration de KEINE Tashi
+::PreviewImage
+---
+src: https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_EN_673.webp
+width: 673
+preview: https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_EN_246.webp
+previewWidth: 246
+alt: Illustration of KEINE Tashi EN
+maxwidth: 300
+---
+Illustration of KEINE Tashi EN
 ::
+
+### ENG
 
 -   **Status:** abandonned
 
