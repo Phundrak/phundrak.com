@@ -35,7 +35,7 @@ steps:
   depends_on:
     - generate
 
-- name: deploy-stable
+- name: deploy stable
   image: appleboy/drone-scp
   settings:
     host:
@@ -59,7 +59,26 @@ steps:
       exclude:
       - pull_request
 
-- name: deploy-devel
+- name: purge cache stable
+  image: jetrails/drone-cloudflare-caching
+  settings:
+    api_token:
+      from_secret: cloudflare_cache_api
+    zone_identifier:
+      from_secret: phundrak_com_zone_id
+    action: purge_files
+    list:
+    - https://beta.phundrak.com
+  depends_on:
+    - "deploy stable"
+  when:
+    branch:
+    - master
+    event:
+      exclude:
+      - pull_request
+
+- name: deploy devel
   image: appleboy/drone-scp
   settings:
     host:
@@ -76,6 +95,25 @@ steps:
       from_secret: ssh_port
   depends_on:
     - generate
+  when:
+    branch:
+    - devel
+    event:
+      exclude:
+      - pull_request
+
+- name: purge cache devel
+  image: jetrails/drone-cloudflare-caching
+  settings:
+    api_token:
+      from_secret: cloudflare_cache_api
+    zone_identifier:
+      from_secret: phundrak_com_zone_id
+    action: purge_files
+    list:
+    - https://alpha.phundrak.com
+  depends_on:
+    - "deploy devel"
   when:
     branch:
     - devel
