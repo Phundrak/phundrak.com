@@ -5,35 +5,35 @@ icon: file-empty
 # Resume
 
 ::PersonalInfos
-  ::Card
+  ::InfoCard
   Lucien Cartier-Tilet
 
   #type
   Name
   ::
 
-  ::Card
+  ::InfoCard
   CS Student
 
   #type
   Position
   ::
 
-  ::Card
+  ::InfoCard
   Aubervilliers
 
   #type
   City
   ::
 
-  ::Card
+  ::InfoCard
   [+33(0)6.83.90.56.89](tel:+33683905689)
 
   #type
   Phone
   ::
 
-  ::Card
+  ::InfoCard
   lucien@phundrak.com
 
   #type
@@ -42,42 +42,42 @@ icon: file-empty
 ::
 
 ::PersonalLinks
-  ::Card
+  ::InfoCard
   [@Phundrak](https://github.com/Phundrak)
 
   #type
   Github
   ::
 
-  ::Card
+  ::InfoCard
   [@Phundrak](https://labs.phundrak.com)
 
   #type
   Gitea
   ::
 
-  ::Card
+  ::InfoCard
   [@Phundrak](https://twitter.com/phundrak)
 
   #type
   Twitter
   ::
 
-  ::Card
+  ::InfoCard
   [@phundrak@fosstodon.org](https://fosstodon.org/@phundrak)
 
   #type
   Mastodon
   ::
 
-  ::Card
+  ::InfoCard
   [conlang.phundrak.com](https://conlang.phundrak.com)
 
   #type
   Conlanging Website
   ::
 
-  ::Card
+  ::InfoCard
   [Phundrak’s Rambling](https://blog.phundrak.com)
 
   #type
