@@ -22,7 +22,10 @@
     </template>
   </Card>
   <Card v-else>
-    <template #loading>Loading repo information</template>
+    <template #loading>
+      <Loader />
+      <p>Loading repository information</p>
+    </template>
   </Card>
 </template>
 
