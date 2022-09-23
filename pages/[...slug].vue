@@ -52,27 +52,19 @@ export default {
 <style lang="scss">
 @import "~/assets/mixins.scss";
 
-@function repeat-str($str, $nbr) {
-  $outstr: "";
-  @for $i from 1 through $nbr {
-    $outstr: $outstr + $str;
-  }
-  @return $outstr;
-}
-
 .content {
   @for $i from 1 through 6 {
     h#{$i} {
       @include font-mono;
-      color: $nord7;
-
-      a {
-        text-decoration: none;
-        box-shadow: none;
-      }
+      @include title-ruler($right: true, $color: $nord7, $margin: 0 0 0 0);
+      gap: 0.5em;
 
       &::before {
         content: repeat-str("§", $i) + " ";
+      }
+
+      a {
+        @include plain-link;
       }
     }
   }

@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge",
+    "axios": "^0.27.2",
     "nord": "^0.2.1"
   }
 }

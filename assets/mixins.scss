@@ -1,6 +1,7 @@
 @use "sass:color";
 @import "node_modules/nord/src/sass/nord.scss";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Mono&display=swap");
+@import 'functions.scss';
 
 /* Global variables **********************************************************/
 
@@ -50,10 +51,15 @@ $long-transition: 0.8s;
   font-family: "Noto Sans", sans-serif;
 }
 
+@mixin plain-link {
+    text-decoration: none;
+    box-shadow: none;
+}
+
 /* Simplifying my life *******************************************************/
 
-@mixin transition($property, $speed: $short-transition) {
-  transition: #{$property} $speed ease-in-out;
+@mixin transition($property, $speed: $short-transition, $transition: ease-in-out) {
+  transition: #{$property} $speed $transition;
 }
 
 @mixin element-theme($element, $dark, $light) {
@@ -66,9 +72,11 @@ $long-transition: 0.8s;
 
 @mixin shadow-theme($rules, $dark, $light) {
   box-shadow: $rules color.adjust($dark, $alpha: -0.3);
+  @include transition(box-shadow);
 
   [color-scheme="light"] & {
     box-shadow: $rules color.adjust($light, $alpha: -0.7);
+    @include transition(box-shadow);
   }
 }
 
@@ -101,4 +109,30 @@ $long-transition: 0.8s;
   background-repeat: no-repeat;
   background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
   background-attachment: local, local, scroll, scroll;
+}
+
+@mixin title-ruler--ruler($color, $height: 0.1em, $margin: 0.2em) {
+    content: "";
+    background: $color;
+    height: $height;
+    margin: $margin;
+    flex: 1;
+}
+
+@mixin title-ruler($color, $left: false, $right: false, $height: 0.1em, $margin: 0.2em) {
+    color: $color;
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    @if $left {
+        &::before {
+            @include title-ruler--ruler($color: $color, $height: $height, $margin: $margin);
+        }
+    }
+    @if $right {
+        &::after {
+            @include title-ruler--ruler($color: $color, $height: $height, $margin: $margin);
+        }
+    }
 }
