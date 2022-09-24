@@ -1,12 +1,14 @@
 <template>
-  <section class="repos">
-    <div v-if="repos && repos.length">
+  <CardList>
+    <template #list v-if="repos && repos.length">
       <div v-for="repo in repos" :key="repo.id" class="repo">
         <GithubCard :repo="repo" class="card" />
       </div>
-    </div>
-    <div v-else>Loading repos</div>
-  </section>
+    </template>
+    <template #loader v-else>
+      <Loader />
+    </template>
+  </CardList>
 </template>
 
 <script setup lang="ts">

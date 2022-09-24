@@ -1,7 +1,9 @@
 <template>
-  <div class="links" id="personal-infos">
-    <slot />
-  </div>
+  <CardList class="personal-infos">
+    <template #list>
+      <slot />
+    </template>
+  </CardList>
 </template>
 
 <style lang="scss" scoped>

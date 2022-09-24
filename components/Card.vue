@@ -14,13 +14,6 @@
 
 <style lang="scss" scoped>
 @import "~/assets/mixins.scss";
-
-.card {
-  &:nth-child(even) {
-    text-align: right;
-  }
-}
-
 .inner-card {
   /* @include background-theme($nord1, $nord4); */
   @include background-theme($nord3, $nord4);

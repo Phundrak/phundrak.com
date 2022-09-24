@@ -2,6 +2,7 @@
   <Card v-if="repository">
     <template #title>
       <h3>{{ repository.name }}</h3>
+      <span class="author">{{ repository.owner.login }}</span>
     </template>
     <template #content>
       <p>{{ repository.description }}</p>
@@ -40,6 +41,7 @@ const props = defineProps<{
 
 let repository = ref(null);
 
+// TODO: Try to go back to useFetch
 if (props.repo) {
   repository.value = props.repo;
 } else {

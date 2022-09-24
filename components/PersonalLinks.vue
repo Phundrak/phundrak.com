@@ -1,5 +1,7 @@
 <template>
-  <div class="links" id="personal-links">
-    <slot />
-  </div>
+  <CardList class="personal-links">
+    <template #list>
+      <slot />
+    </template>
+  </CardList>
 </template>
