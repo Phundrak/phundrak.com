@@ -15,6 +15,7 @@
   display: grid;
   grid-template-areas: "header content" "footer footer";
   grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
   height: 100vh;
   overflow: hidden;
 }
@@ -37,7 +38,6 @@ main {
   grid-area: content;
   overflow-y: auto;
   overflow-x: hidden;
-  height: 96vh;
   @include shadow-theme(inset 0.5rem -0.5rem 1rem, $nord0, $nord3);
   box-sizing: content-box;
 }
