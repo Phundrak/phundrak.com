@@ -27,13 +27,6 @@ icon: file-empty
   ::
 
   ::InfoCard
-  [+33(0)6.83.90.56.89](tel:+33683905689)
-
-  #type
-  Phone
-  ::
-
-  ::InfoCard
   lucien@phundrak.com
 
   #type

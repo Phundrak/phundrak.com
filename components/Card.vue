@@ -15,7 +15,6 @@
 <style lang="scss" scoped>
 @import "~/assets/mixins.scss";
 .inner-card {
-  /* @include background-theme($nord1, $nord4); */
   @include background-theme($nord3, $nord4);
   @include shadow-theme(0.2rem 0.2rem 0.4rem, $nord0, $nord3);
   max-width: 30rem;

@@ -22,16 +22,35 @@
       </div>
     </template>
   </Card>
-  <Card v-else>
+  <ErrorCard v-else-if="error">
+    <template #info>
+      Cannot retrieve information for repository {{ props.id }}
+    </template>
+    <template #cause>
+      {{ error }}
+    </template>
+  </ErrorCard>
+  <Card v-else-if="pending">
     <template #loading>
       <Loader />
       <p>Loading repository information</p>
+    </template>
+  </Card>
+  <Card v-else>
+    <template #error>
+      <span class="error-info">Github Card in an unknown state</span>
+      <span class="error-cause">
+        This card is neither waiting for data, nor does it have any. If you see
+        this happen, please report this as a new issue on the website’s Git
+        repository (see the link in the footer) or by email. Thank you.
+      </span>
     </template>
   </Card>
 </template>
 
 <script lang="ts" setup>
 import { GithubRepo } from "~/composables/github";
+import { useFetch } from "#app";
 import axios from "axios";
 
 const props = defineProps<{
@@ -40,13 +59,14 @@ const props = defineProps<{
 }>();
 
 let repository = ref(null);
+let error = ref(null);
+let pending = ref(true);
 
-// TODO: Try to go back to useFetch
 if (props.repo) {
   repository.value = props.repo;
 } else {
   const fetchUrl = "https://api.github.com/repos/" + props.id;
-  axios.get(fetchUrl).then((data) => (repository.value = data.data));
+  ({ data: repository, error, pending } = await useFetch(fetchUrl));
 }
 </script>
 
