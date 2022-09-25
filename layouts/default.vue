@@ -9,7 +9,6 @@
 </template>
 
 <style lang="scss" scoped>
-@use "sass:color";
 @import "~/assets/mixins.scss";
 
 #glob-container {
