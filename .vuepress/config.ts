@@ -1,4 +1,5 @@
 import { defineUserConfig, defaultTheme } from 'vuepress';
+import { removeHtmlExtensionPlugin } from 'vuepress-plugin-remove-html-extension';
 
 export default defineUserConfig({
   lang: 'fr-FR',
@@ -67,6 +68,7 @@ export default defineUserConfig({
     linkify: true,
     typographer: true,
   },
+  plugins: [removeHtmlExtensionPlugin()],
   locales: {
     '/': {
       lang: 'fr-FR',
