@@ -78,6 +78,11 @@ export default defineUserConfig({
       title: 'Lucien Cartier-Tilet',
       description: 'Personal website of Lucien Cartier-Tilet',
     },
+    '/lfn/': {
+      lang: 'lfn',
+      title: 'Lucien Cartier-Tilet',
+      description: 'loca ueb de Lucien Cartier-Tilet',
+    },
   },
   theme: defaultTheme({
     locales: {
@@ -103,6 +108,30 @@ export default defineUserConfig({
         openInNewWindow: 'Ouvrir dans une nouvelle fenêtre',
         toggleColorMode: 'Changer de thème',
         toggleSidebar: 'Barre latérale',
+      },
+      '/lfn/': {
+        selectLanguageName: 'Elefen',
+        tip: 'avisa',
+        warning: 'averti',
+        danger: 'peril',
+        sidebar: [
+          '/lfn/index.md',
+          '/lfn/about.md',
+          '/lfn/resume.md',
+          '/lfn/projects.md',
+          '/lfn/conlanging.md',
+          '/lfn/vocal-synthesis.md',
+        ],
+        notFound: [
+          'Ce? Se no ave no cosa asi',
+          'A do vade tu?',
+          'Era 404',
+          'La lia no es coreta',
+        ],
+        backToHome: 'reversa a la paja prima',
+        openInNewWindow: 'abri en un nova fenetra',
+        toggleColorMode: 'cambia la colores',
+        toggleSidebar: 'bara ladal',
       },
       '/en/': {
         selectLanguageName: 'English',
