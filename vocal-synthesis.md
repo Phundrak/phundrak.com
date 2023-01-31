@@ -1,3 +1,7 @@
+---
+title: Synthèse vocale
+---
+
 # Travaux en synthèse vocale
 
 De 2011 à 2018, j’ai travaillé autant en tant qu’amateur puis en tant

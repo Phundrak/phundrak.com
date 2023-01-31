@@ -1,3 +1,6 @@
+---
+title: Vocal Synthesis
+---
 # My works in vocal synthesis
 
 From 2011 to 2018, I worked as an amateur and professional in singing
