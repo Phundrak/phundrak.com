@@ -1,0 +1,121 @@
+---
+kind: pipeline
+type: docker
+name: CD
+
+steps:
+- name: restore cache
+  image: drillster/drone-volume-cache
+  volumes:
+    - name: cache
+      path: /cache
+  settings:
+    restore: true
+    mount:
+      - ./node_modules
+
+- name: generate
+  image: node:19-alpine
+  commands:
+    - yarn install
+    - yarn build
+  depends_on:
+    - "restore cache"
+
+- name: rebuild cache
+  image: drillster/drone-volume-cache
+  volumes:
+    - name: cache
+      path: /cache
+  settings:
+    rebuild: true
+    mount:
+      - ./node_modules
+  depends_on:
+    - generate
+
+- name: deploy stable
+  image: appleboy/drone-scp
+  settings:
+    host:
+      from_secret: ssh_host
+    target:
+      from_secret: ssh_target
+    source: .vuepress/dist/*
+    strip_components: 2
+    username:
+      from_secret: ssh_username
+    password:
+      from_secret: ssh_password
+    port:
+      from_secret: ssh_port
+  depends_on:
+    - generate
+  when:
+    branch:
+    - main
+    event:
+      exclude:
+      - pull_request
+
+- name: purge cache stable
+  image: jetrails/drone-cloudflare-caching
+  settings:
+    api_token:
+      from_secret: cloudflare_cache_api
+    zone_identifier:
+      from_secret: phundrak_com_zone_id
+    action: purge_files
+    list:
+    - https://beta.phundrak.com
+  depends_on:
+    - "deploy stable"
+  when:
+    branch:
+    - main
+    event:
+      exclude:
+      - pull_request
+
+- name: deploy devel
+  image: appleboy/drone-scp
+  settings:
+    host:
+      from_secret: ssh_host
+    target:
+      from_secret: ssh_target_devel
+    source: .vuepress/dist/*
+    strip_components: 2
+    username:
+      from_secret: ssh_username
+    password:
+      from_secret: ssh_password
+    port:
+      from_secret: ssh_port
+  depends_on:
+    - generate
+  when:
+    branch:
+    - devel
+    event:
+      exclude:
+      - pull_request
+
+- name: purge cache devel
+  image: jetrails/drone-cloudflare-caching
+  settings:
+    api_token:
+      from_secret: cloudflare_cache_api
+    zone_identifier:
+      from_secret: phundrak_com_zone_id
+    action: purge_files
+    list:
+    - https://alpha.phundrak.com
+  depends_on:
+    - "deploy devel"
+  when:
+    branch:
+    - devel
+    event:
+      exclude:
+      - pull_request
