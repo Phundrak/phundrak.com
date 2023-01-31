@@ -1,0 +1,21 @@
+# Accueil
+
+Bonjour, je suis Lucien Cartier-Tilet, un étudiant en Master 2 THYP
+(*Technologies de l’Hypermédia*) à l’Université Vincennes Saint-Denis
+(Paris 8).
+
+J’ai travaillé chez VoxWave de 2012 à 2018 en tant que co-fondateur et
+directeur technique de l’entreprise. J’y ai notamment développé les
+chanteuses virtuelles francophones nommées ALYS et LEORA.
+
+Je suis un enthousiaste du locigiel libre, utilisant Linux depuis 2008
+et Emacs depuis 2016.
+
+Mes passe-temps principaux sont la programmation, aussi bien de la
+programmation système que de la programmation web, et la construction
+de langues et univers fictifs. J’aime aussi faire de l’escalade et
+quand l’opportunité se présente, de la randonnée.
+
+Ma langue maternelle est le Français, mais je parle également
+couramment en Anglais. J’ai également des bases en Japonais, [Lingua
+Franca Nova](https://elefen.org), et en Norvégien Bokmål.
