@@ -6,21 +6,9 @@ This page was last updated on January 31st, 2023.
 
 This is the personal website of Lucien “Phundrak” Cartier-Tilet.
 
-This website is entirely free and open-source. You can find its source
-code on my Gitea instance
-[here](https://labs.phundrak.com/phundrak/phundrak.com). Icons used on
-this website come from different sources:
-
-- [IcoMoon](https://icomoon.io/), which I use to consolidate all of my
-  icons into a single font, including some default icons from their
-  website (check it out, it’s really cool!)
-- [FontAwesome](https://fontawesome.com/) where most of my icons come
-  from. Their Vue and Nuxt integration feels really wonky to me, so I
-  prefer to instead just grab their SVGs and use them manually.
-- The [Language Creation Society](https://conlang.org/) who’s logo I
-  modified a bit in order to fit better being an icon.
-- [Emacs](https://www.gnu.org/software/emacs/) which I remade its logo
-  into an SVG (I haven’t found any official SVG of their modern logo).
+This website is made with Vuepress and is entirely free and
+open-source. You can find its source code on my Gitea instance
+[here](https://labs.phundrak.com/phundrak/phundrak.com).
 
 ## Where is the website hosted?
 

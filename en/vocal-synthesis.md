@@ -28,7 +28,7 @@ CVVC* and *BSUP02 Drolma TIB*, the two first Tibetan vocal libraries
 for singing vocal synthesis worldwide.
 
 I later created in UTAU *ALYS 001 JPN*, *ALYS 001 FRA*, and *ALYS 002
-FRA* as prototypes, known as *ALYS for UTAU*, for our upcoming product
+FRA* as prototypes, known as *ALYS4UTAU*, for our upcoming product
 while working at VoxWave.
 
 While all these vocal libraries have been discontinued, vocal
@@ -51,10 +51,11 @@ LEORA). Including the development of the new recording scripts, the
 initial development period for ALYS spanned well over a year, with
 some additional eight to nine months for its first major update.
 
-ALYS for Alter/Ego is now available free of charge as a module for
-Alter/Ego, and its source files are publicly available since December
-15th, 2021. However, in accordance with Plogue, no reciepe for
-building ALYS for Alter/Ego have been made available.
+ALYS for Alter/Ego, also known as *ALYS4AE*, is available free of
+charge as a module for Alter/Ego, and its source files are publicly
+available since December 15th, 2021. However, in accordance with
+Plogue, no reciepe for building ALYS for Alter/Ego have been made
+available.
 
 More information on open-sourcing ALYS
 [here](https://blog.phundrak.com/open-sourcing-alys/).

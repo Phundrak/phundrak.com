@@ -25,4 +25,4 @@ worldbuilding is still largely secret while Eittland’s worldbuilding
 is mostly public.
 
 More information can be found on my [conlanging
-website](https://conlang.phundrak.com/eittlandic.html).
+website](https://conlang.phundrak.com/).

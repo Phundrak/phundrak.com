@@ -9,8 +9,6 @@ Lucien Cartier-Tilet
 
 Étudiant informatique, M2 THYP
 
-Aubervilliers
-
 - [GitHub](https://github.com/Phundrak)
 - [Gitea](https://labs.phundrak.com) <Badge type="warning" text="instance personnelle" vertical="middle" />
 - [Twitter](https://twitter.com/phundrak)
@@ -23,8 +21,8 @@ Aubervilliers
 
 ### Front-end
 
-- Bonnes connaissances en HTML5, CSS3 (y compris SASS, SCSS, and
-  LESS) et Javascript
+- Bonnes connaissances en HTML5, CSS3 (y compris SASS, SCSS et LESS)
+  et Javascript
 - Connaissances en Python, Dart et TypeScript
 - Utilisation en cours de Vue, Nuxt.js et Node.js
 - Apprentissage de React et Next.js
@@ -37,8 +35,8 @@ Aubervilliers
 - Utilisation de MySQL et PostgreSQL.
 
 ## Programmation Système
-- De l’expérience avec C et EmacsLisp
-- Connaissances en C++, Rust, Python, CommonLisp et les shells UNIX
+- De l’expérience avec Rust, C et EmacsLisp
+- Connaissances en C++, Python, CommonLisp et les shells UNIX
   (bash, fish, Eshell)
 - Connaissances limités en Prolog et Scheme
 
@@ -52,8 +50,8 @@ Aubervilliers
 
 ### CI/CD et déploiement sur le web
 - De l’expérience avec les serveurs web Nginx et Caddyserver
-- Bonnes connaissances avec Docker ainsi Drone.io et Github Actions
-  pour du déploiement
+- Bonnes connaissances de Docker, Drone.io et GitHub Actions pour du
+  déploiement
 
 ## Systèmes d’exploitation
 - Utilisation et administration de Linux (Arch Linux, Void Linux,
@@ -65,7 +63,7 @@ Aubervilliers
 
 ## Bureautique
 - Bonnes connaissances avec org-mode et LaTeX
-- Connaissances avec Libre Office, Microsoft Office et WPS Office
+- Connaissances avec Libre Office, Microsoft Office, WPS Office et OnlyOffice
 
 ## Audio
 

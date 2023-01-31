@@ -106,7 +106,6 @@ export default defineUserConfig({
       },
       '/en/': {
         selectLanguageName: 'English',
-        selectLanguageText: 'Langues',
         sidebar: [
           '/en/index.md',
           '/en/about.md',

@@ -5,8 +5,6 @@ Lucien Cartier-Tilet
 
 Étudiant informatique, M2 THYP
 
-Aubervilliers
-
 - [GitHub](https://github.com/Phundrak)
 - [Gitea](https://labs.phundrak.com) <Badge type="warning"
   text="personal instance" vertical="middle" />
@@ -37,8 +35,8 @@ Aubervilliers
 - Used MySQL and PostgreSQL
 
 ## System Programming
-- Experienced in C and EmacsLisp knowledge
-- I know my way around C++, Rust, Python, and UNIX shells (bash, fish,
+- Experienced in Rust, C and EmacsLisp knowledge
+- I know my way around C++, Python, and UNIX shells (bash, fish,
   Eshell)
 - Limited knowledge in Prolog and Scheme
 
@@ -51,8 +49,8 @@ Aubervilliers
 ### CI/CD and Deploying to the Web
 - Experienced with web servers such as Nginx and Caddyserver
 - Good knowledge of virtualization and deployment with Docker and
-  Docker Compose for virtualization, and Drone.io and Github Actions
-  for deployment.
+  Docker Compose for virtualization, Drone.io, and Github Actions for
+  deployment.
 
 ## Operating Systems
 - Usage and administration of Linux (Arch Linux, Void Linux, Debian,
@@ -64,7 +62,8 @@ Aubervilliers
 
 ## Office Applications
 - Good knowledge with org-mode (main tool), LaTeX
-- I know my way around Libre Office, Microsoft Office, and WPS Office
+- I know my way around Libre Office, Microsoft Office, OnlyOffice, and
+  WPS Office
 
 ## Audio
 

@@ -36,5 +36,4 @@ s’inscrit dans un exercice créatif de création d’un pays fictif
 présent dans notre monde.
 
 Plus d’informations peuvent être trouvées sur [mon site
-d’idéolinguistique](https://conlang.phundrak.com/eittlandic) (en
-anglais)
+d’idéolinguistique](https://conlang.phundrak.com/) (en anglais)

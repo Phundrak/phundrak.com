@@ -37,7 +37,7 @@ monde.
 
 Je créai plus tard *ALYS 001 JPN*, *ALYS 001 FRA* et *ALYS 002 FRA* en
 tant que prototypes d’ALYS sous UTAU. Ces banques vocales furent
-connues plus tard sous le nom de *ALYS for UTAU*.
+connues plus tard sous le nom de *ALYS4UTAU*.
 
 Tandis que chacune de ces banques vocales ne sont plus en
 développement et leur support technique n’est plus assuré, *BSUP01
@@ -52,7 +52,6 @@ moteur de synthèse vocale créé par [Plogue
 Inc.](https://www.plogue.com/). ALYS fut la première voix de synthèse
 commerciale créée pour ce moteur, ainsi que la première voix de
 synthèse professionelle francophone créée pour le chant.
-vailable in French.
 
 Du fait de l’architecture et du comportement d’Alter/Ego, des
 changements importants ont dû être apportés aux scripts

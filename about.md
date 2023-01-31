@@ -7,21 +7,9 @@ Cette page fut mise à jour pour la dernière fois le 31 Janvier 2023.
 Ceci est le site web personnel de Lucien Cartier-Tilet, aussi connu
 sous le nom de « P’undrak » ou « Phundrak ».
 
-Il est écrit grâce à Nuxt et est entièrement open-source. Vous pouvez
+Il est écrit grâce à Vuepress et est entièrement open-source. Vous pouvez
 trouver son code source sur [mon instance personnelle
-Gitea](https://labs.phundrak.com/phundrak/phundrak.com). Les icônes
-utilisées sur ce site proviennent de plusieurs sources différentes :
-- [IcoMoon](https://icomoon.io/), que j’utilise pour consolider toutes
-  les icônes dans une même fonte, y compris quelques icônes de leur
-  pack par défaut,
-- [FontAwesome](https://fontawesome.com/) d’où viennent la majorité
-  des icônes (leur implémentation de leur paquet pour Vue et Nuxt
-  laisse à mon avis à désirer),
-- La [Language Creation Society](https://conlang.org/) dont j’ai
-  modifié leur logo afin de créer l’icône pour mes langues
-  construites,
-- [Emacs](https://www.gnu.org/software/emacs/) dont j’ai recréé une
-  partie du logo en SVG afin d’en créer une icône.
+Gitea](https://labs.phundrak.com/phundrak/phundrak.com).
 
 ## Où est hébergé le site ?
 Ce site est hébergé sur mon serveur personnel, situé dans la ville de
