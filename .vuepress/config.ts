@@ -5,6 +5,7 @@ export default defineUserConfig({
   lang: 'fr-FR',
   title: 'Lucien Cartier-Tilet',
   description: 'Site web personnel de Lucien Cartier-Tilet',
+  lastUpdated: true,
   head: [
     [
       'link',
@@ -87,6 +88,7 @@ export default defineUserConfig({
     },
   },
   theme: defaultTheme({
+    contributors: false,
     locales: {
       '/': {
         selectLanguageName: 'Français',
@@ -110,6 +112,7 @@ export default defineUserConfig({
         openInNewWindow: 'Ouvrir dans une nouvelle fenêtre',
         toggleColorMode: 'Changer de thème',
         toggleSidebar: 'Barre latérale',
+        lastUpdatedText: 'Dernière mise à jour',
       },
       '/lfn/': {
         selectLanguageName: 'Elefen',
@@ -134,6 +137,7 @@ export default defineUserConfig({
         openInNewWindow: 'abri en un nova fenetra',
         toggleColorMode: 'cambia la colores',
         toggleSidebar: 'bara ladal',
+        lastUpdatedText: 'Ultima refresci',
       },
       '/en/': {
         selectLanguageName: 'English',

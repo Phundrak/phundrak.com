@@ -1,7 +1,5 @@
 # À Propos
 
-Cette page fut mise à jour pour la dernière fois le 31 Janvier 2023.
-
 ## Introducion
 
 Ceci est le site web personnel de Lucien Cartier-Tilet, aussi connu

@@ -1,7 +1,5 @@
 # About
 
-This page was last updated on January 31st, 2023.
-
 ## Introduction
 
 This is the personal website of Lucien “Phundrak” Cartier-Tilet.
