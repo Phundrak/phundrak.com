@@ -54,7 +54,7 @@ Studente informatica, M2 THYP
 
 ## Audio
 ### Sintese vocal cantada
-- Developa e crea de bancas de voses per sintese vocal cantada per
+- Developa e crea de bancos de voses per sintese vocal cantada per
   VOCALOID3, Alter/Ego, Chipspeech e UTAU
 - Usa de VOCALOID2 a VOCALOID4, Alter/Ego, Chpispeech, UTAU, CeVIO
   Creative Studio
