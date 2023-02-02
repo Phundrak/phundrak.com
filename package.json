@@ -1,18 +1,18 @@
 {
-  "name": "vuepress-www",
+  "name": "phundrak.com",
   "version": "0.1.0",
   "description": "Static website of Phundrak",
   "main": "index.js",
   "repository": "https://labs.phundrak.com/phundrak/vuepress-www",
   "author": "Lucien Cartier-Tilet <lucien@phundrak.com>",
-  "license": "GPL-3.0",
+  "license": "AGPL-3.0",
   "private": true,
   "devDependencies": {
     "vuepress": "^2.0.0-beta.60"
   },
   "scripts": {
-    "dev": "vuepress dev",
-    "build": "vuepress build"
+    "dev": "vuepress dev content",
+    "build": "vuepress build content"
   },
   "dependencies": {
     "vuepress-plugin-remove-html-extension": "^0.1.0"

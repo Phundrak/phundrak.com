@@ -41,8 +41,8 @@ steps:
       from_secret: ssh_host
     target:
       from_secret: ssh_target
-    source: .vuepress/dist/*
-    strip_components: 2
+    source: content/.vuepress/dist/*
+    strip_components: 3
     username:
       from_secret: ssh_username
     password:
@@ -84,8 +84,8 @@ steps:
       from_secret: ssh_host
     target:
       from_secret: ssh_target_devel
-    source: .vuepress/dist/*
-    strip_components: 2
+    source: content/.vuepress/dist/*
+    strip_components: 3
     username:
       from_secret: ssh_username
     password:
