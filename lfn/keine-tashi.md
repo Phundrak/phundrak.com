@@ -40,7 +40,7 @@ Desinia de KEINE Tashi par Umi
 - **Model:** BSUP (Bödkay Shetang UTAU Project, franses: *Projet UTAU
   de Chant Tibétain*, elefen: *Projeta UTAU de Canta Bod*)
 - **Numero:** 01
-- **seso:** om
+- **Seso:** om
 - **Aniversario (carater):** 28 junio 1998
 - **Primera Publici:** 14 otobre 2012
 - **Pesa:** 70 kg / 154 lb
@@ -50,9 +50,9 @@ Desinia de KEINE Tashi par Umi
 - **Aspeta:** Tashi apone un varia moderna de un veste bod tradisional
   de la rejion de Amdo (Jonguo: 安多 Ānduō) de color azul o blu. El
   apone egal joalas de turcesa.
-- **Nourriture préférée:** momo a la carne (raviolis bod)
-- **Objet signature:** un manoscrito bod
-- **Voix et créateur:** [Phundrak](https://phundrak.com) (mea)
+- **Comable prefereda:** momo a la carne (raviolis bod)
+- **Ojeto suscrive:** un manoscrito bod
+- **Vose e creor:** [Phundrak](https://phundrak.com) (me)
 - **Ama:** medita, la caligrafia, vea libros e manuscritos (en
   jeneral, mea cuando me ia crea esa carater)
 - **No ama:** la egosia, mentis, vania
