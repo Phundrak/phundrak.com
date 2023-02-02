@@ -34,7 +34,7 @@ while working at VoxWave.
 While all these vocal libraries have been discontinued, vocal
 libraries for *BSUP01 KEINE Tashi* and *ALYS* are available for
 download. Please refer to the following pages:
-- **BSUP01 KEINE Tashi**: [BSUP01 KEINE Tashi](/keine-tashi.md)
+- **BSUP01 KEINE Tashi**: [BSUP01 KEINE Tashi](keine-tashi.md)
 - **ALYS for UTAU**: [Open-Sourcing
   ALYS](https://blog.phundrak.com/open-sourcing-alys/)
 

@@ -42,7 +42,7 @@ connues plus tard sous le nom de *ALYS4UTAU*.
 Tandis que chacune de ces banques vocales ne sont plus en
 développement et leur support technique n’est plus assuré, *BSUP01
 KEINE Tashi* et *ALYS* sont toujours disponibles au téléchargement.
-- **BSUP01 KEINE Tashi**: [BSUP01 KEINE Tashi](/keine-tashi.md)
+- **BSUP01 KEINE Tashi**: [BSUP01 KEINE Tashi](keine-tashi.md)
 - **ALYS for UTAU**: [Open-Sourcing
   ALYS](https://blog.phundrak.com/open-sourcing-alys/) (en anglais)
 

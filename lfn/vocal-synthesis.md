@@ -31,7 +31,7 @@ es conoseda como *ALYS4UTAU*.
 En ce cada esa bancos oji no plu es developa e sua supporta tecnica no
 plu es garantiada, on pote encora descarga *BSUP01 KEINE Tashi* e
 *ALYS*:
-- **BSUP01 KEINE Tashi**: [BSUP01 KEINE Tashi](/keine-tashi.md)
+- **BSUP01 KEINE Tashi**: [BSUP01 KEINE Tashi](keine-tashi.md)
 - **ALYS**: [Open-Sourcing
   ALYS](https://blog.phundrak.com/open-sourcing-alys/) (en engles)
 
