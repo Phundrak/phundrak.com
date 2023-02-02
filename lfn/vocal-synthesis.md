@@ -7,7 +7,7 @@ en la domina de la sintese vocal. Plu eseta, me ia crea e usa bancos
 de voses par la program UTAU e alora Alter/Ego xef.
 
 ## UTAU
-Me ia comensa a usa UTAU a la fin de 2011 con un banco de vose japanes
+Me ia comensa a usa UTAU a la fin de 2011 con un banco de vose nion
 findida sur mea vose, sin nom e perdeda de tempo longa. An si no me ia
 conserva lo longua, xef par causa de la mal cualia de sua ajusta et
 sua samples audio (me ia sample con un microfon de mal cualia), acel

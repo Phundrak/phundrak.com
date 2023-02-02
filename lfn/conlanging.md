@@ -4,7 +4,7 @@ La *linguas construida* (en engles *conlang*) es linguas artifis
 naseda de la spirito de un, o a veses alga persones. Les es diferente
 de linguas natural ce apare con la evolui de un lingua presedente
 parlada par un popla completa dura multiple sentenios, como franses,
-engles, putong, japanes, bahasa o cosa (engles: *!Xhosa*).
+engles, putong, nion, bahasa o cosa (engles: *!Xhosa*).
 
 Linguas construida pote ave difere intende tra sua crea, pe:
 - es parlada como otra linguas natural afin de es un lingua franca

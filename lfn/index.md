@@ -17,4 +17,4 @@ fantasial. Me ama ance asende e, cuando me lo pote, pasea en la
 montania.
 
 Mea lingua prima es franses, ma me pote parla fasil engles. Me ance
-pote parla alga japanes, norsce (bokmål) e elefen.
+pote parla alga nion, norsce (bokmål) e elefen.

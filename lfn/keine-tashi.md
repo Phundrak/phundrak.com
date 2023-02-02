@@ -83,7 +83,7 @@ Desinia de KEINE Tashi par Umi
 -   **Data de publici:** 14 otobre 2012
 -   **Codigo de la fonemes:** Romaji con aliases hiragana e CV en
     romaji
--   **Linguas suportada:** japanes
+-   **Linguas suportada:** nion
 -   **Motores de sintese recomenda:** TIPS, VS4U
 
 ### JPN Extend Power
@@ -100,7 +100,7 @@ Desinia de KEINE Tashi par Umi
 -   **Presente de fixes FRQ:** partal
 -   **Data de publici:** 28 junio 2013
 -   **Codigo de la fonemes:** Romaji (aliases hiragana)
--   **Linguas suportada:** japanes
+-   **Linguas suportada:** nion
 -   **Motores de sintese recomenda:** VS4U, world4utau
 
 ### JPN Extend Youth
@@ -118,7 +118,7 @@ Desinia de KEINE Tashi par Umi
 -   **Presente de fixes FRQ:** partal
 -   **Data de publici:** 28 junio 2013
 -   **Codigo de la fonemes:** Romaji (aliases hiragana)
--   **Linguas suportada:** japanes
+-   **Linguas suportada:** nion
 -   **Motores de sintese recomenda:** fresamp, VS4U, world4utau
 
 ### JPN Extend Native
