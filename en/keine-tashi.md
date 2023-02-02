@@ -20,18 +20,14 @@ charset="utf-8"></component>
 # Character and vocal libraries
 Here’s a copy and paste of some old pages describing KEINE Tashi:
 
-<!-- ::PreviewImage -->
-<!-- --- -->
-<!-- src: https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_1024.webp -->
-<!-- width: 1024 -->
-<!-- preview: https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_512.webp -->
-<!-- previewWidth: 512 -->
-<!-- alt: Illustration of KEINE Tashi -->
-<!-- --- -->
-<!-- Illustration of KEINE Tashi -->
-<!-- :: -->
-
 ## Presentation
+<ResponsiveImage
+src="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_1024.webp"
+width="1024"
+preview="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_512.webp"
+previewWidth="512">
+Illustration de KEINE Tashi par Umi
+</ResponsiveImage>
 
 -   **Codename:** BSUP01 恵音བཀྲ་ཤིས་ KEINE Tashi
 -   **First name:** Tashi (བཀྲ་ཤིས་), Tibetan name meaning “auspicious”
@@ -135,19 +131,14 @@ Here’s a copy and paste of some old pages describing KEINE Tashi:
 ### TIB CVVC
 -   **Status:** abandonned
 
-<!-- ::PreviewImage -->
-<!-- --- -->
-<!-- src: https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_EN_673.webp -->
-<!-- width: 673 -->
-<!-- preview: https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_EN_246.webp -->
-<!-- previewWidth: 246 -->
-<!-- alt: Illustration of KEINE Tashi EN -->
-<!-- maxwidth: 300 -->
-<!-- --- -->
-<!-- Illustration of KEINE Tashi EN -->
-<!-- :: -->
-
 ### ENG
+<ResponsiveImage
+src="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_EN_673.webp"
+width="673"
+preview="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_EN_246.webp"
+previewWidth="300">
+Illustration de KEINE Tashi EN
+</ResponsiveImage>
 
 -   **Status:** abandonned
 
@@ -178,8 +169,9 @@ Although I cannot add anything to this legal notice, I would also like
 if you followed the following rules of thumb regarding this character:
 any religious use of this character and its vocal libraries is
 forbidden, with the exception of folk music, and Buddhist and Bön
-songs. However, due to the current controversy, any song of long life
-to the Karmapa is strictly forbidden until said controversy has been
-officially resolved. This is also applicable to Shamar Rinpoche and to
-Tai Situ Rinpoche. If you have any question or if you are unsure,
-please send me an email.
+songs. However, due to the current controversy, any song linked to His
+Holiness the Gyalwa Karmapa is strictly forbidden until said
+controversy has been officially resolved. This is also applicable to
+His Holiness the Dalai Lama, the Venerable Shamar Rinpoche, and Tai
+Situ Rinpoche. If you have any question or if you are unsure, please
+send me an email.

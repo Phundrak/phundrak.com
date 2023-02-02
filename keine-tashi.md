@@ -24,17 +24,6 @@ charset="utf-8"></component>
 Voici une traduction en français des informations ayant trait à KEINE
 Tashi sur d’anciennes pages le présentant.
 
-<!-- ::PreviewImage -->
-<!-- --- -->
-<!-- src: https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_1024.webp -->
-<!-- width: 1024 -->
-<!-- preview: https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_512.webp -->
-<!-- previewWidth: 512 -->
-<!-- alt: Illustration de KEINE Tashi -->
-<!-- --- -->
-<!-- Illustration de KEINE Tashi par Umi -->
-<!-- :: -->
-
 ## Présentation
 
 <ResponsiveImage
@@ -142,20 +131,15 @@ Illustration de KEINE Tashi par Umi
 ### TIB CVVC
 -   **Status :** abandonné
 
-<!-- ::PreviewImage -->
-<!-- --- -->
-<!-- src: https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_EN_673.webp -->
-<!-- width: 673 -->
-<!-- preview: https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_EN_246.webp -->
-<!-- previewWidth: 246 -->
-<!-- alt: Illustration de KEINE Tashi EN -->
-<!-- maxwidth: 300 -->
-<!-- --- -->
-
-<!-- Illustration de KEINE Tashi EN -->
-<!-- :: -->
-
 ### ENG
+
+<ResponsiveImage
+src="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_EN_673.webp"
+width="673"
+preview="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_EN_246.webp"
+previewWidth="300">
+Illustration de KEINE Tashi EN
+</ResponsiveImage>
 
 -   **Status :** abandonné
 
@@ -194,6 +178,6 @@ tibétaines bouddhistes ou bön. Cependant, du fait de la controverse
 actuelle concernant l’identité de Sa Sainteté le Gyalwa Karmapa, toute
 chanson lié à sa personne est également interdite jusqu’à résolution
 officielle de la situation. Cette interdiction est également
-applicable au Vénérable Shamar Rinpoché et Tai Situ Rinpoche. Si vous
-avez la moindre question, n’hésitez pas à m’[envoyer un
-email](mailto:lucien@phundrak.com).
+applicable à Sa Sainteté le Dalaï Lama, au Vénérable Shamar Rinpoché
+et Tai Situ Rinpoche. Si vous avez la moindre question, n’hésitez pas
+à m’[envoyer un email](mailto:lucien@phundrak.com).
