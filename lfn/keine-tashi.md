@@ -31,6 +31,7 @@ preview="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_512.webp"
 previewWidth="512">
 Desinia de KEINE Tashi par Umi
 </ResponsiveImage>
+
 - **Nom de codigo:**  BSUP01 恵音བཀྲ་ཤིས་ KEINE Tashi
 - **Nom individua:** Tashi (བཀྲ་ཤིས་), nom individua bod ce sinifia "augurida"
 - **Nom familial:** Keine (恵音), nom familial nion ce sinifia "sona
