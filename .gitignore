@@ -2,3 +2,5 @@ node_modules
 .temp
 .cache
 /content/.vuepress/dist/*
+/target
+.env

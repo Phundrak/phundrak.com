@@ -1,0 +1,55 @@
+#+title: phundrak.com
+
+* Introduction
+This is the repository for my website [[https://phundrak.com][phundrak.com]]. While it is not
+yet live on this address, development versions can be found at
+[[https://alpha.phundrak.com][alpha.phundrak.com]] and [[https://beta.phundrak.com][beta.phundrak.com]] (the former follows the
+=develop= branch while the latter follows the =master= branch).
+
+* Structure of the project
+** Frontend
+The frontend is made with [[https://v2.vuepress.vuejs.org/][VuePress]], a Vue-powered static site
+generator. You can find its Node.JS configuration in the [[file:package.json][package.json]]
+file as well as its content and general configuration in the directory
+[[file:content/][content]].
+
+*** Installing and running
+To install the NPM dependencies for the project, run one of the
+following commands:
+#+begin_src shell
+yarn
+# or
+npm install # delete the yarn.lock file before
+#+end_src
+
+To run the project, run one of the following commands using the same
+package manager as above:
+#+begin_src shell
+yarn dev
+# or
+npm run dev
+#+end_src
+
+You can compile the website to a static website by running
+#+begin_src shell
+yarn build
+# or
+npm run build
+#+end_src
+
+The compiled version of the website can then be found in =content/.vuepress/dist=.
+
+** Backend
+This is a simple backend server written in Rust, offering a REST API
+at the address =https://phundrak.com/api/v1=. It communicates with a
+Redis instance in order to cache some queries the frontend makes.
+
+*** Installing and running
+The currently preferred way of running the project is through
+=docker-compose= using these commands:
+#+begin_src shell
+docker-compose pull # retrieve the necessary images (optional)
+docker-compose build
+docker-compose up # add option -d to detach immediately
+docker-compose down # to stop the container if you detached it previously
+#+end_src
