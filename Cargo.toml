@@ -15,3 +15,7 @@ serde = { version = "1.0", features = ["derive"] }
 dotenvy = "0.15"
 gql_client = "1.0.7"
 human-panic = "1.1.0"
+
+[[bin]]
+name = "phuncache"
+path = "src/main.rs"
