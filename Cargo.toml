@@ -2,6 +2,10 @@
 name = "phuncache"
 version = "0.1.0"
 edition = "2021"
+authors = ["Lucien Cartier-Tilet <lucien@phundrak.com>"]
+homepage = "https://labs.phundrak.com/phundrak/phundrak.com"
+license = "AGPL-3.0"
+publish = false
 
 [dependencies]
 actix-web = "4"
