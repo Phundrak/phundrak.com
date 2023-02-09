@@ -1511,6 +1511,48 @@ get-stream@^6.0.1:
   resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-6.0.1.tgz#a262d8eef67aced57c2852ad6167526a43cbf7b7"
   integrity sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==
 
+git-cliff-darwin-arm64@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/git-cliff-darwin-arm64/-/git-cliff-darwin-arm64-1.1.2.tgz#a7c95bae2ce55e5443066ca3b3ffb77e633834d2"
+  integrity sha512-z+pSh6vLrtgoILlWzhisLHiLOuStabJh/ShgbBq0q3JRedUmxfg6WqCi+fHymMkA4AeoXOIS7GGfyV5m+sLQeQ==
+
+git-cliff-darwin-x64@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/git-cliff-darwin-x64/-/git-cliff-darwin-x64-1.1.2.tgz#beb6520b96e1dbe0c87e8b8aa1dfa85f6145e87a"
+  integrity sha512-dhizA8pGobcxxTS2YQDSs960zFqKfjprDsX/pq+MqgEc68e60B2WSRwFWXd+jK2x/7d7PbnMzlXDqszeDwBpRQ==
+
+git-cliff-linux-arm64@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/git-cliff-linux-arm64/-/git-cliff-linux-arm64-1.1.2.tgz#361c04af8b48d252eb53dcaba1caa029be3b01ec"
+  integrity sha512-4TYzQHO8H8FquSxoO/O2IfYN6ZLef4SM5PEDG93jeK958s+/FWnFok8evGSJdoTeyu2MXWdw4J40o1AKl0fcxw==
+
+git-cliff-linux-x64@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/git-cliff-linux-x64/-/git-cliff-linux-x64-1.1.2.tgz#ac330433500c254c8b3e347e9b5fc9315504e52a"
+  integrity sha512-vDLQEITUPHliKVWD69baH1djdsCPpSgUqqbNdX5Xb4bzM8vugIwfpV0XE/BIDC05VUJY2TPLMK1Zh//pdaOhfg==
+
+git-cliff-windows-arm64@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/git-cliff-windows-arm64/-/git-cliff-windows-arm64-1.1.2.tgz#54aa83f6963eee929c3073fddd1385b39259db2e"
+  integrity sha512-wl1S3IU5ewZ6UYzPFZbTZjeyf6/3VIAjDQ0hFWN+LQeo6ttj5RtVzifMRadoCmb2Jgi9RT8qR4plwyL+/NtHlQ==
+
+git-cliff-windows-x64@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/git-cliff-windows-x64/-/git-cliff-windows-x64-1.1.2.tgz#639f8de3ea905af30a9f65831b206c72da3b7c73"
+  integrity sha512-KszFq4Pre+TdJiPuGP+4t1DtXHcVaF9/dBSmwldxWvyAomzeX2wHalquh2iv6YgcFUQ4oe/DP1qiNhLa5xw5/Q==
+
+git-cliff@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/git-cliff/-/git-cliff-1.1.2.tgz#13f0891dbf14dbdb9625695cce729e1fceb43526"
+  integrity sha512-sjIhRW8BZSKkr0e9XcEFdxz2SF7lcOOJJuEEc+b07H7zM7WdhLh5dzZM2Et57adC5jUVO6mLpxuWRJSinGl4nQ==
+  optionalDependencies:
+    git-cliff-darwin-arm64 "1.1.2"
+    git-cliff-darwin-x64 "1.1.2"
+    git-cliff-linux-arm64 "1.1.2"
+    git-cliff-linux-x64 "1.1.2"
+    git-cliff-windows-arm64 "1.1.2"
+    git-cliff-windows-x64 "1.1.2"
+
 glob-parent@^5.1.2, glob-parent@~5.1.2:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
