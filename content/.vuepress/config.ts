@@ -8,7 +8,6 @@ export default defineUserConfig({
   lang: 'fr-FR',
   title: 'Lucien Cartier-Tilet',
   description: 'Site web personnel de Lucien Cartier-Tilet',
-  lastUpdated: true,
   head: head,
   markdown: {
     html: true,
