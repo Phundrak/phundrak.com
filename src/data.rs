@@ -17,24 +17,24 @@ pub struct User {
 #[derive(Default, Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Newest {
-    pub nodes: Vec<Node>,
+    pub nodes: Vec<Repository>,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct MostStarred {
-    pub nodes: Vec<Node>,
+    pub nodes: Vec<Repository>,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Pinned {
-    pub nodes: Vec<Node>,
+    pub nodes: Vec<Repository>,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
-#[serde(rename_all = "camelCase")]
-pub struct Node {
+#[serde(rename_all = "camelCase", rename = "node")]
+pub struct Repository {
     pub name: String,
     pub stargazer_count: i64,
     pub fork_count: i64,
