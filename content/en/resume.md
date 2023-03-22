@@ -1,20 +1,9 @@
 # Resume
 
-## Informations
+## Information
 Lucien Cartier-Tilet
 
-Étudiant informatique, M2 THYP
-
-- [GitHub](https://github.com/Phundrak)
-- [Gitea](https://labs.phundrak.com) <Badge type="warning"
-  text="personal instance" vertical="middle" />
-- [Twitter](https://twitter.com/phundrak)
-- [Mastodon](https://fosstodon.org/@phundrak)
-- [Linguistics website](https://conlang.phundrak.com)
-- [Phundrak’s Rambling](https://blog.phundrak.com) <Badge type="tip"
-  text="blog" vertical="middle" />
-- [lucien@phundrak.com](mailto:lucien@phundrak.com) <Badge type="tip"
-  text="email" vertical="middle" />
+Computer Science - Hypermedia Technologies second year student
 
 ## Web Programming
 

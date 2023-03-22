@@ -6,6 +6,7 @@ const themeLocales = {
     sidebar: [
       '/README.md',
       '/about.md',
+      '/find-me.md',
       '/resume.md',
       '/projects.md',
       '/conlanging.md',
@@ -31,6 +32,7 @@ const themeLocales = {
     sidebar: [
       '/lfn/index.md',
       '/lfn/about.md',
+      '/lfn/find-me.md',
       '/lfn/resume.md',
       '/lfn/projects.md',
       '/lfn/conlanging.md',
@@ -53,6 +55,7 @@ const themeLocales = {
     sidebar: [
       '/en/index.md',
       '/en/about.md',
+      '/en/find-me.md',
       '/en/resume.md',
       '/en/projects.md',
       '/en/conlanging.md',

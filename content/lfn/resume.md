@@ -2,15 +2,7 @@
 ## Informas
 Lucien Cartier-Tilet
 
-Studente informatica, M2 THYP
-
-- [GitHub](https://github.com/Phundrak)
-- [Gitea](https://labs.phundrak.com) <Badge type="warning" text="loca ueb personal" vertical="middle" />
-- [Twitter](https://twitter.com/phundrak)
-- [Mastodon](https://fosstodon.org/@phundrak)
-- [Linguistics website](https://conlang.phundrak.com)
-- [Phundrak’s Rambling](https://blog.phundrak.com) <Badge type="tip" text="blog" vertical="middle" />
-- [lucien@phundrak.com](mailto:lucien@phundrak.com) <Badge type="tip" text="eposta" vertical="middle" />
+Studiante en la Master 2 de Tecnolojia de la Ipermedia de Paris 8
 
 ## Programi ueb
 ### Front-end

@@ -7,15 +7,7 @@ title: CV
 ## Informations
 Lucien Cartier-Tilet
 
-Étudiant informatique, M2 THYP
-
-- [GitHub](https://github.com/Phundrak)
-- [Gitea](https://labs.phundrak.com) <Badge type="warning" text="instance personnelle" vertical="middle" />
-- [Twitter](https://twitter.com/phundrak)
-- [Mastodon](https://fosstodon.org/@phundrak)
-- [Linguistics website](https://conlang.phundrak.com)
-- [Phundrak’s Rambling](https://blog.phundrak.com) <Badge type="tip" text="blog" vertical="middle" />
-- [lucien@phundrak.com](mailto:lucien@phundrak.com) <Badge type="tip" text="courriel" vertical="middle" />
+Étudiant informatique, M2 Technologies de l’Hypermédia, Paris 8
 
 ## Programmation Web
 
