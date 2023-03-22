@@ -13,7 +13,7 @@ On pote me trova sur multe loca ueb e redes sosial do te pote me segue.
     - [**@phundraks-short-stories@write.phundrak.com**](https://write.phundrak.com/phundraks-short-stories) :
       istorias corta (a multe veses en Frans)
 - **Discord** : `Phundrak#0001` (dise me ce tu veni de asi, si no me
-  pote pensa ce tu mesaje es spam)
+  pote pensa ce tua mesaje es spam)
 
 ## Other Websites
 - **Eposta** : [lucien@phundrak.com](mailto:lucien@phundrak.com)
