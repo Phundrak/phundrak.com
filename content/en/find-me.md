@@ -4,7 +4,7 @@ I am on various websites and some social networks where you can follow
 me.
 
 ## Social Networks
-- **Mastodon** : [@phundrak@fosstodon.org](https://fosstodon.org/@phundrak)
+- **Mastodon** : [@phundrak@emacs.ch](https://emacs.ch/@phundrak)
 - **Twitter** : [@phundrak](https://twitter.com/phundrak), though I
   harldy use it anymore and mostly reshare my Mastodon messages and
   sometimes they get truncated

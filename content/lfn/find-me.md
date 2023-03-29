@@ -3,7 +3,7 @@
 On pote me trova sur multe loca ueb e redes sosial do te pote me segue.
 
 ## Redes sosial
-- **Mastodon** : [@phundrak@fosstodon.org](https://fosstodon.org/@phundrak)
+- **Mastodon** : [@phundrak@emacs.ch](https://emacs.ch/@phundrak)
 - **Twitter** : [@phundrak](https://twitter.com/phundrak), ma me lo
   usa a poca veses, la plu de mea tuitas es mea mesajes mastodon ce es
   a vesas truncada
