@@ -2,7 +2,16 @@
 ## Informas
 Lucien Cartier-Tilet
 
-Studiante en la Master 2 de Tecnolojia de la Ipermedia de Paris 8
+## Esperia Profesal
+### Aubay (2023 - )
+### VoxWave (2014 - 2018)
+## Educa
+### Mestral 2 de Tecnolojia de la Ipermedia (Universia de Paris 8)
+### Mestral 1 de Informatica (Universia de Paris 8)
+### Mestral 1 de Informatica (Universia de Paris 8)
+### Lisensa de Informatica (Universia de Paris 8)
+### Engles Leteratural (Universia de Lyon 2)
+### Laural
 
 ## Programi ueb
 ### Front-end

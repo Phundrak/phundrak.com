@@ -2,12 +2,18 @@
 title: CV
 ---
 
-# Resume
+# Curriculum Vitae
 
-## Informations
-Lucien Cartier-Tilet
+## Expériences profesionnelles
+### Aubay (2023 - )
+### VoxWave (2014 - 2018)
 
-Étudiant informatique, M2 Technologies de l’Hypermédia, Paris 8
+## Éducation
+### Master 2 Technologies de l’Hypermédia (Université Paris 8)
+### Master 1 Informatique (Université Paris 8)
+### Licence Informatique (Université Paris 8)
+### Anglais LLCE (Université Lyon 2)
+### Baccalauréat
 
 ## Programmation Web
 

@@ -1,9 +1,15 @@
 # Resume
 
-## Information
-Lucien Cartier-Tilet
+## Profesionnal Experiences
+### Aubay (2023 - )
+### VoxWave (2014 - 2018)
 
-Computer Science - Hypermedia Technologies second year student
+## Education
+### 2nd Year Master’s Degree (University of Paris 8)
+### 1st Year Master’s Degree (University of Paris 8)
+### Computer Science Bachelor Degree (University of Paris 8)
+### English Litterature (University of Lyon 2)
+### Baccalaureate
 
 ## Web Programming
 
@@ -38,7 +44,7 @@ Computer Science - Hypermedia Technologies second year student
 ### CI/CD and Deploying to the Web
 - Experienced with web servers such as Nginx and Caddyserver
 - Good knowledge of virtualization and deployment with Docker and
-  Docker Compose for virtualization, Drone.io, and Github Actions for
+  Docker Compose for virtualization, Drone.io, and GitHub Actions for
   deployment.
 
 ## Operating Systems
@@ -51,7 +57,7 @@ Computer Science - Hypermedia Technologies second year student
 
 ## Office Applications
 - Good knowledge with org-mode (main tool), LaTeX
-- I know my way around Libre Office, Microsoft Office, OnlyOffice, and
+- I know my way around LibreOffice, Microsoft Office, OnlyOffice, and
   WPS Office
 
 ## Audio
