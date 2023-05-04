@@ -17,6 +17,8 @@
     "build": "vuepress build content"
   },
   "dependencies": {
+    "less": "^4.1.3",
+    "nord": "^0.2.1",
     "rxjs": "^7.8.1",
     "vuepress-plugin-remove-html-extension": "^0.1.0"
   },

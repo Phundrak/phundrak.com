@@ -1,10 +1,10 @@
 <template>
   <div v-if="githubRepos && githubRepos.length > 0">
     <div v-for="repo in githubRepos">
-      <p>{{ repo.name }} updated at {{ repo.updated_at }}</p>
+      <GithubRepository :repo="repo" v-for="repo in githubRepos" />
     </div>
   </div>
-  <p v-else>Erreur: {{ error }}</p>
+  <p v-else>Error: {{ error }}</p>
 </template>
 
 <script setup lang="ts">
@@ -22,6 +22,7 @@ const getRepositories = () => {
   return getLatestRepositories('phundrak', 5);
 };
 
+// TODO: Cache all repositories and not just these
 readFromCache<GithubRepo[]>('latestRepos', getRepositories).subscribe({
   next: (repos: GithubRepo[]) => {
     console.log('Received repos:', repos);
@@ -35,4 +36,9 @@ readFromCache<GithubRepo[]>('latestRepos', getRepositories).subscribe({
 });
 </script>
 
-<style lang="less"></style>
+<style lang="less">
+@import '../styles/classes.less';
+.repositories {
+  margin: 2rem auto;
+}
+</style>

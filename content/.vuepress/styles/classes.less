@@ -1,0 +1,32 @@
+each(range(5), {
+  .gap-@{value}rem {
+      gap: @value * 1rem;
+  }
+});
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  .flex();
+  flex-direction: column;
+}
+
+.flex-row {
+  .flex();
+  flex-direction: row;
+}
+
+@flex-justifications: flex-start, flex-end, center, space-between, space-around,
+  space-evenly;
+each(@flex-justifications, {
+  .@{value} {
+    .flex();
+    justify-content: @value;
+  }
+});
+
+.rounded-corners {
+  border-radius: 1rem;
+}
