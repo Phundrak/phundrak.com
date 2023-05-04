@@ -3,7 +3,9 @@ title: Projets
 ---
 # Programmation
 ## Projets GitHub les plus étoilés
-<LatestRepositories />
+<ClientOnly>
+  <LatestRepositories />
+</ClientOnly>
 
 ## Derniers dépôts de code actifs sur GitHub
 # Linguistique
