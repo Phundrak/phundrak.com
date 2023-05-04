@@ -4,7 +4,9 @@ Je suis présent sur différentes plateformes et quelques réseaux
 sociaux où vous pouvez me suivre.
 
 ## Réseaux sociaux
-- **Mastodon** : [@phundrak@emacs.ch](https://emacs.ch/@phundrak)
+- **Mastodon** : [@phundrak@phundrak.com](https://emacs.ch/@phundrak)
+  devrait fonctionner, sinon direction
+  [@phundrak@emacs.ch](https://emacs.ch/@phundrak)
 - **Twitter** : [@phundrak](https://twitter.com/phundrak), cependant
   je n’y suis plus très actif et j’y repartage principalement mes
   messages Mastodon qui parfois se font tronquer
