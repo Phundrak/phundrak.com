@@ -3,7 +3,6 @@
 </template>
 
 <script setup lang="ts">
-import { Ref, ref } from 'vue';
 import { Observable, of } from 'rxjs';
 
 const props = defineProps({
@@ -40,7 +39,6 @@ const storeInCache = (data: Observable<any>, name: string): Observable<any> => {
   return data;
 };
 
-const dataFromCache: Ref<Observable<any>> = ref(null);
 if (isDataOutdated(props.name)) {
   emits('cached', storeInCache(props.callback(), props.name));
 } else {
