@@ -23,7 +23,7 @@ Year repeated due to health issues with no long-lasting consequences.
 
 ### 1st Year Master’s Degree (University of Paris 8)
 ### Computer Science Bachelor Degree (University of Paris 8)
-### English Litterature (University of Lyon 2)
+### English Literature (University of Lyon 2)
 Studied for a year and a half until the creation of
 [VoxWave](#voxwave-2014-2018).
 
