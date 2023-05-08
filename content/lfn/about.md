@@ -13,8 +13,12 @@ ce es usada sur esa loca ueb veni de varia orijinas diversa:
   de letra unica, incluinte alga de lor propre icones,
 - [FontAwesome](https://fontawesome.com/) de do la majoria de mea
   icones veni (lor util per Vue no es vera bon en mea opinia)
-- La [Asosia de Crea de Linguas](https://conlang.org/) <Icon
-  name="conlang2"/> de cual me ia altera lor logo per mea linguas
-  construida,
-- [Emacs](https://www.gnu.org/software/emacs/) <Icon name="emacs" />
-  de cual me ia recrea parte de lor logo en SVG afin de crea un icon.
+- La <Icon name="conlang" /> [Asosia de Crea de
+  Linguas](https://conlang.org/) <Icon name="conlang2"/> de cual me ia
+  altera lor logo per mea linguas construida,
+- <Icon name="emacs" />[Emacs](https://www.gnu.org/software/emacs/) e
+  <Icon name="writefreely" /> [WriteFreely](https://writefreely.org/)
+  de cual me ia recrea parte de lor logo propre en SVG afin de crea un
+  icon,
+- <Icon name="gitea" /> [Gitea](https://gitea.io) de cual me ia altera
+  la logo afin fa lo monocromatica.

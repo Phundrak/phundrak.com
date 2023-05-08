@@ -10,8 +10,12 @@ Icons used on this website come from different sources:
   icons used in one font, including some icons from their default pack
 - [FontAwesome](https://fontawesome.com/) from which most icons come
   from --- their Vue package is, in my opinion, really not usable
-- The [Language Creation Society](https://conlang.org/) whose logo I
-  modified in order to create the icon used here when referring to my
-  constructed languages
-- [Emacs](https://www.gnu.org/software/emacs/) whose logo I partially
-  remade as an SVG file in order to create an icon.
+- The <Icon name="conlang" /> [Language Creation
+  Society](https://conlang.org/) whose logo I modified in order to
+  create the icon used here when referring to my constructed languages
+- <Icon name="emacs" /> [Emacs](https://www.gnu.org/software/emacs/)
+  and <Icon name="writefreely" />
+  [WriteFreely](https://writefreely.org/) whose respective logo I
+  partially remade as an SVG file in order to create an icon.
+- <Icon name="gitea" /> [Gitea](https://gitea.io) whose logo I
+  modified to be monochromatic
