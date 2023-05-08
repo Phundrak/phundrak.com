@@ -8,6 +8,15 @@ each(range(5), {
   display: flex;
 }
 
+.flex-inline {
+  display: inline-flex;
+}
+
+.flex-inline-col {
+  .flex-inline();
+  flex-direction: column;
+}
+
 .flex-col {
   .flex();
   flex-direction: column;

@@ -1,5 +1,6 @@
 <template>
   <ApiLoader :url="fetchUrl" @dataLoaded="filterRepos" cache-name="repos" />
+  <slot />
 </template>
 
 <script setup lang="ts">

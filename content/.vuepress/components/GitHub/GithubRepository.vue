@@ -1,22 +1,18 @@
 <template>
-  <div
-    class="githubRepo flex-row flex-space-between gap-1rem rounded-corners center"
-  >
+  <div class="githubRepo flex-col flex-space-between gap-1rem rounded-corners">
     <ApiLoader
       :cache-name="repoName()"
       :url="fetchUrl"
       :already-known-data="props.data"
       @data-loaded="(repo: GithubRepo) => (repository = repo)"
     >
-      <div class="flex-col info">
-        <h3>{{ repository.name }}</h3>
-        <div>
-          <p>
-            {{ repository.description }}
-          </p>
-        </div>
+      <h3>{{ repository.name }}</h3>
+      <div>
+        <p>
+          {{ repository.description }}
+        </p>
       </div>
-      <div class="flex-col flex-start gap-1rem stats">
+      <div class="flex-row flex-start gap-1rem stats">
         <div class="stars">
           <Icon name="star" /> {{ repository.stargazers_count }}
         </div>
@@ -55,9 +51,15 @@ const repository: Ref<GithubRepo> = ref(null);
 @import '../../styles/classes.less';
 
 .githubRepo {
-  width: 35rem;
-  padding: 3rem;
+  max-width: 35rem;
+  padding: 2rem;
   background-color: @nord4;
+  align-self: auto;
+  h3,
+  h3:first-child {
+    margin: 0;
+    padding: 0;
+  }
 
   html.dark & {
     background-color: @nord3;
@@ -69,6 +71,11 @@ const repository: Ref<GithubRepo> = ref(null);
 
   .stats {
     width: 4rem;
+
+    div {
+      .flex-row();
+      gap: 0.3rem;
+    }
   }
 }
 </style>

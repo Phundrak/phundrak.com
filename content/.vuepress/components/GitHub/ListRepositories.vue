@@ -1,15 +1,19 @@
 <template>
-  <div v-if="props.user !== ''" class="list-repos flex-col gap-1rem">
+  <div class="list-repos flex-col gap-1rem">
     <FetchRepositories
+      v-if="props.user !== ''"
       :sort-by="props.sortBy"
       :user="props.user"
       :limit="props.limit"
       @data-loaded="(response: GithubRepo[]) => (repos = response)"
-    />
-    <GithubRepository :data="repo" type="repositories" v-for="repo in repos" />
-  </div>
-  <div v-else class="list-repos flex-col gap-1rem">
-    <slot></slot>
+    >
+      <GithubRepository
+        :data="repo"
+        type="repositories"
+        v-for="repo in repos"
+      />
+    </FetchRepositories>
+    <slot v-else />
   </div>
 </template>
 
