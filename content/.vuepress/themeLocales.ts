@@ -11,6 +11,7 @@ const themeLocales = {
       '/projects.md',
       '/conlanging.md',
       '/vocal-synthesis.md',
+      '/privacy.md',
     ],
     notFound: [
       'C’est bien vide ici',
