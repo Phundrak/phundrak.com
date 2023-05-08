@@ -1,6 +1,8 @@
 <template>
   <Cache name="repos" :callback="fetchData" @cached="processCachedData" />
-  <slot v-if="loading" name="loader"></slot>
+  <slot v-if="loading" name="loader">
+    <Loader />
+  </slot>
   <slot v-else-if="error" name="error"></slot>
   <slot v-else>
     {{ error }}
@@ -9,6 +11,7 @@
 
 <script setup lang="ts">
 import Cache from './Cache.vue';
+import Loader from './Loader.vue';
 
 import { Ref, ref } from 'vue';
 import { Observable, catchError, switchMap, throwError } from 'rxjs';
