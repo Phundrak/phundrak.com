@@ -15,7 +15,7 @@
   <ListRepositories sortBy='stars' user='phundrak' :limit='5' />
 </ClientOnly>
 
-### Ultima retenerias de codigo sur GitHub
+### La plu nova projetas sur GitHub
 <ClientOnly>
   <ListRepositories sortBy='pushed_at' user='phundrak' :limit='5' />
 </ClientOnly>
