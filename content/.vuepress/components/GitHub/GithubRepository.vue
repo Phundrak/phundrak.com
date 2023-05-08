@@ -19,6 +19,9 @@
       <div class="flex-col flex-start gap-1rem stats">
         <p>Stars: {{ repository.stargazers_count }}</p>
         <p>Forks: {{ repository.forks_count }}</p>
+        <p>
+          <a :href="repository.html_url">source</a>
+        </p>
       </div>
     </ApiLoader>
   </div>
