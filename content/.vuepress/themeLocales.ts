@@ -1,11 +1,11 @@
 const pages: string[] = [
   '/index.md',
-  '/about.md',
   '/find-me.md',
   '/resume.md',
   '/projects.md',
   '/conlanging.md',
   '/vocal-synthesis.md',
+  '/about.md',
   '/privacy.md',
 ];
 
