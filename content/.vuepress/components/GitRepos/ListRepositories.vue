@@ -1,8 +1,8 @@
 <template>
   <div class="flex-col gap-1rem list-repos">
-    <ApiLoader :url="fetchUrl" @dataLoaded="filterRepos">
+    <ApiLoader :url="fetchUrl" @dataLoaded="filterRepos" cache-name="repos">
       <GithubRepository
-        :repo="repo"
+        :data="repo"
         type="repositories"
         v-for="repo in repos"
         class="center"

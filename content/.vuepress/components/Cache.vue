@@ -19,6 +19,10 @@ const props = defineProps({
     required: false,
     type: Number,
   },
+  data: {
+    default: null,
+    type: Object,
+  },
 });
 
 const emits = defineEmits(['cached']);
@@ -29,25 +33,31 @@ const isDataOutdated = (name: string): boolean => {
   return elapsedTime > props.lifetime;
 };
 
-const storeInCache = (data: Observable<any>, name: string): Observable<any> => {
-  data.subscribe({
+const storeInCache = (
+  callback: Function,
+  data: any,
+  name: string
+): Observable<any> => {
+  let response: Observable<any> = data ? of(data) : callback();
+
+  response.subscribe({
     next: (response) => {
       localStorage.setItem(name, JSON.stringify(response));
       localStorage.setItem(name + '-timestamp', `${Date.now()}`);
     },
   });
-  return data;
+  return response;
 };
 
 if (isDataOutdated(props.name)) {
-  emits('cached', storeInCache(props.callback(), props.name));
+  emits('cached', storeInCache(props.callback, props.data, props.name));
 } else {
   let data = localStorage.getItem(props.name);
   try {
     emits('cached', of(JSON.parse(data)));
   } catch (err) {
     console.error(`Could not parse data found in cache: ${err}`);
-    emits('cached', storeInCache(props.callback(), props.name));
+    emits('cached', storeInCache(props.callback, props.data, props.name));
   }
 }
 </script>

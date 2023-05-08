@@ -1,5 +1,10 @@
 <template>
-  <Cache name="repos" :callback="fetchData" @cached="processCachedData" />
+  <Cache
+    :name="props.cacheName"
+    :callback="fetchData"
+    :data="alreadyKnownData"
+    @cached="processCachedData"
+  />
   <slot v-if="loading" name="loader">
     <Loader />
   </slot>
@@ -23,6 +28,11 @@ const props = defineProps({
     required: true,
     type: String,
   },
+  cacheName: {
+    required: true,
+    type: String,
+  },
+  alreadyKnownData: Object,
 });
 const emits = defineEmits(['dataLoaded', 'dataError', 'loading']);
 
