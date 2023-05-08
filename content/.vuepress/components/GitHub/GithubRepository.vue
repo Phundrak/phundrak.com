@@ -17,11 +17,15 @@
         </div>
       </div>
       <div class="flex-col flex-start gap-1rem stats">
-        <p>Stars: {{ repository.stargazers_count }}</p>
-        <p>Forks: {{ repository.forks_count }}</p>
-        <p>
-          <a :href="repository.html_url">source</a>
-        </p>
+        <div class="stars">
+          <Icon name="star" /> {{ repository.stargazers_count }}
+        </div>
+        <div class="forks">
+          <Icon name="fork" /> {{ repository.forks_count }}
+        </div>
+        <div class="link">
+          <a :href="repository.html_url"><i class="icon phunic-link" /></a>
+        </div>
       </div>
     </ApiLoader>
   </div>
