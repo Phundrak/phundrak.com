@@ -16,7 +16,8 @@ sociaux où vous pouvez me suivre.
     - [**@phundraks-short-stories@write.phundrak.com**](https://write.phundrak.com/phundraks-short-stories) :
       histoires courtes
 - **Discord** : `Phundrak#0001` (dites-moi que vous venez d’ici,
-  autrement il est possible que je considère le message comme du spam)
+  autrement il est possible que je considère le message comme du
+  pourriel)
 
 ## Autres plateformes
 - **Courriel** : [lucien@phundrak.com](mailto:lucien@phundrak.com)

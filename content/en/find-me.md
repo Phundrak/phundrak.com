@@ -8,8 +8,8 @@ me.
   should work, otherwise head over to
   [@phundrak@emacs.ch](https://emacs.ch/@phundrak)
 - **Twitter** : [@phundrak](https://twitter.com/phundrak), though I
-  harldy use it anymore and mostly reshare my Mastodon messages and
-  sometimes they get truncated
+  harldy use it anymore and mostly reshare my Mastodon messages when I
+  think to, and sometimes they get truncated
 - **Writefreely** :
     - [**@phundrak@write.phundrak.com**](https://write.phundrak.com/phundrak) :
       blog alternative

@@ -39,8 +39,8 @@ Illustration de KEINE Tashi par Umi
 -   **Gender:** male
 -   **Birthday (lore):** June 28th, 1991
 -   **Birthday (first release):** October 14th, 2012
--   **Weight:** 154lb / 70kg
--   **Heigh:** 6′0″ / 182cm (very tall for a Tibetan)
+-   **Weight:** 154 lb / 70 kg
+-   **Heigh:** 6′0″ / 182 cm (very tall for a Tibetan)
 -   **Hair color:** black
 -   **Eyes color:** brown~black
 -   **Appearance:** Tashi wears a modernized Tibetan suit from the
@@ -53,10 +53,10 @@ Illustration de KEINE Tashi par Umi
     that a self-insert?)
 -   **Dislikes:** selfishness, lies, arrogance
 -   **Personality:** Tashi is somebody very calm, sweet. He really
-    enjoy old books and manuscripts, and he LOVES meditate! He's never
+    enjoys old books and manuscripts, and he LOVES meditate! He's never
     hungry, so, he can stay meditating for 2~3 days meditating, just
     like that, until he realizes that he should eat something. And he
-    always keep quiet, it's really hard to make him angry.
+    always keeps quiet, it's really hard to make him angry.
 
     But when he is, his anger becomes wrath. Anyone who experienced it
     can attest how complex and difficult it is to calm him down.
@@ -68,13 +68,13 @@ Illustration de KEINE Tashi par Umi
 ## Vocal libraries
 ### JPN VCV
 -   **Download link:**
-    | Extension | Size    | Link                                                                              |
-    |-----------|---------|-----------------------------------------------------------------------------------|
-    | 7z        | 25.7MiB | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_VCV.7z)     |
-    | tar.xz    | 32.5MiB | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_VCV.tar.xz) |
-    | zip       | 38.0MiB | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_VCV.zip)    |
--   **File size:** 60.7MB
--   **Total uncompressed size:** 94.4MB
+    | Extension | Size     | Link                                                                              |
+    |-----------|----------|-----------------------------------------------------------------------------------|
+    | 7z        | 25.7 MiB | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_VCV.7z)     |
+    | tar.xz    | 32.5 MiB | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_VCV.tar.xz) |
+    | zip       | 38.0 MiB | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_VCV.zip)    |
+-   **File size:** 60.7 MB
+-   **Total uncompressed size:** 94.4 MB
 -   **Number of voice phonemes:** 1264 (253 audio files)
 -   **Average frequency:** G#2
 -   **Vocal range:** C2~D3
@@ -92,8 +92,8 @@ Illustration de KEINE Tashi par Umi
     | 7z        | 1.1Gio | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_Extend_Power.7z)     |
     | tar.xz    | 1.1Gio | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_Extend_Power.tar.xz) |
     | zip       | 1.2Gio | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_Extend_Power.zip)    |
--   **File size:** 114MB
--   **Total uncompressed size:** 155MB
+-   **File size:** 114 MB
+-   **Total uncompressed size:** 155 MB
 -   **Number of voice phonemes:** 3020 (546 audio files)
 -   **Average frequency:** C3
 -   **Vocal range:** B1~D4
@@ -112,8 +112,8 @@ Illustration de KEINE Tashi par Umi
     | 7z        | 237.7Mio | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_Extend_Youth.7z)     |
     | tar.xz    | 243.5Mio | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_Extend_Youth.tar.xz) |
     | zip       | 268.7Mio | [DL](https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_Extend_Youth.zip)    |
--   **File size:** 36.9MB
--   **Total uncompressed size:** 42.0MB
+-   **File size:** 36.9 MB
+-   **Total uncompressed size:** 42.0 MB
 -   **Number of voice phonemes:** 1954 (182 audio files)
 -   **Average frequency:** C4
 -   **Vocal range:** F#3~A#4
@@ -168,10 +168,9 @@ my work, on the condition of:
 Although I cannot add anything to this legal notice, I would also like
 if you followed the following rules of thumb regarding this character:
 any religious use of this character and its vocal libraries is
-forbidden, with the exception of folk music, and Buddhist and Bön
-songs. However, due to the current controversy, any song linked to His
-Holiness the Gyalwa Karmapa is strictly forbidden until said
-controversy has been officially resolved. This is also applicable to
-His Holiness the Dalai Lama, the Venerable Shamar Rinpoche, and Tai
-Situ Rinpoche. If you have any question or if you are unsure, please
-send me an email.
+forbidden, except for folk music, and Buddhist and Bön songs. However,
+due to the current controversy, any song linked to His Holiness the
+Gyalwa Karmapa is strictly forbidden until said controversy has been
+officially resolved. This is also applicable to His Holiness the Dalai
+Lama, the Venerable Shamar Rinpoche, and Tai Situ Rinpoche. If you
+have any question or if you are unsure, please email me.

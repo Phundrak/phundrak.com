@@ -4,7 +4,7 @@ title: CV
 
 # Curriculum Vitae
 
-## Expériences profesionnelles
+## Expériences professionnelles
 ### Aubay (2023 - )
 ### VoxWave (2014 - 2018)
 
@@ -17,15 +17,15 @@ title: CV
 
 ## Programmation Web
 
-### Front-end
+### Frontend
 
 - Bonnes connaissances en HTML5, CSS3 (y compris SASS, SCSS et LESS)
-  et Javascript
+  et JavaScript
 - Connaissances en Python, Dart et TypeScript
 - Utilisation en cours de Vue, Nuxt.js et Node.js
 - Apprentissage de React et Next.js
 
-### Back-end
+### Backend
 
 - De l’expérience en développement backend avec Django (Python) et Rocket (Rust)
 - De l’expérience en communication avec des bases de données via
@@ -36,7 +36,7 @@ title: CV
 - De l’expérience avec Rust, C et EmacsLisp
 - Connaissances en C++, Python, CommonLisp et les shells UNIX
   (bash, fish, Eshell)
-- Connaissances limités en Prolog et Scheme
+- Connaissances limitées en Prolog et Scheme
 
 ## Outils de développement
 ### IDEs et éditeurs de texte
@@ -60,7 +60,7 @@ title: CV
   10 (excepté Vista)
 
 ## Bureautique
-- Bonnes connaissances avec org-mode et LaTeX
+- Bonnes connaissances avec orgmode et LaTeX
 - Connaissances avec Libre Office, Microsoft Office, WPS Office et OnlyOffice
 
 ## Audio
@@ -71,7 +71,7 @@ title: CV
 - Utilisation de VOCALOID2 à 4, Alter/Ego, Chipspeech, UTAU, CeVIO
   Creative Studio
 
-### Ingénieurie audio
+### Ingénierie audio
 - Logiciel de musique : FL Studio
 - Réparation et nettoyage audio : iZotope RX
 - Mastering : T-RackS CS

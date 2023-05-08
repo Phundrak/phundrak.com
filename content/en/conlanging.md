@@ -1,5 +1,4 @@
 # Conlanging
-
 *Conlangs*, short for *constructed languages*, are artificial
 languages born out of the mind of a single individual (sometimes a
 couple of them), unlike natural languages born through countless
