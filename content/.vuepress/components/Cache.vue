@@ -48,11 +48,7 @@ if (isDataOutdated(props.name)) {
   try {
     emits('cached', of(JSON.parse(data)));
   } catch (err) {
-    console.error(
-      `Could not parse ${JSON.stringify(
-        dataFromCache
-      )}: ${err}. Fetching again data from API.`
-    );
+    console.error(`Could not parse data found in cache: ${err}`);
     emits('cached', storeInCache(props.callback(), props.name));
   }
 }
