@@ -1,6 +1,3 @@
-import { Observable, switchMap, map } from 'rxjs';
-import { fromFetch } from 'rxjs/fetch';
-
 export interface GithubRepo {
   id: number;
   node_id: string;
@@ -48,9 +45,9 @@ export interface GithubRepo {
   labels_url: string;
   releases_url: string;
   deployments_url: string;
-  created_at: Date;
-  updated_at: Date;
-  pushed_at: Date;
+  created_at: string;
+  updated_at: string;
+  pushed_at: string;
   git_url: string;
   ssh_url: string;
   clone_url: string;
@@ -106,34 +103,4 @@ export interface Owner {
 export interface GithubError {
   message: string;
   documentation_url: string;
-}
-
-export function getLatestRepositories(
-  user: string,
-  amount: number
-): Observable<GithubRepo[]> {
-  return getRepositoriesOfUser(user).pipe(
-    map((repositories: GithubRepo[]) => {
-      return repositories
-        .sort(
-          (a: GithubRepo, b: GithubRepo) =>
-            +b.updated_at - +a.updated_at
-        )
-        .slice(0, amount);
-    })
-  );
-}
-
-export function getRepositoriesOfUser(user: string): Observable<GithubRepo[]> {
-  const fetchUrl = `https://api.github.com/users/${user}/repos`;
-  return fromFetch(fetchUrl).pipe(
-    switchMap((response: Response) => {
-      if (response.ok) {
-        return response.json();
-      } else {
-        console.error(`Error ${response.status}: ${JSON.stringify(response)}`);
-        return [];
-      }
-    }),
-  );
 }

@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { GithubRepo } from '../composables/github';
+import { GithubRepo } from '../../composables/github';
 import { PropType } from 'vue';
 const props = defineProps({
   repo: Object as PropType<GithubRepo>,
@@ -21,7 +21,7 @@ const props = defineProps({
 
 <style lang="less">
 @import 'node_modules/nord/src/lesscss/nord.less';
-@import '../styles/classes.less';
+@import '../../styles/classes.less';
 
 .githubRepo {
   max-width: 35rem;
