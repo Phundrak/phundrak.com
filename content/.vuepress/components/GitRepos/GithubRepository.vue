@@ -1,12 +1,16 @@
 <template>
-  <div class="githubRepo flex-col rounded-corners">
-    <h4>{{ props.repo.name }}</h4>
-    <div class="flex-row space-between">
-      <p>{{ props.repo.description }}</p>
-      <div class="gap-1rem flex-end">
-        <p>Stars: {{ repo.stargazers_count }}</p>
-        <p>Forks: {{ repo.forks_count }}</p>
+  <div class="githubRepo flex-row flex-space-between gap-1rem rounded-corners">
+    <div class="flex-col info">
+      <h3>{{ props.repo.name }}</h3>
+      <div>
+        <p>
+          {{ props.repo.description }}
+        </p>
       </div>
+    </div>
+    <div class="flex-col flex-start gap-1rem stats">
+      <p>Stars: {{ repo.stargazers_count }}</p>
+      <p>Forks: {{ repo.forks_count }}</p>
     </div>
   </div>
 </template>
@@ -24,8 +28,20 @@ const props = defineProps({
 @import '../../styles/classes.less';
 
 .githubRepo {
-  max-width: 35rem;
+  width: 35rem;
   padding: 3rem;
-  background-color: @nord3;
+  background-color: @nord4;
+
+  html.dark & {
+    background-color: @nord3;
+  }
+
+  .info {
+    max-width: 30rem;
+  }
+
+  .stats {
+    width: 4rem;
+  }
 }
 </style>

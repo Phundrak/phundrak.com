@@ -18,15 +18,26 @@ each(range(5), {
   flex-direction: row;
 }
 
-@flex-justifications: flex-start, flex-end, center, space-between, space-around,
-  space-evenly;
-each(@flex-justifications, {
+@flex-justifications-prefixed: flex-start, flex-end;
+each(@flex-justifications-prefixed, {
   .@{value} {
     .flex();
     justify-content: @value;
   }
 });
 
+@flex-justifications: center, space-between, space-around, space-evenly;
+each(@flex-justifications, {
+  .flex-@{value} {
+    .flex();
+    justify-content: @value;
+  }
+});
+
 .rounded-corners {
-  border-radius: 1rem;
+  border-radius: 0.3rem;
+}
+
+.center {
+  margin: 0 auto;
 }

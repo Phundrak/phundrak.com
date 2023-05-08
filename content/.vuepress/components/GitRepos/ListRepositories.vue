@@ -1,6 +1,13 @@
 <template>
   <ApiLoader :url="fetchUrl" @dataLoaded="filterRepos">
-    <GithubRepository :repo="repo" type="repositories" v-for="repo in repos" />
+    <div class="flex-col gap-1rem list-repos">
+      <GithubRepository
+        :repo="repo"
+        type="repositories"
+        v-for="repo in repos"
+        class="center"
+      />
+    </div>
   </ApiLoader>
 </template>
 
@@ -47,4 +54,10 @@ const filterRepos = (response: GithubRepo[]) => {
 };
 </script>
 
-<style lang="less"></style>
+<style lang="less">
+@import '../../styles/classes.less';
+
+.list-repos {
+  margin: 2rem auto;
+}
+</style>
