@@ -1,5 +1,7 @@
 <template>
-  <div class="githubRepo flex-col flex-space-between gap-1rem rounded-corners">
+  <div
+    class="githubRepo flex-col flex-space-between gap-1rem rounded-corners card-width"
+  >
     <ApiLoader
       :cache-name="repoName()"
       :url="fetchUrl"
@@ -51,7 +53,6 @@ const repository: Ref<GithubRepo> = ref(null);
 @import '../../styles/classes.less';
 
 .githubRepo {
-  max-width: 35rem;
   padding: 2rem;
   background-color: @nord4;
   align-self: auto;

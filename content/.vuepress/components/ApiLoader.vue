@@ -8,15 +8,16 @@
   <slot v-if="loading" name="loader">
     <Loader />
   </slot>
-  <slot v-else-if="error" name="error"></slot>
-  <slot v-else>
-    {{ error }}
+  <slot v-else-if="error" name="error">
+    <Error :url="props.url" />
   </slot>
+  <slot v-else> </slot>
 </template>
 
 <script setup lang="ts">
 import Cache from './Cache.vue';
 import Loader from './Loader.vue';
+import Error from './Error.vue';
 
 import { Ref, ref } from 'vue';
 import { Observable, catchError, switchMap, throwError } from 'rxjs';
@@ -42,9 +43,9 @@ const loading: Ref<boolean> = ref(true);
 const fetchData = (): Observable<any> => {
   return fromFetch(props.url).pipe(
     switchMap((response: Response) => response.json()),
-    catchError((error: Error) => {
-      console.error(error);
-      return throwError(() => new Error(error.message));
+    catchError((errorResponse: Error) => {
+      error.value = errorResponse;
+      return Error;
     })
   );
 };
@@ -62,5 +63,3 @@ const processCachedData = (data: Observable<any>) => {
   });
 };
 </script>
-
-<style lang="less"></style>

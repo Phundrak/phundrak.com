@@ -6,6 +6,7 @@ import GithubRepository from './components/GitHub/GithubRepository.vue';
 import ApiLoader from './components/ApiLoader.vue';
 import Loader from './components/Loader.vue';
 import Cache from './components/Cache.vue';
+import Error from './components/Error.vue';
 import Icon from './components/Icon.vue';
 
 export default defineClientConfig({
@@ -17,6 +18,7 @@ export default defineClientConfig({
     app.component('ApiLoader', ApiLoader);
     app.component('Loader', Loader);
     app.component('Cache', Cache);
+    app.component('Error', Error);
     app.component('Icon', Icon);
   },
   setup() {},
