@@ -1,10 +1,10 @@
 @font-face {
   font-family: "phunic";
-  src: url("/fonts/phunic.eot?3b74hk");
-  src: url("/fonts/phunic.eot?3b74hk#iefix") format("embedded-opentype"),
-    url("/fonts/phunic.ttf?3b74hk") format("truetype"),
-    url("/fonts/phunic.woff?3b74hk") format("woff"),
-    url("/fonts/phunic.svg?3b74hk#phunic") format("svg");
+  src: url("/fonts/phunic.eot");
+  src: url("/fonts/phunic.eot#iefix") format("embedded-opentype"),
+    url("/fonts/phunic.ttf") format("truetype"),
+    url("/fonts/phunic.woff") format("woff"),
+    url("/fonts/phunic.svg#phunic") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,13 +25,22 @@ i.icon {
   -moz-osx-font-smoothing: grayscale;
 
   &::before {
-    width: 1.25rem;
+    width: 1.4rem;
     display: inline-block;
     align-content: center;
     text-align: center;
   }
 }
 
+.phunic-envelope:before {
+  content: "\e901";
+}
+.phunic-discord:before {
+  content: "\e910";
+}
+.phunic-writefreely:before {
+  content: "\e911";
+}
 .phunic-mastodon:before {
   content: "\e907";
 }
@@ -71,9 +80,6 @@ i.icon {
 .phunic-question:before {
   content: "\e90f";
 }
-.phunic-conlang2:before {
-  content: "\e901";
-}
 .phunic-emacs:before {
   content: "\e902";
 }
@@ -95,17 +101,11 @@ i.icon {
 .phunic-github:before {
   content: "\eab0";
 }
-.phunic-npm:before {
-  content: "\eab1";
-}
-.phunic-tux:before {
-  content: "\eabd";
+.phunic-reddit:before {
+  content: "\eac6";
 }
 .phunic-linkedin:before {
   content: "\eac9";
-}
-.phunic-stackoverflow:before {
-  content: "\ead0";
 }
 .phunic-git:before {
   content: "\eae7";
