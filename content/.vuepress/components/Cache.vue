@@ -19,7 +19,7 @@ const props = defineProps({
     required: false,
     type: Number,
   },
-  data: {
+  alreadyKnownData: {
     default: null,
     type: Object,
   },
@@ -50,14 +50,20 @@ const storeInCache = (
 };
 
 if (isDataOutdated(props.name)) {
-  emits('cached', storeInCache(props.callback, props.data, props.name));
+  emits(
+    'cached',
+    storeInCache(props.callback, props.alreadyKnownData, props.name)
+  );
 } else {
   let data = localStorage.getItem(props.name);
   try {
     emits('cached', of(JSON.parse(data)));
   } catch (err) {
     console.error(`Could not parse data found in cache: ${err}`);
-    emits('cached', storeInCache(props.callback, props.data, props.name));
+    emits(
+      'cached',
+      storeInCache(props.callback, props.alreadyKnownData, props.name)
+    );
   }
 }
 </script>

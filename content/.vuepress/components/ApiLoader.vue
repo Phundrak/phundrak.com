@@ -2,7 +2,7 @@
   <Cache
     :name="props.cacheName"
     :callback="fetchData"
-    :data="alreadyKnownData"
+    :already-known-data="alreadyKnownData"
     @cached="processCachedData"
   />
   <slot v-if="loading" name="loader">

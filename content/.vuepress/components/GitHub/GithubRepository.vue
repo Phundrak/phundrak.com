@@ -1,5 +1,7 @@
 <template>
-  <div class="githubRepo flex-row flex-space-between gap-1rem rounded-corners">
+  <div
+    class="githubRepo flex-row flex-space-between gap-1rem rounded-corners center"
+  >
     <ApiLoader
       :cache-name="repoName()"
       :url="fetchUrl"
@@ -7,16 +9,16 @@
       @data-loaded="(repo: GithubRepo) => (repository = repo)"
     >
       <div class="flex-col info">
-        <h3>{{ props.data.name }}</h3>
+        <h3>{{ repository.name }}</h3>
         <div>
           <p>
-            {{ props.data.description }}
+            {{ repository.description }}
           </p>
         </div>
       </div>
       <div class="flex-col flex-start gap-1rem stats">
-        <p>Stars: {{ data.stargazers_count }}</p>
-        <p>Forks: {{ data.forks_count }}</p>
+        <p>Stars: {{ repository.stargazers_count }}</p>
+        <p>Forks: {{ repository.forks_count }}</p>
       </div>
     </ApiLoader>
   </div>
@@ -31,7 +33,6 @@ import { PropType, Ref, ref } from 'vue';
 const props = defineProps({
   data: Object as PropType<GithubRepo>,
   repoName: String,
-  fetcher: String as PropType<'gitea' | 'github'>,
 });
 
 const repoName = (): string => {
