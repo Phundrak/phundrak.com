@@ -1,8 +1,6 @@
----
-title: Projets
----
-# Programmation
-## Projets GitHub épinglés
+# Projets
+## Programmation
+### Projets GitHub épinglés
 <ClientOnly>
   <ListRepositories>
     <GithubRepository repoName="rejeep/f.el" />
@@ -12,14 +10,14 @@ title: Projets
   </ListRepositories>
 </ClientOnly>
 
-## Projets GitHub les plus étoilés
+### Projets GitHub les plus étoilés
 <ClientOnly>
   <ListRepositories sortBy='stars' user='phundrak' :limit='5' />
 </ClientOnly>
 
-## Derniers dépôts de code actifs sur GitHub
+### Derniers dépôts de code actifs sur GitHub
 <ClientOnly>
   <ListRepositories sortBy='pushed_at' user='phundrak' :limit='5' />
 </ClientOnly>
 
-# Linguistique
+## Linguistique
