@@ -1,14 +1,14 @@
 <template>
-  <ApiLoader :url="fetchUrl" @dataLoaded="filterRepos">
-    <div class="flex-col gap-1rem list-repos">
+  <div class="flex-col gap-1rem list-repos">
+    <ApiLoader :url="fetchUrl" @dataLoaded="filterRepos">
       <GithubRepository
         :repo="repo"
         type="repositories"
         v-for="repo in repos"
         class="center"
       />
-    </div>
-  </ApiLoader>
+    </ApiLoader>
+  </div>
 </template>
 
 <script setup lang="ts">
