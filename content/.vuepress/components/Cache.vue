@@ -44,7 +44,6 @@ const dataFromCache: Ref<Observable<any>> = ref(null);
 if (isDataOutdated(props.name)) {
   emits('cached', storeInCache(props.callback(), props.name));
 } else {
-  console.log('Sending cached data');
   let data = localStorage.getItem(props.name);
   try {
     emits('cached', of(JSON.parse(data)));
