@@ -3,31 +3,47 @@ title: CV
 ---
 
 # Curriculum Vitae
-
 ## Expériences professionnelles
 ### Aubay (2023 - )
+- Stage de début février à début août 2023
+- Développement de site web
+- Utilisation d’Angular, Java Spring Boot et PostgreSQL
+
 ### VoxWave (2014 - 2018)
+Startup spécialisée dans le développement de chanteurs virtuels
+francophones utilisant de la synthèse vocale. Le produit le plus connu
+est la chanteuse virtuelle ALYS. Plus d’informations
+[ici](./vocal-synthesis.md).
+
+- Co-fondateur
+- Programmation de voix de synthèse pour le chant
+- Recherches linguistiques
+- Support utilisateur
+- Formation de recrues au développement de voix de synthèse
 
 ## Éducation
-### Master 2 Technologies de l’Hypermédia (Université Paris 8)
-### Master 1 Informatique (Université Paris 8)
-### Licence Informatique (Université Paris 8)
-### Anglais LLCE (Université Lyon 2)
-### Baccalauréat
+### Master 2 Technologies de l’Hypermédia (Université Paris 8, 2021 - 2023)
+Redoublement pour causes de santé sans séquelles.
+
+### Master 1 Informatique (Université Paris 8, 2020 - 2021)
+### Licence Informatique (Université Paris 8, 2016 - 2019)
+### Anglais LLCE (Université Lyon 2, 2013 - 2014, interrompu)
+Un an et demi d’études de l’anglais littéraire en licence d’anglais
+LLCE. Études interrompues suite à la création de
+[VoxWave](#voxwave-2014-2018).
 
 ## Programmation Web
-
 ### Frontend
-
+- Utilisation régulière de Angular, Vue et Node.js
 - Bonnes connaissances en HTML5, CSS3 (y compris SASS, SCSS et LESS)
   et JavaScript
 - Connaissances en Python, Dart et TypeScript
-- Utilisation en cours de Vue, Nuxt.js et Node.js
 - Apprentissage de React et Next.js
 
 ### Backend
-
-- De l’expérience en développement backend avec Django (Python) et Rocket (Rust)
+- Utilisation régulière de Rust ([actix-web](https://actix.rs/) et
+  [Rocket](https://rocket.rs/)) et Java Spring Boot
+- De l’expérience en développement backend avec Django (Python)
 - De l’expérience en communication avec des bases de données via
   Django et [Diesel](https://diesel.rs). Connaissances de base avec EmacSQL.
 - Utilisation de MySQL et PostgreSQL.
@@ -43,7 +59,7 @@ title: CV
 - Utilisateur avancé d’Emacs, y compris avec ses intégrations pour LSP
   et Git
 - Bonnes connaissances de Git (y compris avec son interface Magit pour
-  Emacs)
+  Emacs), VS Code et Eclipse
 - Connaissances basiques de Vim, CLion, PyCharm et WebStorm
 
 ### CI/CD et déploiement sur le web

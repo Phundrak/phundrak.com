@@ -2,29 +2,43 @@
 
 ## Profesionnal Experiences
 ### Aubay (2023 - )
+- Internship from early February to early August 2023
+- Web development
+- Usage of Angular, Java Spring Boot, and PostgreSQL
+
 ### VoxWave (2014 - 2018)
+Startup specialized in the creation of French virtual singers using
+vocal synthesis. Its best known product is ALYS. [More
+here](./vocal-synthesis.md).
+
+- Co-founder
+- Development of singing synthesis vocal libraries
+- Linguistic research
+- User support
+- Recruit training for vocal libraries development
 
 ## Education
 ### 2nd Year Master’s Degree (University of Paris 8)
+Year repeated due to health issues with no long-lasting consequences.
+
 ### 1st Year Master’s Degree (University of Paris 8)
 ### Computer Science Bachelor Degree (University of Paris 8)
 ### English Litterature (University of Lyon 2)
-### Baccalaureate
+Studied for a year and a half until the creation of
+[VoxWave](#voxwave-2014-2018).
 
 ## Web Programming
-
 ### Front-end
-
+- Regularly using Angular, Vue, and Node.js
 - Good knowledge in HTML5, CSS3 (including SASS, SCSS, and LESS), and
   Javascript
 - I know my way around in Python, Dart, and TypeScript
-- Currently building experience with Vue, Nuxt.js, and Node.js
 - Learning React and Next.js
 
 ### Back-end
-
-- Some experience in back-end development with Django (Python) as well
-  as Rust with Rocket
+- Regularly using Rust ([actix-web](https://actix.rs/) and
+  [Rocket](https://rocket.rs/)) and Java Spring Boot
+- Some experience in back-end development with Django (Python)
 - Some experience communicating with a database with Django’s and
   [Diesel](https://diesel.rs)’s ORM. Know my way around EmacSQL.
 - Used MySQL and PostgreSQL
@@ -38,7 +52,8 @@
 ## Development Tools
 ### IDEs and Text Editors
 - Advanced user of Emacs, including its LSP and Git integrations
-- Good knowledge of Git (including Magit under Emacs)
+- Good knowledge of Git (including Magit under Emacs), VS Code, and
+  Eclipse
 - Basic knowledge of Vim, CLion, Pycharm, and WebStorm
 
 ### CI/CD and Deploying to the Web

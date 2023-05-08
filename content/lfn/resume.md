@@ -4,24 +4,43 @@ Lucien Cartier-Tilet
 
 ## Esperia Profesal
 ### Aubay (2023 - )
+- Stajia de la comensa de febrero a la comensa de agosto 2023
+- Developa de loca ueb
+- Usa de Angular, Java Spring Boot e PostgreSQL
+
 ### VoxWave (2014 - 2018)
+Compania spesialida en la developa de cantantes virtual en franses ce
+usa sintese vocal. La produi la plu selebra es ALYS. Plu de informa
+[aci](./vocal-synthesis.md).
+
+- Cofundor
+- Programi de voses de sintese per la canta
+- Rexerca linguistica
+- Suporta de usadores
+- Instrui de nova empleadas per la programi de voses de sintese
+
 ## Educa
-### Mestral 2 de Tecnolojia de la Ipermedia (Universia de Paris 8)
-### Mestral 1 de Informatica (Universia de Paris 8)
-### Mestral 1 de Informatica (Universia de Paris 8)
-### Lisensa de Informatica (Universia de Paris 8)
-### Engles Leteratural (Universia de Lyon 2)
-### Laural
+### Mestral 2 de Tecnolojia de la Ipermedia (Universia de Paris 8, 2021 - 2023)
+Me ia recomensa la anio per causa de mea sania, ma me no ave tempo
+seguente.
+
+### Mestral 1 de Informatica (Universia de Paris 8, 2020 - 2021)
+### Lisensa de Informatica (Universia de Paris 8, 2016 - 2019)
+### Engles Leteratural (Universia de Lyon 2, 2013-2014)
+Me ia studia la engles leteratural durante un anio e dui asta la crea
+de [VoxWave](#voxwave-2014-2018).
 
 ## Programi ueb
 ### Front-end
+- Usa fidosa de Angular, Vue e Node.JS
 - Bon conose de HTML5, CSS3 (incluinte SASS, SCSS e LESS) e Javascript
 - Conoses de Python, Dart e Typescript
-- Usa de Vue, Nuxt, Vuepress e Node.js
 - Aprende React e Next.js
 
 ### Backend
-- Esperia en programi de backend con Rocket (Rust) e alga con Django (Python)
+- Usa fidosa de Rust ([actix-web](https://actix.rs/) e
+  [Rocket](https://rocket.rs/)) e Java Spring Boot
+- Esperia en programi de backend con Django (Python)
 - Esperia en comunica con banco de datos con
   [Diesel](https://diesel.rs) (Rust) e Django, conose alga EmacSQL
 - Usa de PostgreSQL e MySQL
@@ -34,7 +53,8 @@ Lucien Cartier-Tilet
 ## Utiles de developa
 ### IDEs e editadores
 - Conoses esperta de Emacs, inclui con la incluis de LSP e Git
-- Bon conoses de Git (inclui sua interfas Magit per Emacs)
+- Bon conoses de Git (inclui sua interfas Magit per Emacs), VS Code e
+  Eclipse
 - Conoses fundal de Vim, CLion, PyCharm e WebStorm
 
 ## CI/CD e desplia ueb
