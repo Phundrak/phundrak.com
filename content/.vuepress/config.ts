@@ -2,7 +2,7 @@ import { defineUserConfig, defaultTheme } from 'vuepress';
 import { removeHtmlExtensionPlugin } from 'vuepress-plugin-remove-html-extension';
 import head from './head';
 import locales from './locales';
-import themeLocales from './themeLocales';
+import { themeLocales } from './themeLocales';
 
 export default defineUserConfig({
   lang: 'fr-FR',

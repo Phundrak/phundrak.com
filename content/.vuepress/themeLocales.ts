@@ -1,18 +1,24 @@
-const themeLocales = {
+const pages: string[] = [
+  '/index.md',
+  '/about.md',
+  '/find-me.md',
+  '/resume.md',
+  '/projects.md',
+  '/conlanging.md',
+  '/vocal-synthesis.md',
+  '/privacy.md',
+];
+
+const localePages = (languagePrefix: string) => {
+  return pages.map((page: string) => `/${languagePrefix}${page}`);
+};
+
+export const themeLocales = {
   '/': {
     selectLanguageName: 'Français',
     tip: 'nota bene',
     warning: 'attention',
-    sidebar: [
-      '/README.md',
-      '/about.md',
-      '/find-me.md',
-      '/resume.md',
-      '/projects.md',
-      '/conlanging.md',
-      '/vocal-synthesis.md',
-      '/privacy.md',
-    ],
+    sidebar: pages,
     notFound: [
       'C’est bien vide ici',
       'Pourquoi sommes-nous ici?',
@@ -30,15 +36,7 @@ const themeLocales = {
     tip: 'avisa',
     warning: 'averti',
     danger: 'peril',
-    sidebar: [
-      '/lfn/index.md',
-      '/lfn/about.md',
-      '/lfn/find-me.md',
-      '/lfn/resume.md',
-      '/lfn/projects.md',
-      '/lfn/conlanging.md',
-      '/lfn/vocal-synthesis.md',
-    ],
+    sidebar: localePages('lfn'),
     notFound: [
       'Ce? Se no ave no cosa asi',
       'A do vade tu?',
@@ -53,16 +51,6 @@ const themeLocales = {
   },
   '/en/': {
     selectLanguageName: 'English',
-    sidebar: [
-      '/en/index.md',
-      '/en/about.md',
-      '/en/find-me.md',
-      '/en/resume.md',
-      '/en/projects.md',
-      '/en/conlanging.md',
-      '/en/vocal-synthesis.md',
-    ],
+    sidebar: localePages('en'),
   },
 };
-
-export default themeLocales;
