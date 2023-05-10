@@ -1,19 +1,24 @@
+#+title: À Propos
+#+setupfile: ./headers
+#+language: fr
+
+#+begin_export html
 ---
 title: CV
 ---
+#+end_export
 
-# Curriculum Vitae
-## Expériences professionnelles
-### Aubay (2023 - )
+* Curriculum Vitae
+** Expériences professionnelles
+*** Aubay (2023 - )
 - Stage de début février à début août 2023
 - Développement de site web
 - Utilisation d’Angular, Java Spring Boot et PostgreSQL
 
-### VoxWave (2014 - 2018)
+*** VoxWave (2014 - 2018)
 Startup spécialisée dans le développement de chanteurs virtuels
 francophones utilisant de la synthèse vocale. Le produit le plus connu
-est la chanteuse virtuelle ALYS. Plus d’informations
-[ici](./vocal-synthesis.md).
+est la chanteuse virtuelle ALYS. Plus d’informations [[./vocal-synthesis.md][ici]].
 
 - Co-fondateur
 - Programmation de voix de synthèse pour le chant
@@ -21,53 +26,52 @@ est la chanteuse virtuelle ALYS. Plus d’informations
 - Support utilisateur
 - Formation de recrues au développement de voix de synthèse
 
-## Éducation
-### Master 2 Technologies de l’Hypermédia (Université Paris 8, 2021 - 2023)
+** Éducation
+*** Master 2 Technologies de l’Hypermédia (Université Paris 8, 2021 - 2023)
 Redoublement pour causes de santé sans séquelles.
 
-### Master 1 Informatique (Université Paris 8, 2020 - 2021)
-### Licence Informatique (Université Paris 8, 2016 - 2019)
-### Anglais LLCE (Université Lyon 2, 2013 - 2014, interrompu)
+*** Master 1 Informatique (Université Paris 8, 2020 - 2021)
+*** Licence Informatique (Université Paris 8, 2016 - 2019)
+*** Anglais LLCE (Université Lyon 2, 2013 - 2014, interrompu)
 Un an et demi d’études de l’anglais littéraire en licence d’anglais
-LLCE. Études interrompues suite à la création de
-[VoxWave](#voxwave-2014-2018).
+LLCE. Études interrompues suite à la création de [[./resume.md#voxwave-2014-2018][VoxWave]].
 
-## Programmation Web
-### Frontend
+** Programmation Web
+*** Frontend
 - Utilisation régulière de Angular, Vue et Node.js
 - Bonnes connaissances en HTML5, CSS3 (y compris SASS, SCSS et LESS)
   et JavaScript
 - Connaissances en Python, Dart et TypeScript
 - Apprentissage de React et Next.js
 
-### Backend
-- Utilisation régulière de Rust ([actix-web](https://actix.rs/) et
-  [Rocket](https://rocket.rs/)) et Java Spring Boot
+*** Backend
+- Utilisation régulière de Rust ([[https://actix.rs/][actix-web]] et [[https://rocket.rs/][Rocket]]) et Java Spring
+  Boot
 - De l’expérience en développement backend avec Django (Python)
 - De l’expérience en communication avec des bases de données via
-  Django et [Diesel](https://diesel.rs). Connaissances de base avec EmacSQL.
+  Django et [[https://diesel.rs][Diesel]]. Connaissances de base avec EmacSQL.
 - Utilisation de MySQL et PostgreSQL.
 
-## Programmation Système
+** Programmation Système
 - De l’expérience avec Rust, C et EmacsLisp
 - Connaissances en C++, Python, CommonLisp et les shells UNIX
   (bash, fish, Eshell)
 - Connaissances limitées en Prolog et Scheme
 
-## Outils de développement
-### IDEs et éditeurs de texte
+** Outils de développement
+*** IDEs et éditeurs de texte
 - Utilisateur avancé d’Emacs, y compris avec ses intégrations pour LSP
   et Git
 - Bonnes connaissances de Git (y compris avec son interface Magit pour
   Emacs), VS Code et Eclipse
 - Connaissances basiques de Vim, CLion, PyCharm et WebStorm
 
-### CI/CD et déploiement sur le web
+*** CI/CD et déploiement sur le web
 - De l’expérience avec les serveurs web Nginx et Caddyserver
 - Bonnes connaissances de Docker, Drone.io et GitHub Actions pour du
   déploiement
 
-## Systèmes d’exploitation
+** Systèmes d’exploitation
 - Utilisation et administration de Linux (Arch Linux, Void Linux,
   Debian, Ubuntu, Alpine Linux)
 - Administration de serveurs web et serveurs de stockage (Arch Linux,
@@ -75,19 +79,18 @@ LLCE. Études interrompues suite à la création de
 - Connaissances élémentaires de Guix System, NixOS et Windows de XP à
   10 (excepté Vista)
 
-## Bureautique
+** Bureautique
 - Bonnes connaissances avec orgmode et LaTeX
 - Connaissances avec Libre Office, Microsoft Office, WPS Office et OnlyOffice
 
-## Audio
-
-### Synthèse de voix chantée
+** Audio
+*** Synthèse de voix chantée
 - Développement et création de banques vocales de synthèse vocale
   chantée pour VOCALOID3, Alter/Ego, Chipspeech et UTAU
 - Utilisation de VOCALOID2 à 4, Alter/Ego, Chipspeech, UTAU, CeVIO
   Creative Studio
 
-### Ingénierie audio
+*** Ingénierie audio
 - Logiciel de musique : FL Studio
 - Réparation et nettoyage audio : iZotope RX
 - Mastering : T-RackS CS

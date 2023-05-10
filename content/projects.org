@@ -1,5 +1,10 @@
-# Projetas informatical
-## Mea projetas GitHub spinida
+#+title: Projets informatiques
+#+setupfile: ./headers
+#+language: fr
+
+* Projets Informatiques
+** Projets GitHub épinglés
+#+begin_export html
 <ClientOnly>
   <ListRepositories>
     <GithubRepository repoName="rejeep/f.el" />
@@ -8,13 +13,18 @@
     <GithubRepository repoName="Phundrak/langue-phundrak-fr" />
   </ListRepositories>
 </ClientOnly>
+#+end_export
 
-## Mea projetas GitHub lo plu stelada
+** Projets GitHub les plus étoilés
+#+begin_export html
 <ClientOnly>
   <ListRepositories sortBy='stars' user='phundrak' :limit='5' />
 </ClientOnly>
+#+end_export
 
-## La plu nova projetas sur GitHub
+** Derniers dépôts de code actifs sur GitHub
+#+begin_export html
 <ClientOnly>
   <ListRepositories sortBy='pushed_at' user='phundrak' :limit='5' />
 </ClientOnly>
+#+end_export

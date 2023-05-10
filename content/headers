@@ -1,0 +1,7 @@
+# -*- mode: org -*-
+#+author: Lucien Cartier-Tilet
+#+email: lucien@phundrak.com
+#+creator: Lucien Cartier-Tilet
+#+options: H:4 broken_links:mark email:t ^:{} tex:dvisvgm toc:nil
+
+#+macro: icon @@html:<Icon name="$1" />@@

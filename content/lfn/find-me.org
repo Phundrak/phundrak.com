@@ -1,0 +1,28 @@
+#+title: Do trova me
+#+setupfile: ../headers
+#+language: lfn
+
+* Do trova me
+On pote trova me sur multe loca ueb e redes sosial do on pote segue me.
+
+** Redes sosial
+- {{{icon(mastodon)}}} Mastodon :: [[https://emacs.ch/@phundrak][@phundrak@phundrak.com]] ta debe funsiona,
+  si no, visita [[https://emacs.ch/@phundrak][@phundrak@emacs.ch]]
+- {{{icon(twitter)}}} Twitter :: [[https://twitter.com/phundrak][@phundrak]], ma me usa lo a poca veses, la
+  plu de mea tuitas es mea mesajes mastodon ce es a vesas truncada
+- {{{icon(writefreely)}}} Writefreely :: ⁣
+  - [[https://write.phundrak.com/phundrak][@phundrak@write.phundrak.com]] :: revistas personal
+  - [[https://write.phundrak.com/phundraks-short-stories][@phundraks-short-stories@write.phundrak.com]] :: istorias corta (a
+    multe veses en Frans)
+- {{{icon(discord)}}} Discord :: =Phundrak#0001= (dise me ce tu veni de asi,
+  si no, me pote pensa ce tua mesaje es spam)
+
+** Other Websites
+- {{{icon(envelope)}}} Eposta :: [[mailto:lucien@phundrak.com][lucien@phundrak.com]]
+- {{{icon(rss)}}} Blog :: [[https://blog.phundrak.com][blog.phundrak.com]]
+- {{{icon(gitea)}}} Gitea :: [[https://labs.phundrak.com/phundrak][@phundrak@labs.phundrak.com]]
+- {{{icon(github)}}} GitHub :: [[https://github.com/Phundrak][Phundrak]]
+- {{{icon(youtube)}}} YouTube :: [[https://www.youtube.com/@phundrak][@phundrak]]
+- {{{icon(reddit)}}} Reddit :: [[https://www.reddit.com/user/phundrak][/u/phundrak]]
+- {{{icon(linkedin)}}} LinkedIn :: [[https://www.linkedin.com/in/lucien-cartier-tilet/][Lucien Cartier-Tilet]]
+- {{{icon(twitch)}}} Twitch :: [[https://www.twitch.tv/phundrak][phundrak]]

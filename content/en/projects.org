@@ -1,5 +1,10 @@
-# Programming Projects
-## Pinned GitHub Projects
+#+title: Projects
+#+setupfile: ../headers
+#+language: en
+
+* Programming Projects
+** Pinned GitHub Projects
+#+begin_export html
 <ClientOnly>
   <ListRepositories>
     <GithubRepository repoName="rejeep/f.el" />
@@ -8,13 +13,18 @@
     <GithubRepository repoName="Phundrak/langue-phundrak-fr" />
   </ListRepositories>
 </ClientOnly>
+#+end_export
 
-## Most Starred Projects on GitHub
+** Most Starred Projects on GitHub
+#+begin_export html
 <ClientOnly>
   <ListRepositories sortBy='stars' user='phundrak' :limit='5' />
 </ClientOnly>
+#+end_export
 
-## Latest Active Repositories on GitHub
+** Latest Active Repositories on GitHub
+#+begin_export html
 <ClientOnly>
   <ListRepositories sortBy='pushed_at' user='phundrak' :limit='5' />
 </ClientOnly>
+#+end_export

@@ -1,0 +1,21 @@
+#+title: About
+#+setupfile: ../headers
+#+language: en
+
+* About
+** Introduction
+This is the personal website of Lucien “Phundrak” Cartier-Tilet.
+
+It is written with [[https://v2.vuepress.vuejs.org/][Vuepress]] and is completely open-source. You can
+find the source code on my [[https://labs.phundrak.com/phundrak/phundrak.com][personal Gitea instance]]. Icons used on this
+website come from different sources:
+- [[https://icomoon.io/][IcoMoon]] which I use to consolidate all the icons used in one font,
+  including some icons from their default pack
+- [[https://fontawesome.com/][FontAwesome]] from which most icons come from --- their Vue package
+  is, in my opinion, really not usable
+- The {{{icon(conlang)}}} [[https://conlang.org/][Language Creation Society]] whose logo I modified in
+  order to create the icon used here when referring to my constructed
+  languages
+- {{{icon(emacs)}}} [[https://www.gnu.org/software/emacs/][Emacs]] and {{{icon(writefreely)}}} [[https://writefreely.org/][WriteFreely]] whose respective
+  logo I partially remade as an SVG file in order to create an icon.
+- {{{icon(gitea)}}} [[https://gitea.io][Gitea]] whose logo I modified to be monochromatic

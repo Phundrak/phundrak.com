@@ -1,13 +1,17 @@
-# Vie Privée
-## Où est hébergé le site ?
+#+title: Vie Privée
+#+setupfile: ./headers
+#+language: fr
+
+* Vie Privée
+** Où est hébergé le site ?
 Ce site est hébergé sur mon serveur personnel, situé dans la ville de
 Bron en France, comme la majorité de mes sites. Deux autres sites,
-`labs.phundrak.com` et `mail.phundrak.com`, sont hébergé sur d’autres
+=labs.phundrak.com= et =mail.phundrak.com=, sont hébergé sur d’autres
 serveurs loués à Scaleway et à OVH France respectivement, et les
 serveurs se situent également en France.
 
-## Cookies
-### Que sont les cookies ?
+** Cookies
+*** Que sont les cookies ?
 Les cookies sont des petits fichiers sauvegardés par un site web sur
 votre ordinateur ou votre téléphone portable lorsque vous visitez un
 site. Bien que tous les sites n’en fassent pas forcément usage, ils
@@ -24,11 +28,11 @@ Cependant, ce site étant protégé par Cloudflare, ce dernier pourra
 que votre navigateur ne présente pas de risque ou bien pour
 enregistrer le trafic sur le site.
 
-### Comment puis-je contrôler les cookies sur mon ordinateur ?
+*** Comment puis-je contrôler les cookies sur mon ordinateur ?
 Si vous ne souhaitez pas que Cloudflare enregistre ces dernières
 activités, un bon anti-pub devrait faire l’affaire. Je recommande
-personnellement [uBlock Origin](https://ublockorigin.com/), l’un des
-bloqueurs de pub les plus efficaces que je connaisse.
+personnellement [[https://ublockorigin.com/][uBlock Origin]], l’un des bloqueurs de pub les plus
+efficaces que je connaisse.
 
 Vous pouvez également supprimer manuellement les cookies de votre
 navigateur, mais étant donné le nombre de navigateurs existants, il
@@ -37,7 +41,7 @@ Qwant ou Startpage comment faire pour votre navigateur actuel (si vous
 vous inquiétez de l’utilisation des cookies, je suppose que vous
 voudrez éviter Google).
 
-### Quid des autres méthodes de tracking ?
+*** Quid des autres méthodes de tracking ?
 Il existe d’autres méthodes plus subtiles qui permettent de traquer
 quelqu’un sur internet, ou même via des mails ou tout contenu web
 rendu à l’écran, comme pixels espions (des images extrêmement
@@ -46,13 +50,11 @@ des objets locaux partagés.
 
 Ce site n’en utilise absolument pas.
 
-## Est-ce qu’il y a de la pub ciblée sur ce site ?
-
+** Est-ce qu’il y a de la pub ciblée sur ce site ?
 Il n’y a tout simplement aucune pub sur ce site. Si vous en voyez,
 vous avez sans doute un virus installé sur votre ordinateur.
 
-## Est-ce que cette page est souvent mise à jour ?
-
+** Est-ce que cette page est souvent mise à jour ?
 Je peux la mettre à jour de temps en temps afin de refléter des
 changements de fonctionnement du site, ou si je remarque une erreur
 sur la page. Il se peut aussi que j’ajoute un jour un tracking des
@@ -61,6 +63,6 @@ respectant la vie privée des utilisateurs et qui est tout à fait
 bloquable. La date de la dernière mise à jour de cette page peut être
 trouvée à son tout début.
 
-## J’ai d’autres questions
+** J’ai d’autres questions
 Et je serai heureux d’y répondre par mail. Vous pouvez me contacter
-via l’adresse mail [lucien@phundrak.com](mailto:lucien@phundrak.com).
+via l’adresse mail [[mailto:lucien@phundrak.com][lucien@phundrak.com]].

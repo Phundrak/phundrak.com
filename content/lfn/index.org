@@ -1,8 +1,12 @@
-# Paje Prima
+#+title: Paje prima
+#+setupfile: ../headers
+#+language: lfn
+
+* Paje prima
 
 Saluta, me es Lucien Cartier-Tilet, un studiante de informatica en la
-Master 2 THYP (franses: *Technologies de l’Hypermédia*, elefen:
-*Tecnolojia de la Ipermedia*) en la Universia Vincennes Saint-Denis
+Master 2 THYP (franses: /Technologies de l’Hypermédia/, elefen:
+/Tecnolojia de la Ipermedia/) en la Universia Vincennes Saint-Denis
 (Paris 8).
 
 Me ia labora a VoxWave de 2012 a 2018 como un de sua co-fundores e sua
@@ -13,8 +17,8 @@ Me es un zelo de la programes libre, usante GNU/Linux de 2008 e Emacs
 de 2016.
 
 Me amatos es la crea de programes e construi mundos e linguas
-fantasial. Me ama ance asende e, cuando me lo pote, pasea en la
-montania.
+fantasial. Me ama ance asende e pasea en la montania cuando me pote
+lo.
 
 Mea lingua prima es franses, ma me pote parla fasil engles. Me ance
 pote parla alga nion, norsce (bokmål) e elefen.

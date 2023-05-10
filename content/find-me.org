@@ -1,0 +1,31 @@
+#+title: Où me trouver ?
+#+setupfile: ./headers
+#+language: fr
+
+* Où me trouver ?
+
+Je suis présent sur différentes plateformes et quelques réseaux
+sociaux où vous pouvez me suivre.
+
+** Réseaux sociaux
+- {{{icon(mastodon)}}} *Mastodon* : [[https://emacs.ch/@phundrak][@phundrak@phundrak.com]] devrait
+  fonctionner, sinon direction [[https://emacs.ch/@phundrak][@phundrak@emacs.ch]]
+- {{{icon(twitter)}}} *Twitter* : [[https://twitter.com/phundrak][@phundrak]], cependant je n’y suis plus très
+  actif et j’y repartage principalement mes messages Mastodon qui
+  parfois se font tronquer
+- {{{icon(writefreely)}}} *Writefreely* :
+  - [[https://write.phundrak.com/phundrak][*@phundrak@write.phundrak.com*]] : billets personnels
+  - [[https://write.phundrak.com/phundraks-short-stories][*@phundraks-short-stories@write.phundrak.com*]] : histoires courtes
+- {{{icon(discord)}}} *Discord* : =Phundrak#0001= (dites-moi que vous venez
+  d’ici, autrement il est possible que je considère le message comme
+  du pourriel)
+
+** Autres plateformes
+- {{{icon(envelope)}}} *Courriel* : [[mailto:lucien@phundrak.com][lucien@phundrak.com]]
+- {{{icon(rss)}}} *Blog* : [[https://blog.phundrak.com][blog.phundrak.com]]
+- {{{icon(gitea)}}} *Gitea* : [[https://labs.phundrak.com/phundrak][@phundrak@labs.phundrak.com]]
+- {{{icon(github)}}} *GitHub* : [[https://github.com/Phundrak][Phundrak]]
+- {{{icon(youtube)}}} *YouTube* : [[https://www.youtube.com/@phundrak][@phundrak]]
+- {{{icon(reddit)}}} *Reddit*: [/u/phundrak](https://www.reddit.com/user/phundrak)
+- {{{icon(linkedin)}}} *LinkedIn*: [[https://www.linkedin.com/in/lucien-cartier-tilet/][Lucien Cartier-Tilet]]
+- {{{icon(twitch)}}} *Twitch*: [[https://www.twitch.tv/phundrak][phundrak]]

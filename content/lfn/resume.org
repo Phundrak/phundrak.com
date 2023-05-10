@@ -1,17 +1,21 @@
-# Resoma de carera
-## Informas
+#+title: Resoma de carera
+#+setupfile: ../headers
+#+language: lfn
+
+* Resoma de carera
+** Informas
 Lucien Cartier-Tilet
 
-## Esperia Profesal
-### Aubay (2023 - )
+** Esperia Profesal
+*** Aubay (2023 - )
 - Stajia de la comensa de febrero a la comensa de agosto 2023
 - Developa de loca ueb
 - Usa de Angular, Java Spring Boot e PostgreSQL
 
-### VoxWave (2014 - 2018)
+*** VoxWave (2014 - 2018)
 Compania spesialida en la developa de cantantes virtual en franses ce
 usa sintese vocal. La produi la plu selebra es ALYS. Plu de informa
-[aci](./vocal-synthesis.md).
+[[./vocal-synthesis.md][aci]].
 
 - Cofundor
 - Programi de voses de sintese per la canta
@@ -19,49 +23,48 @@ usa sintese vocal. La produi la plu selebra es ALYS. Plu de informa
 - Suporta de usadores
 - Instrui de nova empleadas per la programi de voses de sintese
 
-## Educa
-### Mestral 2 de Tecnolojia de la Ipermedia (Universia de Paris 8, 2021 - 2023)
+** Educa
+*** Mestral 2 de Tecnolojia de la Ipermedia (Universia de Paris 8, 2021 - 2023)
 Me ia recomensa la anio per causa de mea sania, ma me no ave tempo
 seguente.
 
-### Mestral 1 de Informatica (Universia de Paris 8, 2020 - 2021)
-### Lisensa de Informatica (Universia de Paris 8, 2016 - 2019)
-### Engles Leteratural (Universia de Lyon 2, 2013-2014)
+*** Mestral 1 de Informatica (Universia de Paris 8, 2020 - 2021)
+*** Lisensa de Informatica (Universia de Paris 8, 2016 - 2019)
+*** Engles Leteratural (Universia de Lyon 2, 2013-2014)
 Me ia studia la engles leteratural durante un anio e dui asta la crea
-de [VoxWave](#voxwave-2014-2018).
+de [[./resume.md#voxwave-2014-2018][VoxWave]].
 
-## Programi ueb
-### Front-end
+** Programi ueb
+*** Front-end
 - Usa fidosa de Angular, Vue e Node.JS
 - Bon conose de HTML5, CSS3 (incluinte SASS, SCSS e LESS) e Javascript
 - Conoses de Python, Dart e Typescript
 - Aprende React e Next.js
 
-### Backend
-- Usa fidosa de Rust ([actix-web](https://actix.rs/) e
-  [Rocket](https://rocket.rs/)) e Java Spring Boot
+*** Backend
+- Usa fidosa de Rust ([[https://actix.rs/][actix-web]] e [[https://rocket.rs/][Rocket]]) e Java Spring Boot
 - Esperia en programi de backend con Django (Python)
-- Esperia en comunica con banco de datos con
-  [Diesel](https://diesel.rs) (Rust) e Django, conose alga EmacSQL
+- Esperia en comunica con banco de datos con [[https://diesel.rs][Diesel]] (Rust) e Django,
+  conose alga EmacSQL
 - Usa de PostgreSQL e MySQL
 
-## Programi sistem
+** Programi sistem
 - Esperia con Rust, C e EmacsLisp
 - Conoses de C++, Python, CommonLisp e shelles UNIX (bash, fish, eshell)
 - Conoses limitada de Prolog e Scheme
 
-## Utiles de developa
-### IDEs e editadores
+** Utiles de developa
+*** IDEs e editadores
 - Conoses esperta de Emacs, inclui con la incluis de LSP e Git
 - Bon conoses de Git (inclui sua interfas Magit per Emacs), VS Code e
   Eclipse
 - Conoses fundal de Vim, CLion, PyCharm e WebStorm
 
-## CI/CD e desplia ueb
+** CI/CD e desplia ueb
 - Esperia con la servadores ueb Nginx e Caddyserver
 - Bon conoses de Docker, Drone.io e GitHub Actions per despia ueb
 
-## Sistemes de opera
+** Sistemes de opera
 - Usa et manejablia de Linux (Arch Linux, Void Linux, Debian, Ubuntu,
   Alpine Linux)
 - Manjablia de servidores ueb e servidores de conserva (Arch Linux,
@@ -69,18 +72,18 @@ de [VoxWave](#voxwave-2014-2018).
 - Conosas fundal de Guix System, NixOS e Windows (de XP a 10, con
   eseta de Vista)
 
-## Program de ofisia
+** Program de ofisia
 - Bon conosas con org-mode (Emacs) e LaTeX
 - Conosas con LibreOffice, Microsoft Office, WPS Office e OnlyOffice
 
-## Audio
-### Sintese vocal cantada
+** Audio
+*** Sintese vocal cantada
 - Developa e crea de bancos de voses per sintese vocal cantada per
   VOCALOID3, Alter/Ego, Chipspeech e UTAU
 - Usa de VOCALOID2 a VOCALOID4, Alter/Ego, Chpispeech, UTAU, CeVIO
   Creative Studio
 
-## Injenia audio
+** Injenia audio
 - program de musica: FL Studio
 - repara e puri audio: iZotope RX
 - mastering: T-RackS CS

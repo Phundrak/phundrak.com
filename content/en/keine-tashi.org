@@ -1,0 +1,189 @@
+#+title: Keine Tashi
+#+setupfile: ../headers
+#+language: en
+
+* Introduction
+KEINE Tashi is a character and set of vocal libraries developed for
+the shareware [[http://utau2008.web.fc2.com/][UTAU]], a singing voice synthesizer. I developed KEINE
+Tashi over the course of several years, from 2012 to 2015. Three vocal
+libraries have been released to the public, the most used one being
+his *JPN Power Extend* one. On March 10th, 2017, I announced I would
+cease any kind of activity related to UTAU.
+
+#+begin_export html
+<blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><p
+lang="en" dir="ltr">I’d like to also announce that from now on I am
+dropping my previous UTAU projects other than covers and won’t develop
+any new UTAU library</p>— P’undrak (@Phundrak) <a
+href="https://twitter.com/Phundrak/status/840174634377105408?ref_src=twsrc%5Etfw">March
+10, 2017</a></blockquote> <component is="script" async
+src="https://platform.twitter.com/widgets.js"
+charset="utf-8"></component>
+#+end_export
+
+* Character and vocal libraries
+Here’s a copy and paste of some old pages describing KEINE Tashi:
+
+** Presentation
+#+begin_export html
+<ResponsiveImage
+src="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_1024.webp"
+:width="1024"
+preview="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_512.webp"
+:previewWidth="512">
+Illustration de KEINE Tashi par Umi
+</ResponsiveImage>
+
+#+end_export
+
+- Codename :: BSUP01 恵音བཀྲ་ཤིས་ KEINE Tashi
+- First name :: Tashi (བཀྲ་ཤིས་), Tibetan name meaning “auspicious”
+- Last name :: Keine (恵音), Japanese name meaning “Blessing sound”.
+  It reads as “keine”, although its regular reading should be
+  “megumine”.
+- Model :: BSUP (Bödkay Shetang UTAU Project)
+- Number :: 01
+- Gender :: male
+- Birthday (lore) :: June 28th, 1991
+- Birthday (first release) :: October 14th, 2012
+- Weight :: 154 lb / 70 kg
+- Heigh :: 6′0″ / 182 cm (very tall for a Tibetan)
+- Hair color :: black
+- Eyes color :: brown~black
+- Appearance :: Tashi wears a modernized Tibetan suit from the Amdo
+  Region (Chinese: 安多 Ānduō), colored in blue. He also wears some
+  turquoise jeweleries.
+- Favorite food :: meat momo (Tibetan raviolies)
+- Character item :: a Tibetan manuscript
+- Voice and creator :: [[https://phundrak.com][Phundrak]] (me)
+- Likes  :: to meditate, calligraphy, old books, manuscripts (is that
+  a self-insert?)
+- Dislikes :: selfishness, lies, arrogance
+- Personality :: Tashi is somebody very calm, sweet. He really enjoys
+  old books and manuscripts, and he LOVES meditate! He's never hungry,
+  so, he can stay meditating for 2~3 days meditating, just like that,
+  until he realizes that he should eat something. And he always keeps
+  quiet, it's really hard to make him angry.
+
+  But when he is, his anger becomes wrath. Anyone who experienced it
+  can attest how complex and difficult it is to calm him down.
+  Strangely enough, shortly after being confronted by Tashi, the
+  victims of this wrath see their quality of life greatly improve.
+  Maybe these people needed to hear some truths they refused to face
+  before?
+
+** Vocal libraries
+*** JPN VCV
+- Download link :: ⁣
+
+  | Extension | Size     | Link |
+  |-----------+----------+------|
+  | 7z        | 25.7 MiB | [[https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_VCV.7z][DL]]   |
+  | tar.xz    | 32.5 MiB | [[https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_VCV.tar.xz][DL]]   |
+  | zip       | 38.0 MiB | [[https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_VCV.zip][DL]]   |
+
+- File size :: 60.7 MB
+- Total uncompressed size :: 94.4 MB
+- Number of voice phonemes :: 1264 (253 audio files)
+- Average frequency :: G#2
+- Vocal range :: C2~D3
+- FRQ file presence :: partial
+- Release date :: October, 14th 2012
+- Phoneme encoding :: Romaji with hiragana and CV romaji aliases
+- Supported languages :: Japanese
+- oto.ini :: Tuned myself
+- Recommended engines :: TIPS, VS4U
+
+*** JPN Extend Power
+- Download link :: ⁣
+
+  | Extension | Size   | Link |
+  |-----------+--------+------|
+  | 7z        | 1.1Gio | [[https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_Extend_Power.7z][DL]]   |
+  | tar.xz    | 1.1Gio | [[https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_Extend_Power.tar.xz][DL]]   |
+  | zip       | 1.2Gio | [[https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_Extend_Power.zip][DL]]   |
+
+- File size :: 114 MB
+- Total uncompressed size :: 155 MB
+- Number of voice phonemes :: 3020 (546 audio files)
+- Average frequency :: C3
+- Vocal range :: B1~D4
+- FRQ file presence :: partial
+- Release date :: June 28th, 2013
+- Phoneme encoding :: Romaji (hiragana aliases)
+- Supported languages :: Japanese
+- oto.ini :: Tuned myself
+- Recommended engines :: VS4U, world4utau
+
+*** JPN Extend Youth
+
+- Download link :: ⁣
+
+  | Extension | Size     | Link |
+  |-----------+----------+------|
+  | 7z        | 237.7Mio | [[https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_Extend_Youth.7z][DL]]   |
+  | tar.xz    | 243.5Mio | [[https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_Extend_Youth.tar.xz][DL]]   |
+  | zip       | 268.7Mio | [[https://cdn.phundrak.com/files/KeineTashi/BSUP01_KEINE_Tashi_JPN_Extend_Youth.zip][DL]]   |
+
+- File size :: 36.9 MB
+- Total uncompressed size :: 42.0 MB
+- Number of voice phonemes :: 1954 (182 audio files)
+- Average frequency :: C4
+- Vocal range :: F#3~A#4
+- FRQ file presence :: partial
+- Release date :: June 28th, 2013
+- Phoneme encoding :: Romaji (hiragana aliases, romaji added with the
+  oto.ini update)
+- Supported languages :: Japanese
+- oto.ini :: Tuned myself
+- Recommended engines :: fresamp, VS4U, world4utau
+
+*** JPN Extend Native
+- Status :: abandonned
+
+*** TIB CVVC
+- Status :: abandonned
+
+*** ENG
+#+begin_export html
+<ResponsiveImage
+src="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_EN_673.webp"
+:width="673"
+preview="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_EN_246.webp"
+:previewWidth="300">
+Illustration de KEINE Tashi EN
+</ResponsiveImage>
+#+end_export
+
+- Status :: abandonned
+
+* Usage clause and license
+KEINE Tashi is released under the [[https://creativecommons.org/licenses/by-nc-sa/4.0/][CC BY-SA-NC 4.0 license]], meaning you
+are free to:
+
+- use :: make use of the vocal libraries in UTAU or any other singing
+  vocal synthesizer software.
+- adapt :: remix, transform, and build upon the material
+- share :: copy and redistribute the material in any medium or format
+
+my work, on the condition of:
+
+- Attribution :: You must give appropriate credit, provide a link to
+  the license, and indicate if changes were made. You may do so in any
+  reasonable manner, but not in any way that suggests the licensor
+  endorses you or your use.
+- NonCommercial :: You may not use the material for commercial
+  purposes.
+- ShareAlike :: If you remix, transform, or build upon the material,
+  you must distribute your contributions under the same license as the
+  original.
+
+Although I cannot add anything to this legal notice, I would also like
+if you followed the following rules of thumb regarding this character:
+any religious use of this character and its vocal libraries is
+forbidden, except for folk music, and Buddhist and Bön songs. However,
+due to the current controversy, any song linked to His Holiness the
+Gyalwa Karmapa is strictly forbidden until said controversy has been
+officially resolved. This is also applicable to His Holiness the Dalai
+Lama, the Venerable Shamar Rinpoche, and Tai Situ Rinpoche. If you
+have any question or if you are unsure, please email me.

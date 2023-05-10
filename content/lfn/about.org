@@ -1,0 +1,22 @@
+#+title: A tema
+#+setupfile: ../headers
+#+language: lfn
+
+* A tema
+** Introdui
+Asi es la loca ueb personal de Lucien Cartier-Tilet, ance conoseda
+commo “P’undrak” o “Phundrak”.
+
+Lo es scriveda con [[https://v2.vuepress.vuejs.org/][Vuepress]] e es completa de fonte abrida. On pote
+trova la totalia de la testo de fonte sur [[https://labs.phundrak.com/phundrak/phundrak.com][mea Gitea personal]]. La
+icones ce es usada sur esa loca ueb veni de varia orijinas diversa:
+- [[https://icomoon.io][IcoMoon]] ce me usa afin faxi icones en un tipo de letra unica,
+  incluinte alga de lor propre icones,
+- [[https://fontawesome.com/][FontAwesome]] de do la majoria de mea icones veni (lor util per Vue no
+  es vera bon en mea opinia)
+- La {{{icon(conlang)}}} [[https://conlang.org/][Asosia de Crea de Linguas]] {{{icon(conlang)}}} de cual me
+  ia altera lor logo per mea linguas construida,
+- {{{icon(emacs)}}}[[https://www.gnu.org/software/emacs/][Emacs]] e {{{icon(writefreely)}}} [[https://writefreely.org/][WriteFreely]] de cual me ia
+  recrea parte de lor logo propre en SVG afin de crea un icon,
+- {{{icon(gitea)}}} [[https://gitea.io][Gitea]] de cual me ia altera la logo afin fa lo
+  monocromatica.
