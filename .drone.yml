@@ -4,35 +4,66 @@ type: docker
 name: CD
 
 steps:
-- name: restore cache
+- name: restore cache node
   image: drillster/drone-volume-cache
   volumes:
-    - name: cache
-      path: /cache
+    - name: main-website-node
+      path: /cache/phundrak.com/node
   settings:
     restore: true
     mount:
       - ./node_modules
 
-- name: generate
+- name: restore cache emacs
+  image: drillster/drone-volume-cache
+  volumes:
+    - name: main-website-emacs
+      path: /cache/phundrak.com/emacs
+  settings:
+    restore: true
+    mount:
+      - /root/.emacs.d
+
+- name: generate emacs
+  image: silex/emacs:master-alpine
+  commands:
+    - apk update && apk add git
+    - emacs -Q --script export.el
+  depends_on:
+    - "restore cache emacs"
+
+- name: generate node
   image: node:19-alpine
   commands:
     - yarn install
     - yarn build
   depends_on:
-    - "restore cache"
+    - "restore cache node"
+    - "generate emacs"
 
-- name: rebuild cache
+- name: rebuild cache emacs
   image: drillster/drone-volume-cache
   volumes:
-    - name: cache
-      path: /cache
+    - name: conlang-emacs
+      path: /cache/conlang/emacs
+  settings:
+    rebuild: true
+    mount:
+      - /root/.emacs.d
+  depends_on:
+    - "generate emacs"
+
+- name: rebuild cache node
+  image: drillster/drone-volume-cache
+  volumes:
+    - name: main-website-node
+      path: /cache/phundrak.com/node
   settings:
     rebuild: true
     mount:
       - ./node_modules
   depends_on:
-    - generate
+    - "generate node"
 
 - name: deploy stable
   image: appleboy/drone-scp
@@ -50,7 +81,7 @@ steps:
     port:
       from_secret: ssh_port
   depends_on:
-    - generate
+    - "generate node"
   when:
     branch:
     - main
@@ -93,7 +124,7 @@ steps:
     port:
       from_secret: ssh_port
   depends_on:
-    - generate
+    - "generate node"
   when:
     branch:
     - devel
