@@ -10,7 +10,7 @@
     <GithubRepository repoName="rejeep/f.el" />
     <GithubRepository repoName="Phundrak/eshell-info-banner.el" />
     <GithubRepository repoName="Phundrak/dotfiles" />
-    <GithubRepository repoName="Phundrak/langue-phundrak-fr" />
+    <GithubRepository repoName="Phundrak/conlang.phundrak.com" />
   </ListRepositories>
 </ClientOnly>
 #+end_export
