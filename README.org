@@ -18,6 +18,14 @@ file as well as its content and general configuration in the directory
 [[file:content/][content]].
 
 ** Installing and running
+In order to run the website, you firts need to export all the orgmode
+files to Markdown files. I recommend using =ox-gfm= to do so. If you
+don’t mind =package.el= installing it as well as =f.el=, you can run the
+following command:
+#+begin_src shell
+emacs -Q --script export.el
+#+end_src
+
 To install the NPM dependencies for the project, run one of the
 following commands:
 #+begin_src shell
