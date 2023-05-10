@@ -118,10 +118,9 @@ const simplifiedHead = [
 ];
 
 let head = [];
-simplifiedHead.map((tag: SimplifiedHeader) => {
-  let tagName = tag.tag;
-  tag.content.forEach((element) => {
-    head.push([tagName, element]);
+simplifiedHead.forEach((tag) => {
+  tag.content.forEach((element: any) => {
+    head.push([tag.tag, element]);
   });
 });
 
