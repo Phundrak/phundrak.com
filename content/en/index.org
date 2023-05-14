@@ -1,4 +1,3 @@
-#+title: Home
 #+setupfile: ../headers
 #+language: en
 
@@ -21,3 +20,9 @@ I have the opportunity to.
 
 I speak natively French, and English at a native level. I also speak
 some Japanese, [[https://elefen.org][Lingua Franca Nova]], and Norwegian Bokmål.
+
+#+begin_export html
+This website is also available on Gemini as [gmi.phundrak.com/en](gemini://gmi.phundrak.com/en)!
+#+end_export
+
+#+include: other-links

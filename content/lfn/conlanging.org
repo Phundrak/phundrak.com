@@ -1,4 +1,3 @@
-#+title: Crea de linguas
 #+setupfile: ../headers
 #+language: lfn
 
@@ -28,3 +27,5 @@ lingua de la vicinges, vea nordica, e ce se parla en la pais fantasial
 de Eittland.
 
 On pote trove plu de informa sur [[https://conlang.phundrak.com/][mea loca ueb de linguas construida]].
+
+#+include: other-links

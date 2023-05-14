@@ -1,4 +1,3 @@
-#+title: Resume
 #+setupfile: ../headers
 #+language: en
 
@@ -86,3 +85,5 @@ Studied for a year and a half until the creation of [[./resume.md#voxwave-2014-2
 - Music writing and mix software: FL Studio
 - Audio repair and cleaning: iZotope RX
 - Mastering: T-RackS CS
+
+#+include: other-links

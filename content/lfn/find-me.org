@@ -1,4 +1,3 @@
-#+title: Do trova me
 #+setupfile: ../headers
 #+language: lfn
 
@@ -26,3 +25,5 @@ On pote trova me sur multe loca ueb e redes sosial do on pote segue me.
 - {{{icon(reddit)}}} Reddit :: [[https://www.reddit.com/user/phundrak][/u/phundrak]]
 - {{{icon(linkedin)}}} LinkedIn :: [[https://www.linkedin.com/in/lucien-cartier-tilet/][Lucien Cartier-Tilet]]
 - {{{icon(twitch)}}} Twitch :: [[https://www.twitch.tv/phundrak][phundrak]]
+
+#+include: other-links

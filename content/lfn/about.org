@@ -1,4 +1,3 @@
-#+title: A tema
 #+setupfile: ../headers
 #+language: lfn
 
@@ -20,3 +19,5 @@ icones ce es usada sur esa loca ueb veni de varia orijinas diversa:
   recrea parte de lor logo propre en SVG afin de crea un icon,
 - {{{icon(gitea)}}} [[https://gitea.io][Gitea]] de cual me ia altera la logo afin fa lo
   monocromatica.
+
+#+include: other-links

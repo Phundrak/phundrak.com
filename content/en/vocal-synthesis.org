@@ -1,4 +1,3 @@
-#+title: Vocal Synthesis
 #+setupfile: ../headers
 #+language: en
 
@@ -39,7 +38,7 @@ working at VoxWave.
 While all these vocal libraries have been discontinued, vocal
 libraries for /BSUP01 KEINE Tashi/ and /ALYS/ are available for download.
 Please refer to the following pages:
-- BSUP01 KEINE Tashi :: [[./keine-tashi.md][BSUP01 KEINE Tashi]]
+- BSUP01 KEINE Tashi :: [[file:./keine-tashi.org][BSUP01 KEINE Tashi]]
 - ALYS for UTAU :: [[https://blog.phundrak.com/open-sourcing-alys/][Open-Sourcing ALYS]]
 
 ** Alter/Ego
@@ -59,3 +58,5 @@ since December 15th, 2021. However, in accordance with Plogue, no
 reciepe for building ALYS for Alter/Ego have been made available.
 
 More information on open-sourcing ALYS [[https://blog.phundrak.com/open-sourcing-alys/][here]].
+
+#+include: other-links

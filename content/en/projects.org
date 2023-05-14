@@ -1,9 +1,12 @@
-#+title: Projects
 #+setupfile: ../headers
 #+language: en
 
 * Programming Projects
 ** Pinned GitHub Projects
+#+begin_export gemini
+Unfortunately, this content is not available on Gemini. I’m working on it.
+#+end_export
+
 #+begin_export html
 <ClientOnly>
   <ListRepositories>
@@ -16,6 +19,10 @@
 #+end_export
 
 ** Most Starred Projects on GitHub
+#+begin_export gemini
+Unfortunately, this content is not available on Gemini. I’m working on it.
+#+end_export
+
 #+begin_export html
 <ClientOnly>
   <ListRepositories sortBy='stars' user='phundrak' :limit='5' />
@@ -23,8 +30,14 @@
 #+end_export
 
 ** Latest Active Repositories on GitHub
+#+begin_export gemini
+Unfortunately, this content is not available on Gemini. I’m working on it.
+#+end_export
+
 #+begin_export html
 <ClientOnly>
   <ListRepositories sortBy='pushed_at' user='phundrak' :limit='5' />
 </ClientOnly>
 #+end_export
+
+#+include: other-links

@@ -1,9 +1,12 @@
-#+title: Projetas informatical
 #+setupfile: ../headers
 #+language: lfn
 
 * Projetas informatical
 ** Mea projetas GitHub spinida
+#+begin_export gemini
+Regretable, eso contenida no es dispone per Gemini.
+#+end_export
+
 #+begin_export html
 <ClientOnly>
   <ListRepositories>
@@ -16,6 +19,10 @@
 #+end_export
 
 ** Mea projetas GitHub lo plu stelada
+#+begin_export gemini
+Regretable, eso contenida no es dispone per Gemini.
+#+end_export
+
 #+begin_export html
 <ClientOnly>
   <ListRepositories sortBy='stars' user='phundrak' :limit='5' />
@@ -23,8 +30,14 @@
 #+end_export
 
 ** La plu nova projetas sur GitHub
+#+begin_export gemini
+Regretable, eso contenida no es dispone per Gemini.
+#+end_export
+
 #+begin_export html
 <ClientOnly>
   <ListRepositories sortBy='pushed_at' user='phundrak' :limit='5' />
 </ClientOnly>
 #+end_export
+
+#+include: other-links

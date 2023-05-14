@@ -1,0 +1,14 @@
+# -*- mode: org -*-
+
+#+begin_export gmi
+# Autres pages web du site
+
+=> ./index.gmi Accueil
+=> ./find-me.gmi Où me trouver
+=> ./resume.gmi CV
+=> ./projets.gmi Projets informatiques
+=> ./conlanging.gmi Création de langues
+=> ./vocal-synthesis.gmi Synthèse vocale
+=> ./about.gmi À propos
+=> ./privacy.gmi Vie privée
+#+end_export

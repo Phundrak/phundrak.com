@@ -1,4 +1,3 @@
-#+title: Conlanging
 #+setupfile: ../headers
 #+language: en
 
@@ -25,3 +24,5 @@ worldbuilding project, although Proto-Ñyqy’s worldbuilding is still
 largely secret while Eittland’s worldbuilding is mostly public.
 
 More information can be found on my [[https://conlang.phundrak.com/][conlanging website]].
+
+#+include: other-links

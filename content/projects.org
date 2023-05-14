@@ -1,9 +1,12 @@
-#+title: Projets informatiques
 #+setupfile: ./headers
 #+language: fr
 
 * Projets Informatiques
 ** Projets GitHub épinglés
+#+begin_export gemini
+Malheureusement, ce contenu n’est pas encore disponible sur Gemini. J’y travaille.
+#+end_export
+
 #+begin_export html
 <ClientOnly>
   <ListRepositories>
@@ -16,6 +19,10 @@
 #+end_export
 
 ** Projets GitHub les plus étoilés
+#+begin_export gemini
+Malheureusement, ce contenu n’est pas encore disponible sur Gemini. J’y travaille.
+#+end_export
+
 #+begin_export html
 <ClientOnly>
   <ListRepositories sortBy='stars' user='phundrak' :limit='5' />
@@ -23,8 +30,14 @@
 #+end_export
 
 ** Derniers dépôts de code actifs sur GitHub
+#+begin_export gemini
+Malheureusement, ce contenu n’est pas encore disponible sur Gemini. J’y travaille.
+#+end_export
+
 #+begin_export html
 <ClientOnly>
   <ListRepositories sortBy='pushed_at' user='phundrak' :limit='5' />
 </ClientOnly>
 #+end_export
+
+#+include: other-links

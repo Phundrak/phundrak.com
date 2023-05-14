@@ -1,4 +1,3 @@
-#+title: Keine Tashi
 #+setupfile: ./headers
 #+language: fr
 
@@ -8,7 +7,8 @@ title: BSUP01 Keine Tashi
 ---
 #+end_export
 
-* Présentation
+* BSUP01 Keine Tashi
+** Présentation
 Keine Tashi est un personnage et le nom d’une collection de banques
 vocales développées pour le logiciel [[http://utau2008.web.fc2.com/][UTAU]], un logiciel de synthèse de
 voix pour le chant. J’ai développé Keine Tashi de 2012 à 2015 et
@@ -28,11 +28,11 @@ j’annonçai arrêter toutes activités liées à UTAU.
 <component is="script" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></component>
 #+end_export
 
-* Personnage et banques vocales
+** Personnage et banques vocales
 Voici une traduction en français des informations ayant trait à Keine
 Tashi sur d’anciennes pages le présentant.
 
-** Présentation
+*** Présentation
 #+begin_export html
 <ResponsiveImage
 src="/img/UTAU/KEINE_Tashi_1024.webp"
@@ -80,8 +80,8 @@ Illustration de Keine Tashi par Umi
   vie grandement s’améliorer. Peut-être ces personnes avaient besoin
   d’entendre des réalités auxquelles elles refusaient de faire face ?
 
-** Banques vocales
-*** JPN VCV
+*** Banques vocales
+**** JPN VCV
 - Lien de téléchargement :: ⁣
   | Extension | Taille   | Lien |
   |-----------+----------+------|
@@ -99,7 +99,7 @@ Illustration de Keine Tashi par Umi
 - Langues supportées :: Japonais
 - Moteurs de synthèse recommandés :: TIPS, VS4U
 
-*** JPN Extend Power
+**** JPN Extend Power
 - Lien de téléchargement :: ⁣
   | Extension | Taille | Lien |
   |-----------+--------+------|
@@ -117,7 +117,7 @@ Illustration de Keine Tashi par Umi
 - Langues supportées :: Japonais
 - Moteurs de synthèse recommandés :: VS4U, world4utau
 
-*** JPN Extend Youth
+**** JPN Extend Youth
 - Lien de téléchargement :: ⁣
   | Extension | Taille   | Lien |
   |-----------+----------+------|
@@ -135,13 +135,13 @@ Illustration de Keine Tashi par Umi
 - Langues supportées :: Japonais
 - Moteurs de synthèse recommandés :: fresamp, VS4U, world4utau
 
-*** JPN Extend Native
+**** JPN Extend Native
 - Status :: abandonné
 
-*** TIB CVVC
+**** TIB CVVC
 - Status :: abandonné
 
-*** ENG
+**** ENG
 #+begin_export html
 <ResponsiveImage
 src="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_EN_673.webp"
@@ -154,7 +154,7 @@ Illustration de Keine Tashi EN
 
 - Status :: abandonné
 
-* Licence d’utilisation
+** Licence d’utilisation
 Keine Tashi est publié sous la licence [[https://creativecommons.org/licenses/by-nc-sa/4.0/][CC BY-SA-NC 4.0]]. Cela signifie
 que vous êtes libres :
 - d’utiliser :: utiliser les banques vocales dans UTAU ou tout autre
@@ -189,3 +189,5 @@ officielle de la situation. Cette interdiction est également
 applicable à Sa Sainteté le Dalaï Lama, au Vénérable Shamar Rinpoché
 et Tai Situ Rinpoche. Si vous avez la moindre question, n’hésitez pas
 à m’[[mailto:lucien@phundrak.com][envoyer un email]].
+
+#+include: other-links

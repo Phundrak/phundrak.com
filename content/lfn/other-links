@@ -1,0 +1,14 @@
+# -*- mode: org -*-
+
+#+begin_export gmi
+# Pajinas de la loca ueb
+
+=> ./index.gmi Paje prima
+=> ./find-me.gmi Do trova me
+=> ./resume.gmi Resoma de carera
+=> ./projets.gmi Projetas informatical
+=> ./conlanging.gmi Crea de linguas
+=> ./vocal-synthesis.gmi Sintese vocal
+=> ./about.gmi A tema
+=> ./privacy.gmi Vive privata
+#+end_export

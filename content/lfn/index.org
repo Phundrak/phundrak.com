@@ -1,4 +1,3 @@
-#+title: Paje prima
 #+setupfile: ../headers
 #+language: lfn
 
@@ -22,3 +21,9 @@ lo.
 
 Mea lingua prima es franses, ma me pote parla fasil engles. Me ance
 pote parla alga nion, norsce (bokmål) e elefen.
+
+#+begin_export html
+Eso loca ueb es ance dispone per Gemini a la adirije ueb [gmi.phundrak.com/lfn](gemini://gmi.phundrak.com/lfn)!
+#+end_export
+
+#+include: other-links

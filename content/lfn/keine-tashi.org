@@ -1,14 +1,8 @@
-#+title: BSUP01 Keine Tashi
 #+setupfile: ../headers
 #+language: lfn
 
-#+begin_export html
----
-title: BSUP01 Keine Tashi
----
-#+end_export
-
-* Presenta
+* BSUP01 Keine Tashi
+** Presenta
 KEINE Tashi es un carater e la nom de un colie de bancos de voses
 developa per la program [[http://utau2008.web.fc2.com/][UTAU]], un program de sintese de vose per canta.
 Me ia developa KEINE Tashi de 2012 a 2015 e me ia publici tre de sua
@@ -27,11 +21,11 @@ src="https://platform.twitter.com/widgets.js"
 charset="utf-8"></component>
 #+end_export
 
-* Carater e bancos de vose
+** Carater e bancos de vose
 On ave asi en elefen la informas liada a KEINE Tashi sur sua vea
 pajinas ce le ia presenta.
 
-** Presenta
+*** Presenta
 #+begin_export html
 <ResponsiveImage
 src="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_1024.webp"
@@ -77,8 +71,8 @@ Desinia de KEINE Tashi par Umi
   la cualia de sua vives deveni multe plu bon e se boni enorme. Se
   pote ce esa personas ia nesesa oia realias ce los ia refusa oia?
 
-** Bancos de voses
-*** JPN VCV
+*** Bancos de voses
+**** JPN VCV
 - Descarga ::
     | Sufisa | Taie    | Iperlia |
     |--------+---------+---------|
@@ -96,7 +90,7 @@ Desinia de KEINE Tashi par Umi
 - Linguas suportada :: nion
 - Motores de sintese recomenda :: TIPS, VS4U
 
-*** JPN Extend Power
+**** JPN Extend Power
 - Descarga :: ⁣
 
   | Sufisa | Taie   | Iperlia |
@@ -115,7 +109,7 @@ Desinia de KEINE Tashi par Umi
 - Linguas suportada :: nion
 - Motores de sintese recomenda :: VS4U, world4utau
 
-*** JPN Extend Youth
+**** JPN Extend Youth
 
 - Descarga :: ⁣
 
@@ -135,13 +129,13 @@ Desinia de KEINE Tashi par Umi
 - Linguas suportada :: nion
 - Motores de sintese recomenda :: fresamp, VS4U, world4utau
 
-*** JPN Extend Native
+**** JPN Extend Native
 - State :: abandonada
 
-*** TIB CVVC
+**** TIB CVVC
 - State :: abandonada
 
-*** ENG
+**** ENG
 
 #+begin_export html
 <ResponsiveImage
@@ -155,7 +149,7 @@ Desinia de KEINE Tashi EN
 
 - State :: abandonada
 
-* Lisensa de usa
+** Lisensa de usa
 KEINE Tashi es publica con la lisensa [[https://creativecommons.org/licenses/by-nc-sa/4.0/][CC BY-SA-NC 4.0]]. Esa sinifia ce
 tu pote:
 - usa :: usa la bancos de voses en UTAU o tota otra program
@@ -180,3 +174,5 @@ tota canta lia a sua person es nonpermeteda asta esa situa es solveda.
 Esa despermete es simil aplicada a Sia Santia la Dalai Lama, la
 Onorable Xamar Rinpotxe e Tai Situ Rinpotxe. Si te ave un demanda o si
 te no es serta, envia me [[mailto:lucien@phundrak.com][un eposta]].
+
+#+include: other-links

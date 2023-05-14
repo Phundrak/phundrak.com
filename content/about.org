@@ -1,4 +1,3 @@
-#+title: À Propos
 #+setupfile: ./headers
 #+language: fr
 
@@ -21,3 +20,5 @@ utilisées sur ce site proviennent de plusieurs sources différentes :
   une partie de leur logo respectif en SVG afin d’en créer une icône,
 - {{{icon(gitea)}}} [[https://gitea.io/][Gitea]] dont j’ai modifié le logo en SVG pour l’avoir en
   monochrome.
+
+#+include: other-links

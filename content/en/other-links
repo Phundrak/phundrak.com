@@ -1,0 +1,14 @@
+# -*- mode: org -*-
+
+#+begin_export gmi
+# Other Web Pages
+
+=> ./index.gmi Home
+=> ./find-me.gmi Where to find me
+=> ./resume.gmi Resume
+=> ./projets.gmi Programming Projets
+=> ./conlanging.gmi Conlanging
+=> ./vocal-synthesis.gmi Vocal Synthesis
+=> ./about.gmi About
+=> ./privacy.gmi Privacy
+#+end_export

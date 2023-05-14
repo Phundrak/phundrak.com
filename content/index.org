@@ -1,4 +1,3 @@
-#+title: Accueil
 #+setupfile: ./headers
 #+language: fr
 
@@ -23,3 +22,9 @@ quand l’opportunité se présente, de la randonnée.
 Ma langue maternelle est le Français, mais je parle également
 couramment en anglais. J’ai également des bases en japonais, [[https://elefen.org][lingua
 franca nova]], et en norvégien bokmål.
+
+#+begin_export html
+Ce site web est également disponible sur Gemini à l’adresse [gmi.phundrak.com](gemini://gmi.phundrak.com)!
+#+end_export
+
+#+include: other-links

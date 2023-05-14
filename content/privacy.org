@@ -1,4 +1,3 @@
-#+title: Vie Privée
 #+setupfile: ./headers
 #+language: fr
 
@@ -66,3 +65,5 @@ trouvée à son tout début.
 ** J’ai d’autres questions
 Et je serai heureux d’y répondre par mail. Vous pouvez me contacter
 via l’adresse mail [[mailto:lucien@phundrak.com][lucien@phundrak.com]].
+
+#+include: other-links

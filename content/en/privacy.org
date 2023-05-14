@@ -1,4 +1,3 @@
-#+title: Privacy
 #+setupfile: ../headers
 #+language: en
 
@@ -63,3 +62,5 @@ beginning.
 ** I have other questions
 And I have the answers! I’ll be more thang happy to chat with you by
 email, feel free to send me one at [[mailto:lucien@phundrak.com][lucien@phundrak.com]].
+
+#+include: other-links

@@ -1,4 +1,3 @@
-#+title: Création de langues
 #+setupfile: ./headers
 #+language: fr
 
@@ -36,3 +35,5 @@ notre monde.
 
 Plus d’informations peuvent être trouvées sur [[https://conlang.phundrak.com/][mon site
 d’idéolinguistique]] (en anglais)
+
+#+include: other-links

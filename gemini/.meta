@@ -1,0 +1,4 @@
+# This line will be ignored.
+lfn/**/*.gmi: ;lang=lfn
+en/**/*.gmi: ;lang=en-US
+*.gmi: ;lang=fr-FR

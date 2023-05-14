@@ -1,8 +1,7 @@
-#+title: Où me trouver ?
 #+setupfile: ./headers
 #+language: fr
 
-* Où me trouver ?
+* Où me trouver
 
 Je suis présent sur différentes plateformes et quelques réseaux
 sociaux où vous pouvez me suivre.
@@ -29,3 +28,5 @@ sociaux où vous pouvez me suivre.
 - {{{icon(reddit)}}} *Reddit*: [/u/phundrak](https://www.reddit.com/user/phundrak)
 - {{{icon(linkedin)}}} *LinkedIn*: [[https://www.linkedin.com/in/lucien-cartier-tilet/][Lucien Cartier-Tilet]]
 - {{{icon(twitch)}}} *Twitch*: [[https://www.twitch.tv/phundrak][phundrak]]
+
+#+include: other-links
