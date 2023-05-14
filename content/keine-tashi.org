@@ -35,11 +35,11 @@ Tashi sur d’anciennes pages le présentant.
 *** Présentation
 #+begin_export html
 <ResponsiveImage
-src="/img/UTAU/KEINE_Tashi_1024.webp"
+src="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_1024.webp"
 :width="1024"
-preview="/img/UTAU/KEINE_Tashi_512.webp"
+preview="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_512.webp"
 :previewWidth="512">
-Illustration de Keine Tashi par Umi
+Illustration de KEINE Tashi par Umi
 </ResponsiveImage>
 #+end_export
 

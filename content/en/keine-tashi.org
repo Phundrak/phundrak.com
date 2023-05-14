@@ -33,7 +33,6 @@ preview="https://cdn.phundrak.com/img/UTAU/KEINE_Tashi_512.webp"
 :previewWidth="512">
 Illustration de KEINE Tashi par Umi
 </ResponsiveImage>
-
 #+end_export
 
 - Codename :: BSUP01 恵音བཀྲ་ཤིས་ KEINE Tashi
