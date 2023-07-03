@@ -1,1 +1,24 @@
-{"subject":"acct:phundrak@emacs.ch","aliases":["https://emacs.ch/@phundrak","https://emacs.ch/users/phundrak"],"links":[{"rel":"http://webfinger.net/rel/profile-page","type":"text/html","href":"https://emacs.ch/@phundrak"},{"rel":"self","type":"application/activity+json","href":"https://emacs.ch/users/phundrak"},{"rel":"http://ostatus.org/schema/1.0/subscribe","template":"https://emacs.ch/authorize_interaction?uri={uri}"}]}
+{
+  "subject": "acct:phundrak@emacs.ch",
+  "aliases": ["https://emacs.ch/@phundrak", "https://emacs.ch/users/phundrak"],
+  "links": [
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://emacs.ch/@phundrak"
+    },
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://emacs.ch/users/phundrak"
+    },
+    {
+      "rel": "http://ostatus.org/schema/1.0/subscribe",
+      "template": "https://emacs.ch/authorize_interaction?uri={uri}"
+    },
+    {
+      "rel": "http://openid.net/specs/connect/1.0/issuer",
+      "href": "https://auth.phundrak.com"
+    }
+  ]
+}
