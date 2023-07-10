@@ -1,20 +1,20 @@
 {
-  "subject": "acct:phundrak@emacs.ch",
-  "aliases": ["https://emacs.ch/@phundrak", "https://emacs.ch/users/phundrak"],
+  "subject": "acct:phundrak@mastodon.phundrak.com",
+  "aliases": ["https://mastodon.phundrak.com/@phundrak", "https://mastodon.phundrak.com/users/phundrak"],
   "links": [
     {
       "rel": "http://webfinger.net/rel/profile-page",
       "type": "text/html",
-      "href": "https://emacs.ch/@phundrak"
+      "href": "https://mastodon.phundrak.com/@phundrak"
     },
     {
       "rel": "self",
       "type": "application/activity+json",
-      "href": "https://emacs.ch/users/phundrak"
+      "href": "https://mastodon.phundrak.com/users/phundrak"
     },
     {
       "rel": "http://ostatus.org/schema/1.0/subscribe",
-      "template": "https://emacs.ch/authorize_interaction?uri={uri}"
+      "template": "https://mastodon.phundrak.com/authorize_interaction?uri={uri}"
     },
     {
       "rel": "http://openid.net/specs/connect/1.0/issuer",

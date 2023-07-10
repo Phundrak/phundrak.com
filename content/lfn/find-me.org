@@ -5,8 +5,8 @@
 On pote trova me sur multe loca ueb e redes sosial do on pote segue me.
 
 ** Redes sosial
-- {{{icon(mastodon)}}} Mastodon :: [[https://emacs.ch/@phundrak][@phundrak@phundrak.com]] ta debe funsiona,
-  si no, visita [[https://emacs.ch/@phundrak][@phundrak@emacs.ch]]
+- {{{icon(mastodon)}}} Mastodon :: [[https://mastodon.phundrak.com/@phundrak][@phundrak@phundrak.com]] ta debe funsiona,
+  si no, visita [[https://mastodon.phundrak.com/@phundrak][@phundrak@mastodon.phundrak.com]]
 - {{{icon(twitter)}}} Twitter :: [[https://twitter.com/phundrak][@phundrak]], ma me usa lo a poca veses, la
   plu de mea tuitas es mea mesajes mastodon ce es a vesas truncada
 - {{{icon(writefreely)}}} Writefreely :: ⁣

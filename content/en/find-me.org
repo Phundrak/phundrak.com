@@ -7,8 +7,8 @@ I am on various websites and some social networks where you can follow
 me.
 
 ** Social Networks
-- {{{icon(mastodon)}}} Mastodon :: [[https://emacs.ch/@phundrak][@phundrak@phundrak.com]] should work,
-  otherwise head over to [[https://emacs.ch/@phundrak][@phundrak@emacs.ch]]
+- {{{icon(mastodon)}}} Mastodon :: [[https://mastodon.phundrak.com/@phundrak][@phundrak@phundrak.com]] should work,
+  otherwise head over to [[https://mastodon.phundrak.com/@phundrak][@phundrak@mastodon.phundrak.com]]
 - {{{icon(twitter)}}} Twitter :: [[https://twitter.com/phundrak][@phundrak]], though I harldy use it anymore
   and mostly reshare my Mastodon messages when I think to, and
   sometimes they get truncated

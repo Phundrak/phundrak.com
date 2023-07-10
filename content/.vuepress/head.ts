@@ -123,5 +123,10 @@ simplifiedHead.forEach((tag) => {
     head.push([tag.tag, element]);
   });
 });
+head.push([
+  'a',
+  { rel: 'me', href: 'https://mastodon.phundrak.com/@phundrak' },
+  'Mastodon',
+]);
 
 export default head;
