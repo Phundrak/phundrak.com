@@ -7,8 +7,8 @@ Je suis présent sur différentes plateformes et quelques réseaux
 sociaux où vous pouvez me suivre.
 
 ** Réseaux sociaux
-- {{{icon(mastodon)}}} *Mastodon* : [[https://mastodon.phundrak.com/@phundrak][@phundrak@phundrak.com]] devrait
-  fonctionner, sinon direction [[https://mastodon.phundrak.com/@phundrak][@phundrak@mastodon.phundrak.com]]
+- {{{icon(mastodon)}}} *Mastodon* : [[https://emacs.ch/@phundrak][@phundrak@phundrak.com]] devrait
+  fonctionner, sinon direction [[https://emacs.ch/@phundrak][@phundrak@emacs.ch]]
 - {{{icon(twitter)}}} *Twitter* : [[https://twitter.com/phundrak][@phundrak]], cependant je n’y suis plus très
   actif et j’y repartage principalement mes messages Mastodon qui
   parfois se font tronquer
