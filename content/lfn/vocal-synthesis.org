@@ -8,7 +8,7 @@ title: Sintese vocal
 #+end_export
 
 * Labora en sintese vocal
-De 2011 a 2028, me ia labora esente un amator alora esente un profesal
+De 2011 a 2018, me ia labora esente un amator alora esente un profesal
 en la domina de la sintese vocal. Plu eseta, me ia crea e usa bancos
 de voses par la program UTAU e alora Alter/Ego xef.
 
@@ -37,7 +37,7 @@ conoseda como /ALYS4UTAU/.
 En ce cada esa bancos oji no plu es developa e sua supporta tecnica no
 plu es garantiada, on pote encora descarga /BSUP01 KEINE Tashi/ e /ALYS/:
 - BSUP01 KEINE Tashi :: [[file:./keine-tashi.org][BSUP01 KEINE Tashi]]
-- ALYS :: [[https://blog.phundrak.com/open-sourcing-alys/][Open-Sourcing ALYS]] (en engles)
+- ALYS :: [[https://labs.phundrak.com/ALYS/ALYS][Descarga de ALYS4AE]] (en engles)
 
 ** Alter/Ego
 [[https://www.plogue.com/products/alter-ego.html][Alter/Ego]] es un motor de sintese vocal crea par [[https://www.plogue.com][Plogue Inc.]]. ALYS ia
@@ -51,7 +51,6 @@ Alter/Ego (simil conoseda como /ALYS4AE/) ia dura plu de un anio. La
 developa de la prima refresci de ALYS ia dura nove menses completinte.
 
 On pote aora descarga /ALYS4AE/ sin custa con un modulo de Alter/Ego de
-15 desembre 2021. An con tota, me no pote publici informas e la metodo
-per compila la banco de vose de ALYS per Alter/Ego. Plu informas [[https://blog.phundrak.com/open-sourcing-alys/][asi]].
+15 desembre 2021.
 
 #+include: other-links

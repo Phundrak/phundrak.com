@@ -39,7 +39,7 @@ While all these vocal libraries have been discontinued, vocal
 libraries for /BSUP01 KEINE Tashi/ and /ALYS/ are available for download.
 Please refer to the following pages:
 - BSUP01 KEINE Tashi :: [[file:./keine-tashi.org][BSUP01 KEINE Tashi]]
-- ALYS for UTAU :: [[https://blog.phundrak.com/open-sourcing-alys/][Open-Sourcing ALYS]]
+- ALYS :: [[https://labs.phundrak.com/ALYS/ALYS][ALYS for Alter/Ego download]]
 
 ** Alter/Ego
 [[https://www.plogue.com/products/alter-ego.html][Alter/Ego]] is a singing vocal synthesis engine made by [[https://www.plogue.com/][Plogue Inc.]].
@@ -53,10 +53,6 @@ initial development period for ALYS spanned well over a year, with
 some additional eight to nine months for its first major update.
 
 ALYS for Alter/Ego, also known as /ALYS4AE/, is available free of charge
-as a module for Alter/Ego, and its source files are publicly available
-since December 15th, 2021. However, in accordance with Plogue, no
-reciepe for building ALYS for Alter/Ego have been made available.
-
-More information on open-sourcing ALYS [[https://blog.phundrak.com/open-sourcing-alys/][here]].
+as a module for Alter/Ego
 
 #+include: other-links

@@ -45,7 +45,7 @@ Tandis que chacune de ces banques vocales ne sont plus en
 développement et leur support technique n’est plus assuré, /BSUP01
 KEINE Tashi/ et /ALYS/ sont toujours disponibles au téléchargement.
 - BSUP01 KEINE Tashi :: [[file:./keine-tashi.org][BSUP01 KEINE Tashi]]
-- ALYS for UTAU :: [[https://blog.phundrak.com/open-sourcing-alys/][Open-Sourcing ALYS]] (en anglais)
+- ALYS :: [[https://labs.phundrak.com/ALYS/ALYS][Téléchargement d’ALYS4AE]] (en anglais)
 
 ** Alter/Ego
 [[https://www.plogue.com/products/alter-ego.html][Alter/Ego]] est un moteur de synthèse vocale créé par [[https://www.plogue.com/][Plogue Inc.]]. ALYS
