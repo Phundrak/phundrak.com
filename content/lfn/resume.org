@@ -7,9 +7,10 @@ Lucien Cartier-Tilet
 
 ** Esperia Profesal
 *** Aubay (2023 - )
+- Spesialiste de setembre 2023
 - Stajia de la comensa de febrero a la comensa de agosto 2023
-- Developa de loca ueb
-- Usa de Angular, Java Spring Boot e PostgreSQL
+- Developa de programes ueb
+- Usa de Angular, Java Spring Boot, Spring Batch e PostgreSQL
 
 *** VoxWave (2014 - 2018)
 Compania spesialida en la developa de cantantes virtual en franses ce

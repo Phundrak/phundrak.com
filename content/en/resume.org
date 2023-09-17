@@ -4,9 +4,10 @@
 * Resume
 ** Profesionnal Experiences
 *** Aubay (2023 - )
+- Consultant since September 2023
 - Internship from early February to early August 2023
-- Web development
-- Usage of Angular, Java Spring Boot, and PostgreSQL
+- Web app development
+- Usage of Angular, Java Spring Boot, Spring Batch, and PostgreSQL
 
 *** VoxWave (2014 - 2018)
 Startup specialized in the creation of French virtual singers using

@@ -10,9 +10,10 @@ title: CV
 * Curriculum Vitae
 ** Expériences professionnelles
 *** Aubay (2023 - )
+- Consultant depuis septembre 2023
 - Stage de début février à début août 2023
-- Développement de site web
-- Utilisation d’Angular, Java Spring Boot et PostgreSQL
+- Développement d’applications web
+- Utilisation d’Angular, Java Spring Boot, Spring Batch et PostgreSQL
 
 *** VoxWave (2014 - 2018)
 Startup spécialisée dans le développement de chanteurs virtuels
