@@ -3,7 +3,9 @@
 
 * Accueil
 
-Bonjour, je suis Lucien Cartier-Tilet, un étudiant en Master 2 THYP
+Bonjour, je suis Lucien Cartier-Tilet, un consultant chez [[Aubay][https://aubay.com/]].
+
+J’ai étudié pour mon Master 2 THYP
 (/Technologies de l’Hypermédia/) à l’Université Vincennes Saint-Denis
 (Paris 8).
 
