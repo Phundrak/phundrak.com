@@ -3,7 +3,9 @@
 
 * Paje prima
 
-Saluta, me es Lucien Cartier-Tilet, un studiante de informatica en la
+Saluta, me es Lucien Cartier-Tilet, un spesialiste laborante a [[Aubay][https://aubay.com/]].
+
+Me ia studia la informatica en la
 Master 2 THYP (franses: /Technologies de l’Hypermédia/, elefen:
 /Tecnolojia de la Ipermedia/) en la Universia Vincennes Saint-Denis
 (Paris 8).
