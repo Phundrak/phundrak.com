@@ -3,11 +3,10 @@
 
 * Accueil
 
-Bonjour, je suis Lucien Cartier-Tilet, un consultant chez [[Aubay][https://aubay.com/]].
+Bonjour, je suis Lucien Cartier-Tilet, un consultant chez [[https://aubay.com][Aubay]].
 
-J’ai étudié pour mon Master 2 THYP
-(/Technologies de l’Hypermédia/) à l’Université Vincennes Saint-Denis
-(Paris 8).
+J’ai étudié pour mon Master 2 THYP (/Technologies de l’Hypermédia/) à
+l’Université Vincennes Saint-Denis (Paris 8).
 
 J’ai travaillé chez VoxWave de 2012 à 2018 en tant que co-fondateur et
 directeur technique de l’entreprise. J’y ai notamment développé les

@@ -2,9 +2,11 @@
 #+language: en
 
 * Home
-Hi, I’m Lucien Cartier-Tilet, a consultant working at [[Aubay][https://aubay.com/]].
+Hi, I’m Lucien Cartier-Tilet, a consultant working at [[https://aubay.com][Aubay]].
 
-I studied for my Masters 2 degree in THYP (in French: /Technologies de l’Hypermédia/, in English: /Hypermedia Technologies/) at the Université Vincennes Saint-Denis (Paris 8).
+I studied for my Masters 2 degree in THYP (in French: /Technologies de
+l’Hypermédia/, in English: /Hypermedia Technologies/) at the Université
+Vincennes Saint-Denis (Paris 8).
 
 I worked at VoxWave from 2012 to 2018 as its co-founder and CTO.
 During that time, I developed French singing vocal libraries for vocal

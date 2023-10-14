@@ -3,12 +3,11 @@
 
 * Paje prima
 
-Saluta, me es Lucien Cartier-Tilet, un spesialiste laborante a [[Aubay][https://aubay.com/]].
+Saluta, me es Lucien Cartier-Tilet, un spesialiste laborante a [[https://aubay.com][Aubay]].
 
-Me ia studia la informatica en la
-Master 2 THYP (franses: /Technologies de l’Hypermédia/, elefen:
-/Tecnolojia de la Ipermedia/) en la Universia Vincennes Saint-Denis
-(Paris 8).
+Me ia studia la informatica en la Master 2 THYP (franses: /Technologies
+de l’Hypermédia/, elefen: /Tecnolojia de la Ipermedia/) en la Universia
+Vincennes Saint-Denis (Paris 8).
 
 Me ia labora a VoxWave de 2012 a 2018 como un de sua co-fundores e sua
 dirijor tecnical. Dura esta tempo, me ia crea la cantores virtual

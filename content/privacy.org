@@ -51,7 +51,11 @@ Ce site n’en utilise absolument pas.
 
 ** Est-ce qu’il y a de la pub ciblée sur ce site ?
 Il n’y a tout simplement aucune pub sur ce site. Si vous en voyez,
-vous avez sans doute un virus installé sur votre ordinateur.
+vous avez sans doute un virus installé sur votre ordinateur. Si ça
+vient en effet de mon site web, cela veut dire qu’il a été hacké. Si
+vous voyez sur son dépôt de code que c’est bien moi qui ai rajouté ces
+pubs, cela veut dire que j’ai perdu tout mon sens moral, ou bien que
+j’ai été kidnappé et il s’agit d’un appel au secours.
 
 ** Est-ce que cette page est souvent mise à jour ?
 Je peux la mettre à jour de temps en temps afin de refléter des

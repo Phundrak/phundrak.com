@@ -46,8 +46,12 @@ possible to store Flash cookies or local shared objects.
 This site does not use them at all.
 
 ** Is there targeted advertisement on this website?
-There’s no advertisement to begin with. If you see any, check your
-computer and browser for virus, that is not normal.
+There’s no advertisement to begin with, and never will be. If you see
+any, check your computer and browser for virus, that is not normal. If
+it indeed comes from my website, it means it has been hacked. If you
+can see in this website’s repository that I myself added ads, it means
+that I either lost my morals, or that I have been kidnapped and this
+is a cry for help.
 
 ** How often is this page updated?
 It is updated from time to time to reflect any changes in how my
