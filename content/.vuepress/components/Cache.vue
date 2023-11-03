@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { Observable, of } from 'rxjs';
+import { Observable, of, tap } from 'rxjs';
 
 const props = defineProps({
   name: {
@@ -36,23 +36,21 @@ const isDataOutdated = (name: string): boolean => {
 const storeInCache = (
   callback: Function,
   data: any,
-  name: string
+  name: string,
 ): Observable<any> => {
   let response: Observable<any> = data ? of(data) : callback();
-
-  response.subscribe({
-    next: (response) => {
+  return response.pipe(
+    tap((response) => {
       localStorage.setItem(name, JSON.stringify(response));
       localStorage.setItem(name + '-timestamp', `${Date.now()}`);
-    },
-  });
-  return response;
+    }),
+  );
 };
 
 if (isDataOutdated(props.name)) {
   emits(
     'cached',
-    storeInCache(props.callback, props.alreadyKnownData, props.name)
+    storeInCache(props.callback, props.alreadyKnownData, props.name),
   );
 } else {
   let data = localStorage.getItem(props.name);
@@ -62,7 +60,7 @@ if (isDataOutdated(props.name)) {
     console.error(`Could not parse data found in cache: ${err}`);
     emits(
       'cached',
-      storeInCache(props.callback, props.alreadyKnownData, props.name)
+      storeInCache(props.callback, props.alreadyKnownData, props.name),
     );
   }
 }
