@@ -1,9 +1,11 @@
+import { HeadAttrsConfig } from 'vuepress';
+
 interface SimplifiedHeader {
   tag: string;
-  content: [any];
+  content: HeadAttrsConfig[];
 }
 
-const simplifiedHead = [
+const simplifiedHead: SimplifiedHeader[] = [
   {
     tag: 'meta',
     content: [
@@ -117,12 +119,16 @@ const simplifiedHead = [
   },
 ];
 
-let head = [];
+let headBuilder = [];
 simplifiedHead.forEach((tag) => {
   tag.content.forEach((element: any) => {
-    head.push([tag.tag, element]);
+    headBuilder.push([tag.tag, element]);
   });
 });
-head.push(['a', { rel: 'me', href: 'https://emacs.ch/@phundrak' }, 'Mastodon']);
+headBuilder.push([
+  'a',
+  { rel: 'me', href: 'https://emacs.ch/@phundrak' },
+  'Mastodon',
+]);
 
-export default head;
+export const head = headBuilder;
