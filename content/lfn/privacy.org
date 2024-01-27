@@ -16,19 +16,15 @@ es an con tota estrema comun. Los capasi esa locas ueb a funsiona
 coreta o plu eficas.
 
 Esa loca ueb usa cucis con la ojeto de recorda tua prefere, como ance
-la lingua o la motif ce te ia eleje. Lo ance usa cucis de mi personal
-Matomo par sabe lo ce lo usores de esa loca ueb fa asi, ma Matomo
-trasa lo sola sur mea locas ueb.
+la lingua o la motif ce te ia eleje.
 
 An tal, esa loca ueb es protejeda par Cloudflare, esa compania ance
 pote ospita alga cucis afin lo recorda si tu surfador es un risca par
 me loca ueb o no.
 
 *** Como me pote controla la cucis sur mea computa?
-Si te no vole ce Cloudflare o Matomo recorda cucis, un bon
-anti-comersial como [[https://ublockorigin.com/][uBlock Origin]] ta pote
-te proteje (es la plu eficas ce me conose). Matomo ance respecta la
-demanda “no trasa me” de surfadores.
+Si te no vole ce Cloudflare recorda cucis, un bon anti-comersial como
+[[https://ublockorigin.com/][uBlock Origin]] ta pote te proteje (es la plu eficas ce me conose).
 
 Te pote ance supresa con mano la cucis de tua surfador, ma me no pote
 te dise como, lo ave tro ce esiste. Ma te pote xerca sur DuckDuckGo,
@@ -40,21 +36,32 @@ Lo esista otra metodos plu sutil afin de trasa usores sur la interede,
 o an con epostas o cada contenida ueb, como pixeles spia (imajes
 estrema peti), cucis Flash o ojetos local compartida.
 
-Ma esa loca ueb no usa lo.
+*** Ma, lo ave metodos de trasa asi?
+Si, ma la lo conserva tua vida privata. Me usa mea propre varia de
+[[https://umami.is][Umami]] ce es un servi de analise de datos ce respeta completa la GDPR e
+la CCPA. En noncomplicada parolas, cuando te come a un paje, la
+informa es enviada ce alga ia visita lo, con alga otra informas. Ma on
+no pote sabe ci ia visita la loca ueb, e si te va visita lo a otra
+ves, on no pote sabe ce te ia veni ja.
 
-*** Esa loca ueb usa comersiales intendeda?
+Si an tal te ansiosa consernante tua vida privata, tu avec du
+posibles:
+- Ativi la parametre Do Not Track de tua surfador (Umami respeta lo)
+- Bloci la domina ueb =umami.phundrak.com= en uBlock Origin (la sola
+  blocinte de comersiales ce me fida)
+
+** Esa loca ueb usa comersiales intendeda?
 Lo no ave no comersiales. Si te lo vide asi, te ave un virus sur tua
 computa o surfador. Si esa comersiales vera ta veni de mea loca ueb,
 lo es cracida. Si te pote vide en la arciveria git ce lo es me ce ia
 ajunta esa comersiales, o me ia dementi, o me es secuestrada e lo es
 un sinial de crise.
 
-*** Ave esa pajina frecuente refrescis?
+** Ave esa pajina frecuente refrescis?
 Me dona esa pajina un refresci aora e alora cuando lo debe a mostra
-cambias de funsiona de mea loca ueb, o si me trova eras. Te pote trove
-la ultima refresci de esa pajina a supra.
+cambias de funsiona de mea loca ueb, o si me trova eras.
 
-*** Me ave otra demandas
+** Me ave otra demandas
 Te pote scrive me un eposta a la adirije de eposta
 [[mailto:lucien@phundrak.com][lucien@phundrak.com]].
 

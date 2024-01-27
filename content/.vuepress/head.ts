@@ -7,6 +7,17 @@ interface SimplifiedHeader {
 
 const simplifiedHead: SimplifiedHeader[] = [
   {
+    tag: 'script',
+    content: [
+      {
+        async: true,
+        src: 'https://umami.phundrak.com/script.js',
+        'data-website-id': '67166941-8c83-4a19-bc8c-139e44b7f7aa',
+        'data-do-not-track': 'true',
+      },
+    ],
+  },
+  {
     tag: 'meta',
     content: [
       {

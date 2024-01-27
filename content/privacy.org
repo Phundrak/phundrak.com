@@ -5,7 +5,7 @@
 ** Où est hébergé le site ?
 Ce site est hébergé sur mon serveur personnel, situé dans la ville de
 Bron en France, comme la majorité de mes sites. Deux autres sites,
-=labs.phundrak.com= et =mail.phundrak.com=, sont hébergé sur d’autres
+=labs.phundrak.com= et =mail.phundrak.com=, sont hébergés sur d’autres
 serveurs loués à Scaleway et à OVH France respectivement, et les
 serveurs se situent également en France.
 
@@ -23,7 +23,7 @@ Ces cookies ne sont pas et ne peuvent pas être utilisés pour vous
 traquer.
 
 Cependant, ce site étant protégé par Cloudflare, ce dernier pourra
-également héberger quelques cookies afin par exemple de se souvenir
+pareillement héberger quelques cookies afin par exemple de se souvenir
 que votre navigateur ne présente pas de risque ou bien pour
 enregistrer le trafic sur le site.
 
@@ -33,7 +33,7 @@ activités, un bon anti-pub devrait faire l’affaire. Je recommande
 personnellement [[https://ublockorigin.com/][uBlock Origin]], l’un des bloqueurs de pub les plus
 efficaces que je connaisse.
 
-Vous pouvez également supprimer manuellement les cookies de votre
+Vous pouvez par ailleurs supprimer manuellement les cookies de votre
 navigateur, mais étant donné le nombre de navigateurs existants, il
 sera sans doute plus rapide pour vous de chercher sur DuckDuckGo,
 Qwant ou Startpage comment faire pour votre navigateur actuel (si vous
@@ -44,15 +44,29 @@ voudrez éviter Google).
 Il existe d’autres méthodes plus subtiles qui permettent de traquer
 quelqu’un sur internet, ou même via des mails ou tout contenu web
 rendu à l’écran, comme pixels espions (des images extrêmement
-petites). Il est également possible de stocker des cookies Flash ou
-des objets locaux partagés.
+petites). Il est de plus possible de stocker des cookies Flash ou des
+objets locaux partagés.
 
-Ce site n’en utilise absolument pas.
+*** Mais, est-ce qu’il y a du tracking sur ce site ?
+Oui, mais en préservant intégralement votre vie privée. J’utilise ma
+propre instance de [[https://umami.is][Umami]] qui est un service d’analyse de données qui
+respecte entièrement le RGPD et le [[https://www.oag.ca.gov/privacy/ccpa][CCPA]]. Pour résumer, lorsque vous
+passez sur une nouvelle page du site, l’information est envoyée qu’une
+visite s’est produite, avec quelques informations supplémentaires,
+mais rien qui permet d’identifier qui que ce soit. Si vous revenez
+dans une heure, je ne saurai pas que vous êtes la même personne.
+
+Si vous vous inquiétez tout de même de votre vie privée, deux options
+s’offrent à vous :
+- Activez l’option Do Not Track de votre navigateur (Umami respecte ce
+  paramètre)
+- Bloquez le domaine =umami.phundrak.com= dans uBlock Origin (le seul
+  bloqueur de pubs auquel je fais confiance)
 
 ** Est-ce qu’il y a de la pub ciblée sur ce site ?
 Il n’y a tout simplement aucune pub sur ce site. Si vous en voyez,
 vous avez sans doute un virus installé sur votre ordinateur. Si ça
-vient en effet de mon site web, cela veut dire qu’il a été hacké. Si
+vient en effet de mon site web, cela veut dire qu’il a été piraté. Si
 vous voyez sur son dépôt de code que c’est bien moi qui ai rajouté ces
 pubs, cela veut dire que j’ai perdu tout mon sens moral, ou bien que
 j’ai été kidnappé et il s’agit d’un appel au secours.
@@ -60,11 +74,7 @@ j’ai été kidnappé et il s’agit d’un appel au secours.
 ** Est-ce que cette page est souvent mise à jour ?
 Je peux la mettre à jour de temps en temps afin de refléter des
 changements de fonctionnement du site, ou si je remarque une erreur
-sur la page. Il se peut aussi que j’ajoute un jour un tracking des
-utilisateurs sur mon site via Matomo, un service de tracking
-respectant la vie privée des utilisateurs et qui est tout à fait
-bloquable. La date de la dernière mise à jour de cette page peut être
-trouvée à son tout début.
+sur la page.
 
 ** J’ai d’autres questions
 Et je serai heureux d’y répondre par mail. Vous pouvez me contacter
