@@ -15,7 +15,7 @@ sociaux où vous pouvez me suivre.
 - {{{icon(writefreely)}}} *Writefreely* :
   - [[https://write.phundrak.com/phundrak][*@phundrak@write.phundrak.com*]] : billets personnels
   - [[https://write.phundrak.com/phundraks-short-stories][*@phundraks-short-stories@write.phundrak.com*]] : histoires courtes
-- {{{icon(discord)}}} *Discord* : =Phundrak#0001= (dites-moi que vous venez
+- {{{icon(discord)}}} *Discord* : =@phundrak= (dites-moi que vous venez
   d’ici, autrement il est possible que je considère le message comme
   du pourriel)
 

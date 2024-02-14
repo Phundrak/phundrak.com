@@ -16,7 +16,7 @@ me.
   - [[https://write.phundrak.com/phundrak][@phundrak@write.phundrak.com]] : blog alternative
   - [[https://write.phundrak.com/phundraks-short-stories][@phundraks-short-stories@write.phundrak.com]] :: short stories,
     mainly in French for now
-- {{{icon(discord)}}} Discord :: =Phundrak#0001= (tell me you come from here,
+- {{{icon(discord)}}} Discord :: =@phundrak= (tell me you come from here,
   otherwise there’s a chance I’ll consider your message as spam)
 
 ** Other Websites
