@@ -37,6 +37,10 @@ const simplifiedHead: SimplifiedHeader[] = [
         name: 'twitter:creator',
         content: '@phundrak',
       },
+      {
+        name: 'build-status',
+        content: `value: ${process.env.NODE_ENV}`,
+      },
       { name: 'msapplication-TileColor', content: '#3b4252' },
       { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
       { name: 'theme-color', content: '#3b4252' },
