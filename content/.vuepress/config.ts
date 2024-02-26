@@ -2,10 +2,13 @@ import { defaultTheme } from '@vuepress/theme-default';
 import { viteBundler } from '@vuepress/bundler-vite';
 import { defineUserConfig } from 'vuepress';
 import { searchProPlugin } from 'vuepress-plugin-search-pro';
+import { umamiAnalyticsPlugin } from 'vuepress-plugin-umami-analytics';
 
 import { head } from './head';
 import { locales, searchLocales } from './locales';
 import { themeLocales } from './themeLocales';
+
+let isProd = process.env.NODE_ENV === 'production';
 
 export default defineUserConfig({
   lang: 'fr-FR',
@@ -23,6 +26,13 @@ export default defineUserConfig({
       indexContent: true,
       locales: searchLocales,
     }),
+    isProd
+      ? umamiAnalyticsPlugin({
+          id: '67166941-8c83-4a19-bc8c-139e44b7f7aa',
+          src: 'https://umami.phundrak.com/script.js',
+          doNotTrack: true,
+        })
+      : [],
   ],
   locales: locales,
   theme: defaultTheme({
