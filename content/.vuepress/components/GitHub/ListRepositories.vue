@@ -5,7 +5,7 @@
       :sort-by="props.sortBy"
       :user="props.user"
       :limit="props.limit"
-      @data-loaded="(response: GithubRepo[]) => (repos = response)"
+      @loaded="(response: GithubRepo[]) => (repos = response)"
     >
       <GithubRepository
         :data="repo"
@@ -22,7 +22,7 @@ import FetchRepositories from './FetchRepositories.vue';
 import GithubRepository from './GithubRepository.vue';
 
 import { PropType, Ref, ref } from 'vue';
-import { GithubRepo } from '../../composables/github';
+import { GithubRepo } from '../../types/github';
 
 const props = defineProps({
   sortBy: {

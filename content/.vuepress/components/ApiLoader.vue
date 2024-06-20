@@ -1,31 +1,22 @@
 <template>
-  <Cache
-    :name="props.cacheName"
-    :callback="fetchData"
-    :already-known-data="alreadyKnownData"
-    @cached="processCachedData"
-  />
   <slot v-if="loading" name="loader">
-    <Loader />
+    <LoaderAnimation />
   </slot>
   <slot v-else-if="error" name="error">
-    <Error :url="props.url" />
+    <FetchError :url="props.url" />
   </slot>
   <slot v-else> </slot>
 </template>
 
 <script setup lang="ts">
-import Cache from './Cache.vue';
-import Loader from './Loader.vue';
-import Error from './Error.vue';
+import LoaderAnimation from './LoaderAnimation.vue';
+import FetchError from './FetchError.vue';
 
-import { Ref, ref } from 'vue';
-import { Observable, catchError, switchMap, throwError } from 'rxjs';
-import { fromFetch } from 'rxjs/fetch';
+import { useFetchAndCache } from '../composables/fetchAndCache';
 
 const props = defineProps({
   url: {
-    default: false,
+    default: '',
     required: true,
     type: String,
   },
@@ -35,31 +26,11 @@ const props = defineProps({
   },
   alreadyKnownData: Object,
 });
-const emits = defineEmits(['dataLoaded', 'dataError', 'loading']);
 
-const error: Ref<Error> = ref(null);
-const loading: Ref<boolean> = ref(true);
+const emits = defineEmits(['loaded', 'error', 'loading']);
 
-const fetchData = (): Observable<any> => {
-  return fromFetch(props.url).pipe(
-    switchMap((response: Response) => response.json()),
-    catchError((errorResponse: Error) => {
-      error.value = errorResponse;
-      return Error;
-    })
-  );
-};
-
-const processCachedData = (data: Observable<any>) => {
-  data.subscribe({
-    next: (response: any) => {
-      loading.value = false;
-      emits('dataLoaded', response);
-    },
-    error: (responseError: Error) => {
-      loading.value = false;
-      error.value = responseError;
-    },
-  });
-};
+const { loading, error } = useFetchAndCache(props.url, {
+  emits: emits,
+  cacheName: props.cacheName,
+});
 </script>

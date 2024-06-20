@@ -123,9 +123,9 @@ const simplifiedHead: SimplifiedHeader[] = [
   },
 ];
 
-let headBuilder = [];
+const headBuilder = [];
 simplifiedHead.forEach((tag) => {
-  tag.content.forEach((element: any) => {
+  tag.content.forEach((element) => {
     headBuilder.push([tag.tag, element]);
   });
 });

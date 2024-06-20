@@ -11,15 +11,14 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v4
         with:
-          node-version: 18.x
-      - run: corepack enable
-      - run: yarn install --frozen-lockfile
+          node-version: 22.x
+      - run: npm ci
       - uses: purcell/setup-emacs@master
         with:
           version: 29.1
       - name: "Export org to md"
         run: emacs -Q --script export.el
-      - run: yarn build
+      - run: npm run build
       - name: "Deploy on the Web"
         uses: appleboy/scp-action@v0.1.7
         with:

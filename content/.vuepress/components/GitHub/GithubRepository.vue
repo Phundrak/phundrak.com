@@ -6,23 +6,23 @@
       :cache-name="repoName()"
       :url="fetchUrl"
       :already-known-data="props.data"
-      @data-loaded="(repo: GithubRepo) => (repository = repo)"
+      @loaded="(repo: GithubRepo) => (repository = repo)"
     >
-      <h3>{{ repository.name }}</h3>
+      <h3>{{ repository?.name }}</h3>
       <div>
         <p>
-          {{ repository.description }}
+          {{ repository?.description }}
         </p>
       </div>
       <div class="flex-row flex-start gap-1rem stats">
         <div class="stars">
-          <Icon name="star" /> {{ repository.stargazers_count }}
+          <Icon name="star" /> {{ repository?.stargazers_count }}
         </div>
         <div class="forks">
-          <Icon name="fork" /> {{ repository.forks_count }}
+          <Icon name="fork" /> {{ repository?.forks_count }}
         </div>
         <div class="link">
-          <a :href="repository.html_url"><i class="icon phunic-link" /></a>
+          <a :href="repository?.html_url"><i class="icon phunic-link" /></a>
         </div>
       </div>
     </ApiLoader>
@@ -32,7 +32,7 @@
 <script setup lang="ts">
 import ApiLoader from '../ApiLoader.vue';
 
-import { GithubRepo } from '../../composables/github';
+import { GithubRepo } from '../../types/github';
 import { PropType, Ref, ref } from 'vue';
 
 const props = defineProps({
@@ -45,7 +45,7 @@ const repoName = (): string => {
 };
 
 const fetchUrl = `https://api.github.com/repos/${repoName()}`;
-const repository: Ref<GithubRepo> = ref(null);
+const repository: Ref<GithubRepo | null> = ref(null);
 </script>
 
 <style lang="less">
@@ -76,6 +76,13 @@ const repository: Ref<GithubRepo> = ref(null);
     div {
       .flex-row();
       gap: 0.3rem;
+    }
+  }
+
+  .link {
+    a {
+      display: flex;
+      align-items: center;
     }
   }
 }
