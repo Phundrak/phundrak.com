@@ -11,8 +11,6 @@
     "@vuepress/bundler-vite": "2.0.0-rc.13",
     "@vuepress/plugin-umami-analytics": "^2.0.0-rc.36",
     "@vuepress/theme-default": "^2.0.0-rc.36",
-    "cz-conventional-changelog": "^3.3.0",
-    "git-cliff": "^1.4.0",
     "vuepress": "2.0.0-rc.13",
     "vuepress-plugin-search-pro": "^2.0.0-rc.43"
   },
