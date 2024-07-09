@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Static website of Phundrak",
   "main": "index.js",
-  "repository": "https://labs.phundrak.com/phundrak/vuepress-www",
+  "repository": "https://labs.phundrak.com/phundrak/phundrak.com",
   "author": "Lucien Cartier-Tilet <lucien@phundrak.com>",
   "license": "AGPL-3.0",
   "private": true,
@@ -14,18 +14,12 @@
     "vuepress": "2.0.0-rc.13",
     "vuepress-plugin-search-pro": "^2.0.0-rc.43"
   },
-  "scripts": {
-    "dev": "vuepress dev content",
-    "build": "vuepress build content"
-  },
   "dependencies": {
     "less": "^4.2.0",
     "nord": "^0.2.1"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "packageManager": "yarn@4.3.0"
+  "scripts": {
+    "dev": "vuepress dev content",
+    "build": "vuepress build content"
+  }
 }
