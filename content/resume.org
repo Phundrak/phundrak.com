@@ -20,7 +20,7 @@ Startup spécialisée dans le développement de chanteurs virtuels
 francophones utilisant de la synthèse vocale. Le produit le plus connu
 est la chanteuse virtuelle ALYS. Plus d’informations [[./vocal-synthesis.md][ici]].
 
-- Co-fondateur
+- Co-fondateur, directeur technique
 - Programmation de voix de synthèse pour le chant
 - Recherches linguistiques
 - Support utilisateur
@@ -38,32 +38,25 @@ LLCE. Études interrompues suite à la création de [[./resume.md#voxwave-2014-2
 
 ** Programmation Web
 *** Frontend
-- Utilisation régulière de Angular, Vue et Node.js
-- Bonnes connaissances en HTML5, CSS3 (y compris SASS, SCSS et LESS)
-  et JavaScript
-- Connaissances en Python, Dart et TypeScript
-- Apprentissage de React et Next.js
+- Expérience professionnelle avec Angular et TypeScript
+- Expérience personnelle avec Vue (y compris Nuxt)
 
 *** Backend
-- Utilisation régulière de Rust ([[https://actix.rs/][actix-web]] et [[https://rocket.rs/][Rocket]]) et Java Spring
-  Boot
-- De l’expérience en développement backend avec Django (Python)
-- De l’expérience en communication avec des bases de données via
-  Django et [[https://diesel.rs][Diesel]]. Connaissances de base avec EmacSQL.
-- Utilisation de MySQL et PostgreSQL.
+- Utilisation professionnelle de Java SpringBoot et SpringBatch
+- Utilisation professionnelle et personnelle de PostgreSQL
+- Utilisation personnelle de Rust ([[https://github.com/poem-web/poem/][poem]], [[https://actix.rs/][actix-web]] et [[https://rocket.rs/][Rocket]])
+- Connaissances en développement backend avec Django (Python)
+- Utilisation personnelle de MySQL et SQLite
 
 ** Programmation Système
-- De l’expérience avec Rust, C et EmacsLisp
-- Connaissances en C++, Python, CommonLisp et les shells UNIX
-  (bash, fish, Eshell)
-- Connaissances limitées en Prolog et Scheme
+- Utilisation personnelle fréquente de Rust, C, shells UNIX (bash, fish, Eshell) et EmacsLisp
+- Utilisation personnelle occasionnelle de C++, Python et CommonLisp
 
 ** Outils de développement
 *** IDEs et éditeurs de texte
-- Utilisateur avancé d’Emacs, y compris avec ses intégrations pour LSP
-  et Git
-- Bonnes connaissances de Git (y compris avec son interface Magit pour
-  Emacs), VS Code et Eclipse
+- Utilisation professionnelle de VS Code, Eclipse et Git
+- Utilisateur avancé personnelle d’Emacs, y compris avec ses
+  intégrations pour LSP et Git
 - Connaissances basiques de Vim, CLion, PyCharm et WebStorm
 
 *** CI/CD et déploiement sur le web
@@ -73,14 +66,14 @@ LLCE. Études interrompues suite à la création de [[./resume.md#voxwave-2014-2
 
 ** Systèmes d’exploitation
 - Utilisation et administration de Linux (Arch Linux, Void Linux,
-  Debian, Ubuntu, Alpine Linux)
+  Debian, Ubuntu, Alpine Linux, NixOS)
 - Administration de serveurs web et serveurs de stockage (Arch Linux,
-  Debian, Ubuntu, Alpine Linux)
-- Connaissances élémentaires de Guix System, NixOS et Windows de XP à
-  10 (excepté Vista)
+  Debian, Ubuntu, Alpine Linux, NixOS)
+- Connaissances élémentaires de Guix System et Windows de XP à 10
+  (excepté Vista)
 
 ** Bureautique
-- Bonnes connaissances avec orgmode et LaTeX
+- Bonnes connaissances avec [[https://orgmode.org/][org mode]] et LaTeX
 - Connaissances avec Libre Office, Microsoft Office, WPS Office et OnlyOffice
 
 ** Audio

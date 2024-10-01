@@ -17,7 +17,7 @@ Compania spesialida en la developa de cantantes virtual en franses ce
 usa sintese vocal. La produi la plu selebra es ALYS. Plu de informa
 [[./vocal-synthesis.md][aci]].
 
-- Cofundor
+- Cofundor, dirije tecnical
 - Programi de voses de sintese per la canta
 - Rexerca linguistica
 - Suporta de usadores
@@ -36,44 +36,42 @@ de [[./resume.md#voxwave-2014-2018][VoxWave]].
 
 ** Programi ueb
 *** Front-end
-- Usa fidosa de Angular, Vue e Node.JS
-- Bon conose de HTML5, CSS3 (incluinte SASS, SCSS e LESS) e Javascript
-- Conoses de Python, Dart e Typescript
-- Aprende React e Next.js
+- Usa profesal de Angular e TypeScript
+- Usa personal de Vue (inclui Nuxt)
 
 *** Backend
-- Usa fidosa de Rust ([[https://actix.rs/][actix-web]] e [[https://rocket.rs/][Rocket]]) e Java Spring Boot
+- Usa profesional de Java SpringBoot e SpringBatch
+- Usa profesional e personal de PostgreSQL
+- Usa personal de Rust ([[https://github.com/poem-web/poem/][poem]], [[https://actix.rs/][actix-web]] e [[https://rocket.rs/][Rocket]])
 - Esperia en programi de backend con Django (Python)
-- Esperia en comunica con banco de datos con [[https://diesel.rs][Diesel]] (Rust) e Django,
-  conose alga EmacSQL
-- Usa de PostgreSQL e MySQL
+- Usa personal de PostgreSQL e SQLite
 
 ** Programi sistem
-- Esperia con Rust, C e EmacsLisp
-- Conoses de C++, Python, CommonLisp e shelles UNIX (bash, fish, eshell)
-- Conoses limitada de Prolog e Scheme
+- Usa personal e frecuente de Rust, C, shelles UNIX (bash, fish,
+  Eshell) e EmacsLisp
+  Usa personal nonfrecuente de C++, Python e CommonLisp
 
 ** Utiles de developa
 *** IDEs e editadores
+- Usa profesional de VS Code, Eclipse e Git
 - Conoses esperta de Emacs, inclui con la incluis de LSP e Git
-- Bon conoses de Git (inclui sua interfas Magit per Emacs), VS Code e
-  Eclipse
 - Conoses fundal de Vim, CLion, PyCharm e WebStorm
 
-** CI/CD e desplia ueb
+*** CI/CD e desplia ueb
 - Esperia con la servadores ueb Nginx e Caddyserver
-- Bon conoses de Docker, Drone.io e GitHub Actions per despia ueb
+- Bon conoses de Docker e Docker Compose, Drone.io e GitHub Actions
+  per despia ueb
 
 ** Sistemes de opera
 - Usa et manejablia de Linux (Arch Linux, Void Linux, Debian, Ubuntu,
-  Alpine Linux)
+  Alpine Linux, NixOS)
 - Manjablia de servidores ueb e servidores de conserva (Arch Linux,
-  Debian, Ubuntu, Alpine Linux)
-- Conosas fundal de Guix System, NixOS e Windows (de XP a 10, con
-  eseta de Vista)
+  Debian, Ubuntu, Alpine Linux, NixOS)
+- Conosas fundal de Guix System e Windows (de XP a 10, con eseta de
+  Vista)
 
 ** Program de ofisia
-- Bon conosas con org-mode (Emacs) e LaTeX
+- Bon conosas con [[https://orgmode.org/][org-mode]] (Emacs) e LaTeX
 - Conosas con LibreOffice, Microsoft Office, WPS Office e OnlyOffice
 
 ** Audio

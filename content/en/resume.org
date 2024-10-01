@@ -13,7 +13,7 @@
 Startup specialized in the creation of French virtual singers using
 vocal synthesis. Its best known product is ALYS. [[./vocal-synthesis.md][More here]].
 
-- Co-founder
+- Co-founder, CTO
 - Development of singing synthesis vocal libraries
 - Linguistic research
 - User support
@@ -30,30 +30,24 @@ Studied for a year and a half until the creation of [[./resume.md#voxwave-2014-2
 
 ** Web Programming
 *** Front-end
-- Regularly using Angular, Vue, and Node.js
-- Good knowledge in HTML5, CSS3 (including SASS, SCSS, and LESS), and
-  Javascript
-- I know my way around in Python, Dart, and TypeScript
-- Learning React and Next.js
+- Professional use of Angular and TypeScript
+- Personal use of Vue (including Nuxt)
 
 *** Back-end
-- Regularly using Rust ([[https://actix.rs/][actix-web]] and [[https://rocket.rs/][Rocket]]) and Java Spring Boot
+- Professional use of Java SpringBoot and SpringBatch
+- Professional and personal use of PostgreSQL
+- Personal use of Rust ([[https://github.com/poem-web/poem/][poem]], [[https://actix.rs/][actix-web]] and [[https://rocket.rs/][Rocket]])
 - Some experience in back-end development with Django (Python)
-- Some experience communicating with a database with Django’s and
-  [[https://diesel.rs][Diesel]]’s ORM. Know my way around EmacSQL.
-- Used MySQL and PostgreSQL
+- Personal use of MySQL and SQLite
 
 ** System Programming
-- Experienced in Rust, C and EmacsLisp knowledge
-- I know my way around C++, Python, and UNIX shells (bash, fish,
-  Eshell)
-- Limited knowledge in Prolog and Scheme
+- Frequent usage of Rust, C, EmacsLisp, and UNIX shells (bash, fish, Eshell)
+- Occasional use of C++, Python, and CommonLisp
 
 ** Development Tools
 *** IDEs and Text Editors
+- Professional use of VS Code, Eclipse, and Git
 - Advanced user of Emacs, including its LSP and Git integrations
-- Good knowledge of Git (including Magit under Emacs), VS Code, and
-  Eclipse
 - Basic knowledge of Vim, CLion, Pycharm, and WebStorm
 
 *** CI/CD and Deploying to the Web
@@ -64,14 +58,14 @@ Studied for a year and a half until the creation of [[./resume.md#voxwave-2014-2
 
 ** Operating Systems
 - Usage and administration of Linux (Arch Linux, Void Linux, Debian,
-  Ubuntu, Alpine Linux)
+  Ubuntu, Alpine Linux, NixOS)
 - Administration of web servers and storage servers (Arch Linux,
-  Debian, Raspbian, Alpine Linux)
-- Basic knowledge with Guix System and NixOS, and Windows XP through
-  10 (except Vista)
+  Debian, Raspbian, Alpine Linux, NixOS)
+- Basic knowledge with Guix System and Windows XP through 10 (except
+  Vista)
 
 ** Office Applications
-- Good knowledge with org-mode (main tool), LaTeX
+- Good knowledge with [[https://orgmode.org/][org-mode]] (main tool), LaTeX
 - I know my way around LibreOffice, Microsoft Office, OnlyOffice, and
   WPS Office
 
