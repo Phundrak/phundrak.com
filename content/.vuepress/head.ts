@@ -14,6 +14,10 @@ const simplifiedHead: SimplifiedHeader[] = [
         content: 'Lucien Cartier-Tilet',
       },
       {
+        name: 'fediverse:creator',
+        content: '@phundrak@mastodon.phundrak.com',
+      },
+      {
         property: 'og:image',
         content: 'https://cdn.phundrak.com/img/rich_preview.png',
       },
@@ -131,7 +135,7 @@ simplifiedHead.forEach((tag) => {
 });
 headBuilder.push([
   'a',
-  { rel: 'me', href: 'https://emacs.ch/@phundrak' },
+  { rel: 'me', href: 'https://mastodon.phundrak.com/@phundrak' },
   'Mastodon',
 ]);
 
