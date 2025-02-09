@@ -1,0 +1,50 @@
+name: deploy
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+      - run: npm ci
+      - uses: purcell/setup-emacs@master
+        with:
+          version: 29.1
+      - name: "Export org to md"
+        run: emacs -Q --script export.el
+      - run: npm run build
+      - name: "Deploy to Cloudflare Pages"
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.ACCOUNT_ID }}
+          projectName: phundrak-com
+          directory: content/.vuepress/dist/
+          githubToken: ${{ secrets.TOKEN }}
+
+      # - name: "Deploy on the Web"
+      #   uses: appleboy/scp-action@v0.1.7
+      #   with:
+      #     host: ${{ secrets.HOST }}
+      #     username: ${{ secrets.USERNAME }}
+      #     key: ${{ secrets.KEY }}
+      #     port: ${{ secrets.PORT }}
+      #     source: content/.vuepress/dist/*
+      #     target: ${{ secrets.DESTPATH }}
+      #     strip_components: 3
+      # - name: "Deploy on Gemini"
+      #   uses: appleboy/scp-action@v0.1.7
+      #   with:
+      #     host: ${{ secrets.HOST }}
+      #     username: ${{ secrets.USERNAME }}
+      #     key: ${{ secrets.KEY }}
+      #     port: ${{ secrets.PORT }}
+      #     source: gemini/*
+      #     target: ${{ secrets.DESTPATH_GMI }}
+      #     strip_components: 1
