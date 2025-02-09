@@ -1,11 +1,11 @@
 import { defaultTheme } from '@vuepress/theme-default';
 import { viteBundler } from '@vuepress/bundler-vite';
 import { defineUserConfig } from 'vuepress';
-import { searchProPlugin } from 'vuepress-plugin-search-pro';
+import { slimsearchPlugin } from '@vuepress/plugin-slimsearch';
 import { umamiAnalyticsPlugin } from '@vuepress/plugin-umami-analytics';
 
 import { head } from './head';
-import { locales, searchLocales } from './locales';
+import { locales, searchLocaleLfn } from './locales';
 import { themeLocales } from './themeLocales';
 
 const isProd = process.env.NODE_ENV === 'production';
@@ -15,16 +15,26 @@ export default defineUserConfig({
   title: 'Lucien Cartier-Tilet',
   description: 'Site web personnel de Lucien Cartier-Tilet',
   head: head,
-  bundler: viteBundler({}),
+  bundler: isProd
+    ? viteBundler({})
+    : viteBundler({
+        viteOptions: {
+          server: {
+            allowedHosts: true,
+          },
+        },
+      }),
   markdown: {
     html: true,
     linkify: true,
     typographer: true,
   },
   plugins: [
-    searchProPlugin({
+    slimsearchPlugin({
       indexContent: true,
-      locales: searchLocales,
+      indexLocaleOptions: {
+        '/lfn': searchLocaleLfn,
+      },
     }),
     isProd
       ? umamiAnalyticsPlugin({
