@@ -123,7 +123,7 @@ impl TryFrom<&str> for Environment {
 }
 
 /// Email server configuration for the contact form.
-#[derive(Debug, serde::Deserialize, Clone, Default)]
+#[derive(serde::Deserialize, Clone, Default)]
 pub struct EmailSettings {
     /// SMTP server hostname
     pub host: String,
@@ -141,6 +141,21 @@ pub struct EmailSettings {
     pub starttls: Starttls,
     /// Whether to use implicit TLS (SMTPS)
     pub tls: bool,
+}
+
+impl std::fmt::Debug for EmailSettings {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        f.debug_struct("EmailSettings")
+            .field("host", &self.host)
+            .field("port", &self.port)
+            .field("user", &self.user)
+            .field("from", &self.from)
+            .field("password", &"[REDACTED]")
+            .field("recipient", &self.recipient)
+            .field("starttls", &self.starttls)
+            .field("tls", &self.tls)
+            .finish()
+    }
 }
 
 /// STARTTLS configuration for SMTP connections.
@@ -576,5 +591,29 @@ mod tests {
         let json = r#"{"foo": "bar"}"#;
         let result: Result<Starttls, _> = serde_json::from_str(json);
         assert!(result.is_err());
+    }
+
+    #[test]
+    fn email_settings_debug_redacts_password() {
+        let settings = EmailSettings {
+            host: "smtp.example.com".to_string(),
+            port: 587,
+            user: "user@example.com".to_string(),
+            from: "noreply@example.com".to_string(),
+            password: "super_secret_password".to_string(),
+            recipient: "admin@example.com".to_string(),
+            starttls: Starttls::Always,
+            tls: false,
+        };
+
+        let debug_output = format!("{settings:?}");
+
+        // Password should be redacted
+        assert!(debug_output.contains("[REDACTED]"));
+        // Password should not appear in output
+        assert!(!debug_output.contains("super_secret_password"));
+        // Other fields should still be present
+        assert!(debug_output.contains("smtp.example.com"));
+        assert!(debug_output.contains("user@example.com"));
     }
 }
