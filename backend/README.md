@@ -5,9 +5,14 @@ The backend for [phundrak.com](https://phundrak.com), built with Rust and the [P
 ## Features
 
 - **RESTful API** with automatic OpenAPI/Swagger documentation
-- **Contact form** with SMTP email relay (supports TLS, STARTTLS, and unencrypted)
+- **Rate limiting** with configurable per-second limits using the
+  Generic Cell Rate Algorithm (thanks to
+  [`governor`](https://github.com/boinkor-net/governor))
+- **Contact form** with SMTP email relay (supports TLS, STARTTLS, and
+  unencrypted)
 - **Type-safe routing** using Poem's declarative API
-- **Hierarchical configuration** with YAML files and environment variable overrides
+- **Hierarchical configuration** with YAML files and environment
+  variable overrides
 - **Structured logging** with `tracing` and `tracing-subscriber`
 - **Strict linting** for code quality and safety
 - **Comprehensive testing** with integration test support
@@ -48,9 +53,28 @@ email:
   recipient: Admin <admin@example.com>
   starttls: true  # Use STARTTLS (typically port 587)
   tls: false      # Use implicit TLS (typically port 465)
+
+rate_limit:
+  enabled: true        # Enable/disable rate limiting
+  burst_size: 10       # Maximum requests allowed in time window
+  per_seconds: 60      # Time window in seconds (100 req/60s = ~1.67 req/s)
 ```
 
 You can also use a `.env` file for local development settings.
+
+### Rate Limiting
+
+The application includes built-in rate limiting to protect against abuse:
+
+- Uses the **Generic Cell Rate Algorithm (GCRA)** via the `governor` crate
+- **In-memory rate limiting** - no external dependencies like Redis required
+- **Configurable limits** via YAML configuration or environment variables
+- **Per-second rate limiting** with burst support
+- Returns `429 Too Many Requests` when limits are exceeded
+
+Default configuration: 100 requests per 60 seconds (approximately 1.67 requests per second with burst capacity).
+
+To disable rate limiting, set `rate_limit.enabled: false` in your configuration.
 
 ## Development
 
@@ -199,6 +223,9 @@ backend/
 │   ├── startup.rs       # Application builder, server setup
 │   ├── settings.rs      # Configuration management
 │   ├── telemetry.rs     # Logging and tracing setup
+│   ├── middleware/      # Custom middleware
+│   │   ├── mod.rs       # Middleware module
+│   │   └── rate_limit.rs # Rate limiting middleware
 │   └── route/           # API route handlers
 │       ├── mod.rs       # Route organization
 │       ├── contact.rs   # Contact form endpoint

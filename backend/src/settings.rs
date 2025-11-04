@@ -19,6 +19,9 @@ pub struct Settings {
     pub email: EmailSettings,
     /// Frontend URL for CORS configuration
     pub frontend_url: String,
+    /// Rate limiting configuration
+    #[serde(default)]
+    pub rate_limit: RateLimitSettings,
 }
 
 impl Settings {
@@ -231,6 +234,42 @@ impl<'de> serde::Deserialize<'de> for Starttls {
     }
 }
 
+/// Rate limiting configuration.
+#[derive(Debug, serde::Deserialize, Clone)]
+pub struct RateLimitSettings {
+    /// Whether rate limiting is enabled
+    #[serde(default = "default_rate_limit_enabled")]
+    pub enabled: bool,
+    /// Maximum number of requests allowed in the time window (burst size)
+    #[serde(default = "default_burst_size")]
+    pub burst_size: u32,
+    /// Time window in seconds for rate limiting
+    #[serde(default = "default_per_seconds")]
+    pub per_seconds: u64,
+}
+
+impl Default for RateLimitSettings {
+    fn default() -> Self {
+        Self {
+            enabled: default_rate_limit_enabled(),
+            burst_size: default_burst_size(),
+            per_seconds: default_per_seconds(),
+        }
+    }
+}
+
+const fn default_rate_limit_enabled() -> bool {
+    true
+}
+
+const fn default_burst_size() -> u32 {
+    100
+}
+
+const fn default_per_seconds() -> u64 {
+    60
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -377,5 +416,165 @@ mod tests {
     fn startls_default_is_never() {
         let startls = Starttls::default();
         assert_eq!(startls, Starttls::Never);
+    }
+
+    #[test]
+    fn startls_try_from_str_never() {
+        assert_eq!(Starttls::try_from("never").unwrap(), Starttls::Never);
+        assert_eq!(Starttls::try_from("no").unwrap(), Starttls::Never);
+        assert_eq!(Starttls::try_from("off").unwrap(), Starttls::Never);
+        assert_eq!(Starttls::try_from("NEVER").unwrap(), Starttls::Never);
+        assert_eq!(Starttls::try_from("No").unwrap(), Starttls::Never);
+    }
+
+    #[test]
+    fn startls_try_from_str_always() {
+        assert_eq!(Starttls::try_from("always").unwrap(), Starttls::Always);
+        assert_eq!(Starttls::try_from("yes").unwrap(), Starttls::Always);
+        assert_eq!(Starttls::try_from("ALWAYS").unwrap(), Starttls::Always);
+        assert_eq!(Starttls::try_from("Yes").unwrap(), Starttls::Always);
+    }
+
+    #[test]
+    fn startls_try_from_str_opportunistic() {
+        assert_eq!(
+            Starttls::try_from("opportunistic").unwrap(),
+            Starttls::Opportunistic
+        );
+        assert_eq!(
+            Starttls::try_from("OPPORTUNISTIC").unwrap(),
+            Starttls::Opportunistic
+        );
+    }
+
+    #[test]
+    fn startls_try_from_str_invalid() {
+        let result = Starttls::try_from("invalid");
+        assert!(result.is_err());
+        assert!(result
+            .unwrap_err()
+            .contains("not a supported option"));
+    }
+
+    #[test]
+    fn startls_try_from_string_never() {
+        assert_eq!(
+            Starttls::try_from("never".to_string()).unwrap(),
+            Starttls::Never
+        );
+    }
+
+    #[test]
+    fn startls_try_from_string_always() {
+        assert_eq!(
+            Starttls::try_from("yes".to_string()).unwrap(),
+            Starttls::Always
+        );
+    }
+
+    #[test]
+    fn startls_try_from_string_opportunistic() {
+        assert_eq!(
+            Starttls::try_from("opportunistic".to_string()).unwrap(),
+            Starttls::Opportunistic
+        );
+    }
+
+    #[test]
+    fn startls_try_from_string_invalid() {
+        let result = Starttls::try_from("invalid".to_string());
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn startls_from_bool_true() {
+        assert_eq!(Starttls::from(true), Starttls::Always);
+    }
+
+    #[test]
+    fn startls_from_bool_false() {
+        assert_eq!(Starttls::from(false), Starttls::Never);
+    }
+
+    #[test]
+    fn startls_display_never() {
+        let startls = Starttls::Never;
+        assert_eq!(startls.to_string(), "never");
+    }
+
+    #[test]
+    fn startls_display_always() {
+        let startls = Starttls::Always;
+        assert_eq!(startls.to_string(), "always");
+    }
+
+    #[test]
+    fn startls_display_opportunistic() {
+        let startls = Starttls::Opportunistic;
+        assert_eq!(startls.to_string(), "opportunistic");
+    }
+
+    #[test]
+    fn rate_limit_settings_default() {
+        let settings = RateLimitSettings::default();
+        assert!(settings.enabled);
+        assert_eq!(settings.burst_size, 100);
+        assert_eq!(settings.per_seconds, 60);
+    }
+
+    #[test]
+    fn rate_limit_settings_deserialize_full() {
+        let json = r#"{"enabled": true, "burst_size": 50, "per_seconds": 30}"#;
+        let settings: RateLimitSettings = serde_json::from_str(json).unwrap();
+        assert!(settings.enabled);
+        assert_eq!(settings.burst_size, 50);
+        assert_eq!(settings.per_seconds, 30);
+    }
+
+    #[test]
+    fn rate_limit_settings_deserialize_partial() {
+        let json = r#"{"enabled": false}"#;
+        let settings: RateLimitSettings = serde_json::from_str(json).unwrap();
+        assert!(!settings.enabled);
+        assert_eq!(settings.burst_size, 100); // default
+        assert_eq!(settings.per_seconds, 60); // default
+    }
+
+    #[test]
+    fn rate_limit_settings_deserialize_empty() {
+        let json = "{}";
+        let settings: RateLimitSettings = serde_json::from_str(json).unwrap();
+        assert!(settings.enabled); // default
+        assert_eq!(settings.burst_size, 100); // default
+        assert_eq!(settings.per_seconds, 60); // default
+    }
+
+    #[test]
+    fn startls_deserialize_from_incompatible_type() {
+        // Test that deserialization from an array fails with expected error message
+        let json = "[1, 2, 3]";
+        let result: Result<Starttls, _> = serde_json::from_str(json);
+        assert!(result.is_err());
+        let error = result.unwrap_err().to_string();
+        // The error should mention what was expected
+        assert!(
+            error.contains("STARTTLS") || error.contains("string") || error.contains("boolean")
+        );
+    }
+
+    #[test]
+    fn startls_deserialize_from_number() {
+        // Test that deserialization from a number fails
+        let json = "42";
+        let result: Result<Starttls, _> = serde_json::from_str(json);
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn startls_deserialize_from_object() {
+        // Test that deserialization from an object fails
+        let json = r#"{"foo": "bar"}"#;
+        let result: Result<Starttls, _> = serde_json::from_str(json);
+        assert!(result.is_err());
     }
 }

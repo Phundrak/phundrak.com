@@ -10,11 +10,17 @@ use poem::middleware::{AddDataEndpoint, Cors, CorsEndpoint};
 use poem::{EndpointExt, Route};
 use poem_openapi::OpenApiService;
 
-use crate::{route::Api, settings::Settings};
+use crate::{
+    middleware::rate_limit::{RateLimit, RateLimitConfig},
+    route::Api,
+    settings::Settings,
+};
+
+use crate::middleware::rate_limit::RateLimitEndpoint;
 
 type Server = poem::Server<poem::listener::TcpListener<String>, std::convert::Infallible>;
-/// The configured application with CORS and settings data.
-pub type App = AddDataEndpoint<CorsEndpoint<Route>, Settings>;
+/// The configured application with rate limiting, CORS, and settings data.
+pub type App = AddDataEndpoint<CorsEndpoint<RateLimitEndpoint<Route>>, Settings>;
 
 /// Application builder that holds the server configuration before running.
 pub struct Application {
@@ -51,7 +57,35 @@ impl From<RunnableApplication> for App {
 
 impl From<Application> for RunnableApplication {
     fn from(value: Application) -> Self {
-        let app = value.app.with(Cors::new()).data(value.settings);
+        // Configure rate limiting based on settings
+        let rate_limit_config = if value.settings.rate_limit.enabled {
+            tracing::event!(
+                target: "backend::startup",
+                tracing::Level::INFO,
+                burst_size = value.settings.rate_limit.burst_size,
+                per_seconds = value.settings.rate_limit.per_seconds,
+                "Rate limiting enabled"
+            );
+            RateLimitConfig::new(
+                value.settings.rate_limit.burst_size,
+                value.settings.rate_limit.per_seconds,
+            )
+        } else {
+            tracing::event!(
+                target: "backend::startup",
+                tracing::Level::INFO,
+                "Rate limiting disabled (using very high limits)"
+            );
+            // Use very high limits to effectively disable rate limiting
+            RateLimitConfig::new(u32::MAX, 1)
+        };
+
+        let app = value
+            .app
+            .with(RateLimit::new(&rate_limit_config))
+            .with(Cors::new())
+            .data(value.settings);
+
         let server = value.server;
         Self { server, app }
     }
@@ -143,6 +177,11 @@ mod tests {
             debug: false,
             email: crate::settings::EmailSettings::default(),
             frontend_url: "http://localhost:3000".to_string(),
+            rate_limit: crate::settings::RateLimitSettings {
+                enabled: false,
+                burst_size: 100,
+                per_seconds: 60,
+            },
         }
     }
 

@@ -22,8 +22,13 @@ impl From<&MetaApi> for Meta {
 
 #[derive(ApiResponse)]
 enum MetaResponse {
+    /// Success
     #[oai(status = 200)]
     Meta(Json<Meta>),
+    /// Too Many Requests - rate limit exceeded
+    #[oai(status = 429)]
+    #[allow(dead_code)]
+    TooManyRequests,
 }
 
 /// API for retrieving application metadata (name and version).

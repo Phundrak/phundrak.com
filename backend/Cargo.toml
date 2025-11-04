@@ -17,6 +17,7 @@ name = "backend"
 chrono = { version = "0.4.42", features = ["serde"] }
 config = { version = "0.15.18", features = ["yaml"] }
 dotenvy = "0.15.7"
+governor = "0.8.0"
 lettre = { version = "0.11.19", default-features = false, features = ["builder", "hostname", "pool", "rustls-tls", "tokio1", "tokio1-rustls-tls", "smtp-transport"] }
 poem = { version = "3.1.12", default-features = false, features = ["csrf", "rustls", "test"] }
 poem-openapi = { version = "5.1.16", features = ["chrono", "swagger-ui"] }

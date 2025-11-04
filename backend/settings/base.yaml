@@ -11,3 +11,8 @@ email:
   recipient: Admin <user@example.com>
   starttls: false
   tls: false
+
+rate_limit:
+  enabled: true
+  burst_size: 10
+  per_seconds: 60

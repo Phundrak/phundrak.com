@@ -11,6 +11,8 @@
 #![warn(missing_docs)]
 #![allow(clippy::unused_async)]
 
+/// Custom middleware implementations
+pub mod middleware;
 /// API route handlers and endpoints
 pub mod route;
 /// Application configuration settings

@@ -99,7 +99,8 @@ enum ContactApiResponse {
     BadRequest(Json<ContactResponse>),
     /// Too Many Requests - rate limit exceeded
     #[oai(status = 429)]
-    TooManyRequests(Json<ContactResponse>),
+    #[allow(dead_code)]
+    TooManyRequests,
     /// Internal Server Error
     #[oai(status = 500)]
     InternalServerError(Json<ContactResponse>),

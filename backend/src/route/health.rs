@@ -6,8 +6,13 @@ use super::ApiCategory;
 
 #[derive(ApiResponse)]
 enum HealthResponse {
+    /// Success
     #[oai(status = 200)]
     Ok,
+    /// Too Many Requests - rate limit exceeded
+    #[oai(status = 429)]
+    #[allow(dead_code)]
+    TooManyRequests,
 }
 
 /// Health check API for monitoring service availability.
