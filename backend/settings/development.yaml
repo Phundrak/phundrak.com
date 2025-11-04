@@ -5,4 +5,12 @@ application:
   protocol: http
   host: 127.0.0.1
   base_url: http://127.0.0.1:3100
-  name: "com.phundrak.backend.prod"
+  name: "com.phundrak.backend.dev"
+
+email:
+  host: localhost
+  port: 1025
+  user: ""
+  password: ""
+  tls: false
+  starttls: false

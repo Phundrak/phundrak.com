@@ -3,7 +3,11 @@ application:
   version: "0.1.0"
 
 email:
-  host: localhost
+  host: email.example.com
+  port: 587
   user: user
   from: Contact Form <noreply@example.com>
   password: hunter2
+  recipient: Admin <user@example.com>
+  starttls: false
+  tls: false

@@ -1,13 +1,23 @@
+//! Backend API server for phundrak.com
+//!
+//! This is a REST API built with the Poem framework that provides:
+//! - Health check endpoints
+//! - Application metadata endpoints
+//! - Contact form submission with email integration
+
 #![deny(clippy::all)]
 #![deny(clippy::pedantic)]
 #![deny(clippy::nursery)]
-#![allow(clippy::missing_panics_doc)]
-#![allow(clippy::missing_errors_doc)]
+#![warn(missing_docs)]
 #![allow(clippy::unused_async)]
 
+/// API route handlers and endpoints
 pub mod route;
+/// Application configuration settings
 pub mod settings;
+/// Application startup and server configuration
 pub mod startup;
+/// Logging and tracing setup
 pub mod telemetry;
 
 type MaybeListener = Option<poem::listener::TcpListener<String>>;
@@ -36,13 +46,19 @@ fn prepare(listener: MaybeListener) -> startup::Application {
     tracing::event!(
         target: "backend",
         tracing::Level::INFO,
-        "Documentation available at http://{}:{}/docs",
+        "Documentation available at http://{}:{}/",
         application.host(),
         application.port()
     );
     application
 }
 
+/// Runs the application with the specified TCP listener.
+///
+/// # Errors
+///
+/// Returns a `std::io::Error` if the server fails to start or encounters
+/// an I/O error during runtime (e.g., port already in use, network issues).
 #[cfg(not(tarpaulin_include))]
 pub async fn run(listener: MaybeListener) -> Result<(), std::io::Error> {
     let application = prepare(listener);

@@ -1,12 +1,22 @@
+//! Application startup and server configuration.
+//!
+//! This module handles:
+//! - Building the application with routes and middleware
+//! - Setting up the OpenAPI service and Swagger UI
+//! - Configuring CORS
+//! - Starting the HTTP server
+
 use poem::middleware::{AddDataEndpoint, Cors, CorsEndpoint};
 use poem::{EndpointExt, Route};
 use poem_openapi::OpenApiService;
 
-use crate::{settings::Settings, route::{Api, HealthApi, MetaApi}};
+use crate::{route::Api, settings::Settings};
 
 type Server = poem::Server<poem::listener::TcpListener<String>, std::convert::Infallible>;
+/// The configured application with CORS and settings data.
 pub type App = AddDataEndpoint<CorsEndpoint<Route>, Settings>;
 
+/// Application builder that holds the server configuration before running.
 pub struct Application {
     server: Server,
     app: poem::Route,
@@ -15,12 +25,19 @@ pub struct Application {
     settings: Settings,
 }
 
+/// A fully configured application ready to run.
 pub struct RunnableApplication {
     server: Server,
     app: App,
 }
 
 impl RunnableApplication {
+    /// Runs the application server.
+    ///
+    /// # Errors
+    ///
+    /// Returns a `std::io::Error` if the server fails to start or encounters
+    /// an I/O error during runtime (e.g., port already in use, network issues).
     pub async fn run(self) -> Result<(), std::io::Error> {
         self.server.run(self.app).await
     }
@@ -43,12 +60,16 @@ impl From<Application> for RunnableApplication {
 impl Application {
     fn setup_app(settings: &Settings) -> poem::Route {
         let api_service = OpenApiService::new(
-            (Api, HealthApi, MetaApi),
+            Api::from(settings).apis(),
             settings.application.clone().name,
             settings.application.clone().version,
-        );
+        )
+        .url_prefix("/api");
         let ui = api_service.swagger_ui();
-        poem::Route::new().nest("/", api_service).nest("/docs", ui)
+        poem::Route::new()
+            .nest("/api", api_service.clone())
+            .nest("/specs", api_service.spec_endpoint_yaml())
+            .nest("/", ui)
     }
 
     fn setup_server(
@@ -65,6 +86,9 @@ impl Application {
         poem::Server::new(tcp_listener)
     }
 
+    /// Builds a new application with the given settings and optional TCP listener.
+    ///
+    /// If no listener is provided, one will be created based on the settings.
     #[must_use]
     pub fn build(
         settings: Settings,
@@ -83,16 +107,19 @@ impl Application {
         }
     }
 
+    /// Converts the application into a runnable application.
     #[must_use]
     pub fn make_app(self) -> RunnableApplication {
         self.into()
     }
 
+    /// Returns the host address the application is configured to bind to.
     #[must_use]
     pub fn host(&self) -> String {
         self.host.clone()
     }
 
+    /// Returns the port the application is configured to bind to.
     #[must_use]
     pub const fn port(&self) -> u16 {
         self.port
@@ -150,8 +177,8 @@ mod tests {
     #[test]
     fn application_with_custom_listener() {
         let settings = create_test_settings();
-        let tcp_listener = std::net::TcpListener::bind("127.0.0.1:0")
-            .expect("Failed to bind random port");
+        let tcp_listener =
+            std::net::TcpListener::bind("127.0.0.1:0").expect("Failed to bind random port");
         let port = tcp_listener.local_addr().unwrap().port();
         let listener = poem::listener::TcpListener::bind(format!("127.0.0.1:{port}"));
 

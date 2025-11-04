@@ -1,5 +1,14 @@
+//! Logging and tracing configuration.
+//!
+//! This module provides utilities for setting up structured logging using the tracing crate.
+//! Supports both pretty-printed logs for development and JSON logs for production.
+
 use tracing_subscriber::layer::SubscriberExt;
 
+/// Creates a tracing subscriber configured for the given debug mode.
+///
+/// In debug mode, logs are pretty-printed to stdout.
+/// In production mode, logs are output as JSON.
 #[must_use]
 pub fn get_subscriber(debug: bool) -> impl tracing::Subscriber + Send + Sync {
     let env_filter = if debug { "debug" } else { "info" }.to_string();
@@ -17,6 +26,13 @@ pub fn get_subscriber(debug: bool) -> impl tracing::Subscriber + Send + Sync {
     subscriber.with(json_log)
 }
 
+/// Initializes the global tracing subscriber.
+///
+/// # Panics
+///
+/// Panics if:
+/// - A global subscriber has already been set
+/// - The subscriber cannot be set as the global default
 pub fn init_subscriber(subscriber: impl tracing::Subscriber + Send + Sync) {
     tracing::subscriber::set_global_default(subscriber).expect("Failed to set subscriber");
 }

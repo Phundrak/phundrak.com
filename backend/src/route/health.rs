@@ -1,3 +1,5 @@
+//! Health check endpoint for monitoring service availability.
+
 use poem_openapi::{ApiResponse, OpenApi};
 
 use super::ApiCategory;
@@ -8,13 +10,15 @@ enum HealthResponse {
     Ok,
 }
 
+/// Health check API for monitoring service availability.
+#[derive(Default, Clone)]
 pub struct HealthApi;
 
-#[OpenApi(prefix_path = "/v1/health-check", tag = "ApiCategory::Health")]
+#[OpenApi(tag = "ApiCategory::Health")]
 impl HealthApi {
-    #[oai(path = "/", method = "get")]
+    #[oai(path = "/health", method = "get")]
     async fn ping(&self) -> HealthResponse {
-        tracing::event!(target: "backend", tracing::Level::DEBUG, "Accessing health-check endpoint");
+        tracing::event!(target: "backend::health", tracing::Level::DEBUG, "Accessing health-check endpoint");
         HealthResponse::Ok
     }
 }
@@ -23,7 +27,7 @@ impl HealthApi {
 async fn health_check_works() {
     let app = crate::get_test_app();
     let cli = poem::test::TestClient::new(app);
-    let resp = cli.get("/v1/health-check").send().await;
+    let resp = cli.get("/api/health").send().await;
     resp.assert_status_is_ok();
     resp.assert_text("").await;
 }

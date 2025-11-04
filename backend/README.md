@@ -4,11 +4,53 @@ The backend for [phundrak.com](https://phundrak.com), built with Rust and the [P
 
 ## Features
 
-- **RESTful API** with OpenAPI documentation
+- **RESTful API** with automatic OpenAPI/Swagger documentation
+- **Contact form** with SMTP email relay (supports TLS, STARTTLS, and unencrypted)
 - **Type-safe routing** using Poem's declarative API
-- **Structured logging** with `tracing`
+- **Hierarchical configuration** with YAML files and environment variable overrides
+- **Structured logging** with `tracing` and `tracing-subscriber`
 - **Strict linting** for code quality and safety
 - **Comprehensive testing** with integration test support
+
+## API Endpoints
+
+The application provides the following endpoints:
+
+- **Swagger UI**: `/` - Interactive API documentation
+- **OpenAPI Spec**: `/specs` - OpenAPI specification in YAML format
+- **Health Check**: `GET /api/health` - Returns server health status
+- **Application Metadata**: `GET /api/meta` - Returns version and build info
+- **Contact Form**: `POST /api/contact` - Submit contact form (relays to SMTP)
+
+## Configuration
+
+Configuration is loaded from multiple sources in order of precedence:
+
+1. `settings/base.yaml` - Base configuration
+2. `settings/{environment}.yaml` - Environment-specific (development/production)
+3. Environment variables prefixed with `APP__` (e.g., `APP__APPLICATION__PORT=8080`)
+
+The environment is determined by the `APP_ENVIRONMENT` variable (defaults to "development").
+
+### Configuration Example
+
+```yaml
+application:
+  port: 3100
+  version: "0.1.0"
+
+email:
+  host: smtp.example.com
+  port: 587
+  user: user@example.com
+  from: Contact Form <noreply@example.com>
+  password: your_password
+  recipient: Admin <admin@example.com>
+  starttls: true  # Use STARTTLS (typically port 587)
+  tls: false      # Use implicit TLS (typically port 465)
+```
+
+You can also use a `.env` file for local development settings.
 
 ## Development
 
@@ -25,7 +67,7 @@ To start the development server:
 cargo run
 ```
 
-The server will start on the configured port (check your configuration for details).
+The server will start on the configured port (default: 3100).
 
 ### Building
 
@@ -49,6 +91,8 @@ Run all tests:
 
 ```bash
 cargo test
+# or
+just test
 ```
 
 Run a specific test:
@@ -63,31 +107,53 @@ Run tests with output:
 cargo test -- --nocapture
 ```
 
+Run tests with coverage:
+
+```bash
+cargo tarpaulin --config .tarpaulin.local.toml
+# or
+just coverage
+```
+
+### Testing Notes
+
+- Integration tests use random TCP ports to avoid conflicts
+- Tests use `get_test_app()` helper for consistent test setup
+- Telemetry is automatically disabled during tests
+- Tests are organized in `#[cfg(test)]` modules within each file
+
 ## Code Quality
 
 ### Linting
 
-This project uses strict Clippy linting rules:
+This project uses extremely strict Clippy linting rules:
 
 - `#![deny(clippy::all)]`
 - `#![deny(clippy::pedantic)]`
 - `#![deny(clippy::nursery)]`
+- `#![warn(missing_docs)]`
 
 Run Clippy to check for issues:
 
 ```bash
 cargo clippy --all-targets
+# or
+just lint
 ```
+
+All code must pass these checks before committing.
 
 ### Continuous Checking with Bacon
 
 For continuous testing and linting during development, use [bacon](https://dystroy.org/bacon/):
 
 ```bash
-bacon
+bacon           # Runs clippy-all by default
+bacon test      # Runs tests continuously
+bacon clippy    # Runs clippy on default target only
 ```
 
-This will watch your files and automatically run clippy or tests on changes.
+Press 'c' in bacon to run clippy-all.
 
 ## Code Style
 
@@ -99,29 +165,29 @@ This will watch your files and automatically run clippy or tests on changes.
 
 ### Logging
 
-- Use `tracing::event!` for logging
-- Always set `target: "backend"`
-- Use appropriate log levels (trace, debug, info, warn, error)
+Always use `tracing::event!` with proper target and level:
 
-Example:
 ```rust
-tracing::event!(target: "backend", tracing::Level::INFO, "Server started");
+tracing::event!(
+    target: "backend",  // or "backend::module_name"
+    tracing::Level::INFO,
+    "Message here"
+);
 ```
 
 ### Imports
 
 Organize imports in three groups:
 1. Standard library (`std::*`)
-2. External crates
-3. Local modules
+2. External crates (poem, serde, etc.)
+3. Local modules (`crate::*`)
 
-Use explicit paths (e.g., `poem_openapi::ApiResponse` instead of wildcards).
+### Testing Conventions
 
-### Testing
-
-- Use `#[cfg(test)]` module blocks
-- Leverage Poem's test utilities for endpoint testing
-- Use random TCP listeners for integration tests to avoid port conflicts
+- Use `#[tokio::test]` for async tests
+- Use descriptive test names that explain what is being tested
+- Test both success and error cases
+- For endpoint tests, verify both status codes and response bodies
 
 ## Project Structure
 
@@ -129,15 +195,50 @@ Use explicit paths (e.g., `poem_openapi::ApiResponse` instead of wildcards).
 backend/
 ├── src/
 │   ├── main.rs          # Application entry point
-│   ├── api/             # API endpoints
-│   ├── models/          # Data models
-│   ├── services/        # Business logic
-│   └── utils/           # Utility functions
-├── tests/               # Integration tests
+│   ├── lib.rs           # Library root with run() and prepare()
+│   ├── startup.rs       # Application builder, server setup
+│   ├── settings.rs      # Configuration management
+│   ├── telemetry.rs     # Logging and tracing setup
+│   └── route/           # API route handlers
+│       ├── mod.rs       # Route organization
+│       ├── contact.rs   # Contact form endpoint
+│       ├── health.rs    # Health check endpoint
+│       └── meta.rs      # Metadata endpoint
+├── settings/            # Configuration files
+│   ├── base.yaml        # Base configuration
+│   ├── development.yaml # Development overrides
+│   └── production.yaml  # Production overrides
 ├── Cargo.toml           # Dependencies and metadata
 └── README.md            # This file
 ```
 
+## Architecture
+
+### Application Initialization Flow
+
+1. `main.rs` calls `run()` from `lib.rs`
+2. `run()` calls `prepare()` which:
+   - Loads environment variables from `.env` file
+   - Initializes `Settings` from YAML files and environment variables
+   - Sets up telemetry/logging (unless in test mode)
+   - Builds the `Application` with optional TCP listener
+3. `Application::build()`:
+   - Sets up OpenAPI service with all API endpoints
+   - Configures Swagger UI at the root path (`/`)
+   - Configures API routes under `/api` prefix
+   - Creates server with TCP listener
+4. Application runs with CORS middleware and settings injected as data
+
+### Email Handling
+
+The contact form supports multiple SMTP configurations:
+- **Implicit TLS (SMTPS)** - typically port 465
+- **STARTTLS (Always/Opportunistic)** - typically port 587
+- **Unencrypted** (for local dev) - with or without authentication
+
+The `SmtpTransport` is built dynamically from `EmailSettings` based on
+TLS/STARTTLS configuration.
+
 ## License
 
-See the root repository for license information.
+AGPL-3.0-only - See the root repository for full license information.

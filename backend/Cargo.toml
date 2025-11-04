@@ -26,6 +26,7 @@ thiserror = "2.0.17"
 tokio = { version = "1.48.0", features = ["macros", "rt-multi-thread"] }
 tracing = "0.1.41"
 tracing-subscriber = { version = "0.3.20", features = ["fmt", "std", "env-filter", "registry", "json", "tracing-log"] }
+validator = { version = "0.20.0", features = ["derive"] }
 
 [lints.rust]
 unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tarpaulin_include)'] }
