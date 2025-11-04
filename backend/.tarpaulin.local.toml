@@ -1,0 +1,7 @@
+[all]
+out = ["Html", "Lcov"]
+skip-clean = true
+target-dir = "coverage"
+output-dir = "coverage"
+fail-under = 60
+exclude-files = ["target/*"]

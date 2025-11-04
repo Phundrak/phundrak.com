@@ -1,0 +1,9 @@
+application:
+  port: 3100
+  version: "0.1.0"
+
+email:
+  host: localhost
+  user: user
+  from: Contact Form <noreply@example.com>
+  password: hunter2

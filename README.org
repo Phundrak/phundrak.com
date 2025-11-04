@@ -1,51 +1,76 @@
 #+title: phundrak.com
 
-#+html: <a href="https://www.gnu.org/software/emacs/"><img src="https://img.shields.io/badge/Emacs-29.1-blueviolet.svg?style=flat-square&logo=GNU%20Emacs&logoColor=white" /></a>
-#+html: <a href="https://orgmode.org/"><img src="https://img.shields.io/badge/Written%20with-Org%20mode-success?logo=Org&logoColor=white&style=flat-square"/></a>
-#+html: <a href="https://v2.vuepress.vuejs.org/"><img src="https://img.shields.io/badge/Framework-Vuepress-42D392?logo=Vue.js&logoColor=white&style=flat-square"/></a>
-#+html: <a href="https://phundrak.com"><img src="https://img.shields.io/badge/dynamic/json?label=Website&query=%24%5B%3A1%5D.status&url=https%3A%2F%2Fdrone.phundrak.com%2Fapi%2Frepos%2Fphundrak%2Fphundrak.com%2Fbuilds&style=flat-square&logo=buffer" /></a>
+#+html: <a href="https://www.rust-lang.org/"><img src="https://img.shields.io/badge/Rust-Backend-orange.svg?style=flat-square&logo=Rust&logoColor=white" /></a>
+#+html: <a href="https://nuxt.com/"><img src="https://img.shields.io/badge/Frontend-Nuxt%204-00DC82?logo=Nuxt.js&logoColor=white&style=flat-square"/></a>
+#+html: <a href="https://vuejs.org/"><img src="https://img.shields.io/badge/Vue-3-42B883?logo=Vue.js&logoColor=white&style=flat-square"/></a>
+#+html: <a href="https://phundrak.com"><img src="https://img.shields.io/badge/Website-phundrak.com-blue?style=flat-square&logo=buffer" /></a>
 
 * Introduction
 This is the repository for my website [[https://phundrak.com][phundrak.com]] which contains the
 code available on the =main= branch. Code available on the =develop=
 branch is available at [[https://beta.phundrak.com][beta.phundrak.com]].
 
-* Structure of the project
-This website is made with [[https://v2.vuepress.vuejs.org/][VuePress]], a Vue-powered static site
-generator. You can find its Node.JS configuration in the [[file:package.json][package.json]]
-file as well as its content and general configuration in the directory
-[[file:content/][content]].
+* Architecture
+The website follows a modern full-stack architecture:
 
-** Installing and running
-In order to run the website, you firts need to export all the orgmode
-files to Markdown files. I recommend using =ox-gfm= to do so. If you
-don’t mind =package.el= installing it as well as =f.el=, you can run the
-following command:
+- *Backend*: Rust using the [[https://github.com/poem-web/poem][Poem]] web framework (located in [[file:backend/][backend/]])
+- *Frontend*: Nuxt 4 + Vue 3 + TypeScript (located in [[file:frontend/][frontend/]])
+
+** Backend
+The backend is written in Rust and provides a RESTful API using the
+Poem framework with OpenAPI support.
+
+*** Running the Backend
+To run the backend in development mode:
 #+begin_src shell
-emacs -Q --script export.el
+cd backend
+cargo run
 #+end_src
 
-To install the NPM dependencies for the project, run one of the
-following commands:
+To run tests:
 #+begin_src shell
-yarn
-# or
-npm install # delete the yarn.lock file before
+cd backend
+cargo test
 #+end_src
 
-To run the project, run one of the following commands using the same
-package manager as above:
+For continuous testing and linting during development, use [[https://dystroy.org/bacon/][bacon]]:
 #+begin_src shell
-yarn dev
-# or
-npm run dev
+cd backend
+bacon
 #+end_src
 
-You can compile the website to a static website by running
+*** Building the Backend
+To build the backend for production:
 #+begin_src shell
-yarn build
-# or
-npm run build
+cd backend
+cargo build --release
 #+end_src
 
-The compiled version of the website can then be found in =content/.vuepress/dist=.
+The compiled binary will be available at =backend/target/release/backend=.
+
+** Frontend
+The frontend is built with Nuxt 4, Vue 3, and TypeScript, providing a
+modern single-page application experience.
+
+*** Installing Dependencies
+First, install the required dependencies using =pnpm=:
+#+begin_src shell
+cd frontend
+pnpm install
+#+end_src
+
+*** Running the Frontend
+To run the frontend in development mode:
+#+begin_src shell
+cd frontend
+pnpm dev
+#+end_src
+
+*** Building the Frontend
+To build the frontend for production:
+#+begin_src shell
+cd frontend
+pnpm build
+#+end_src
+
+The compiled version of the website can then be found in =frontend/.output=.

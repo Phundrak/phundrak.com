@@ -1,0 +1,48 @@
+default: run
+
+run:
+	cargo run
+
+run-release:
+	cargo run --release
+
+format:
+	cargo fmt --all
+
+format-check:
+	cargo fmt --check --all
+
+audit:
+	cargo deny
+
+build:
+	cargo build
+
+build-release:
+	cargo build --release
+
+lint:
+	cargo clippy --all-targets
+
+release-build:
+	cargo build --release
+
+release-run:
+	cargo run --release
+
+test:
+	cargo test
+
+coverage:
+	mkdir -p coverage
+	cargo tarpaulin --config .tarpaulin.local.toml
+
+coverage-ci:
+	mkdir -p coverage
+	cargo tarpaulin --config .tarpaulin.ci.toml
+
+check-all: format-check lint coverage audit
+
+## Local Variables:
+## mode: makefile
+## End:

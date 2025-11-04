@@ -1,0 +1,31 @@
+[package]
+name = "phundrak-dot-com-backend"
+version = "0.1.0"
+edition = "2024"
+publish = false
+authors = ["Lucien Cartier-Tilet <lucien@phundrak.com>"]
+license = "AGPL-3.0-only"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+path = "src/main.rs"
+name = "backend"
+
+[dependencies]
+chrono = { version = "0.4.42", features = ["serde"] }
+config = { version = "0.15.18", features = ["yaml"] }
+dotenvy = "0.15.7"
+lettre = { version = "0.11.19", default-features = false, features = ["builder", "hostname", "pool", "rustls-tls", "tokio1", "tokio1-rustls-tls", "smtp-transport"] }
+poem = { version = "3.1.12", default-features = false, features = ["csrf", "rustls", "test"] }
+poem-openapi = { version = "5.1.16", features = ["chrono", "swagger-ui"] }
+serde = "1.0.228"
+serde_json = "1.0.145"
+thiserror = "2.0.17"
+tokio = { version = "1.48.0", features = ["macros", "rt-multi-thread"] }
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.20", features = ["fmt", "std", "env-filter", "registry", "json", "tracing-log"] }
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tarpaulin_include)'] }

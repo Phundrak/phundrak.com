@@ -7,6 +7,10 @@ insert_final_newline = true
 charset = utf-8
 trim_trailing_whitespace = true
 
+[*.{rs, toml}]
+indent_style = space
+indent_size = 4
+
 [*.{json,ts,css}]
 indent_style = space
 indent_size = 2

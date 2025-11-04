@@ -1,0 +1,6 @@
+[all]
+out = ["Xml"]
+target-dir = "coverage"
+output-dir = "coverage"
+fail-under = 60
+exclude-files = ["target/*"]

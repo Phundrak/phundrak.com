@@ -1,0 +1,8 @@
+debug: false
+frontend_url: ""
+
+application:
+  name: "com.phundrak.backend.prod"
+  protocol: https
+  host: 0.0.0.0
+  base_url: ""

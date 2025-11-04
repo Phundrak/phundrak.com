@@ -1,0 +1,36 @@
+{
+  "name": "frontend",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "cleanup": "nuxt cleanup"
+  },
+  "dependencies": {
+    "@nuxt/content": "3.8.0",
+    "@nuxt/eslint": "1.10.0",
+    "@nuxt/image": "1.11.0",
+    "@nuxt/scripts": "^0.12.2",
+    "@nuxt/test-utils": "3.20.1",
+    "@nuxt/ui": "4.1.0",
+    "@nuxtjs/turnstile": "1.1.1",
+    "@vueuse/nuxt": "14.0.0",
+    "better-sqlite3": "^12.4.1",
+    "eslint": "^9.39.1",
+    "nitropack": "^2.12.9",
+    "nuxi": "^3.30.0",
+    "nuxt": "^4.2.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@nuxtjs/i18n": "^10.2.0",
+    "zod": "^4.1.12"
+  }
+}

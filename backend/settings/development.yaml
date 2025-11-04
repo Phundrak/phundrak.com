@@ -1,0 +1,8 @@
+frontend_url: http://localhost:3000
+debug: true
+
+application:
+  protocol: http
+  host: 127.0.0.1
+  base_url: http://127.0.0.1:3100
+  name: "com.phundrak.backend.prod"

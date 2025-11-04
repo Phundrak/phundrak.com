@@ -1,0 +1,109 @@
+#+title: phundrak.com frontend
+#+author: Lucien Cartier-Tilet
+#+email: lucien@phundrak.com
+
+This is the frontend of =phundrak.com=, written with Nuxt.
+
+* Setup
+
+** Environment
+*** Nix Environment
+If you use Nix, you can set up your environment using the [[file:flake.nix][=flake.nix=]]
+file, which will give you the exact same development environment as I
+use.
+
+#+begin_src bash
+nix develop
+#+end_src
+
+If you have [[https://direnv.net/][=direnv=]] installed, you can simply use it to automatically
+enable this environment. However, I *strongly* recommend you to read the
+content of the =flake.nix= file before doing so, as you should with any
+Nix-defined environment you did not create.
+
+#+begin_src bash
+direnv allow .
+#+end_src
+
+*** Required Tools
+To be able to work on this project, you need a Javascript package
+manager, such as:
+- =npm=
+- =pnpm= (recommended)
+- =yarn=
+- =bun=
+
+In my case, I use pnpm.
+
+You can skip this if you are already using my Nix environment.
+
+** Dependencies
+Once you have your environment ready, you can now install the
+project’s dependencies.
+
+#+begin_src bash
+# npm
+npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
+#+end_src
+
+* Running the Project
+You are now ready to start the development server on
+=http://localhost:3000=.
+
+#+begin_src bash
+# npm
+npm run dev
+
+# pnpm
+pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
+#+end_src
+
+* Production
+Once you are satisfied with the project, you can build the application in production mode.
+
+#+begin_src bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+#+end_src
+
+You can preview locally the production build too.
+
+#+begin_src bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+#+end_src
+
+Check out the [[https://nuxt.com/docs/getting-started/deployment][deployment documentation]] for more information.
