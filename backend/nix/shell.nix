@@ -6,9 +6,7 @@
   rust-overlay,
   ...
 }: let
-  overlays = [(import rust-overlay)];
-  rustPkgs = import inputs.nixpkgs {inherit system overlays;};
-  rustVersion = rustPkgs.rust-bin.stable.latest.default;
+  rustPlatform = import ./rust-version.nix { inherit rust-overlay inputs system; };
 in
   inputs.devenv.lib.mkShell {
     inherit inputs pkgs;
@@ -20,8 +18,8 @@ in
           pkgs.lib.mkIf (devenvRootFileContent != "") devenvRootFileContent;
       }
       {
-        packages = with rustPkgs; [
-          (rustVersion.override {
+        packages = with rustPlatform.pkgs; [
+          (rustPlatform.version.override {
             extensions = [
               "clippy"
               "rust-src"
@@ -36,8 +34,8 @@ in
           cargo-watch
           flyctl
           just
+          marksman
           tombi # TOML lsp server
-          vscode-langservers-extracted
         ];
 
         services.mailpit = {

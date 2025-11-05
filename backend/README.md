@@ -80,14 +80,24 @@ To disable rate limiting, set `rate_limit.enabled: false` in your configuration.
 
 ### Prerequisites
 
+**Option 1: Native Development**
 - Rust (latest stable version recommended)
 - Cargo (comes with Rust)
 
+**Option 2: Nix Development (Recommended)**
+- [Nix](https://nixos.org/download) with flakes enabled
+- All dependencies managed automatically
+
 ### Running the Server
 
-To start the development server:
-
+**With Cargo:**
 ```bash
+cargo run
+```
+
+**With Nix development shell:**
+```bash
+nix develop .#backend
 cargo run
 ```
 
@@ -95,19 +105,42 @@ The server will start on the configured port (default: 3100).
 
 ### Building
 
-For development builds:
+**With Cargo:**
 
+For development builds:
 ```bash
 cargo build
 ```
 
 For optimized production builds:
-
 ```bash
 cargo build --release
 ```
 
 The compiled binary will be at `target/release/backend`.
+
+**With Nix:**
+
+Build the backend binary:
+```bash
+nix build .#backend
+# Binary available at: ./result/bin/backend
+```
+
+Build Docker images:
+```bash
+# Build versioned Docker image (e.g., 0.1.0)
+nix build .#backendDocker
+
+# Build latest Docker image
+nix build .#backendDockerLatest
+
+# Load into Docker
+docker load < result
+# Image will be available as: localhost/phundrak/backend-rust:latest
+```
+
+The Nix build ensures reproducible builds with all dependencies pinned.
 
 ## Testing
 
@@ -265,6 +298,126 @@ The contact form supports multiple SMTP configurations:
 
 The `SmtpTransport` is built dynamically from `EmailSettings` based on
 TLS/STARTTLS configuration.
+
+## Docker Deployment
+
+### Using Pre-built Images
+
+Docker images are automatically built and published via GitHub Actions to the configured container registry.
+
+Pull and run the latest image:
+```bash
+# Pull from Phundrak Labs (labs.phundrak.com)
+docker pull labs.phundrak.com/phundrak/phundrak-dot-com-backend:latest
+
+# Run the container
+docker run -d \
+  --name phundrak-backend \
+  -p 3100:3100 \
+  -e APP__APPLICATION__PORT=3100 \
+  -e APP__EMAIL__HOST=smtp.example.com \
+  -e APP__EMAIL__PORT=587 \
+  -e APP__EMAIL__USER=user@example.com \
+  -e APP__EMAIL__PASSWORD=your_password \
+  -e APP__EMAIL__FROM="Contact Form <noreply@example.com>" \
+  -e APP__EMAIL__RECIPIENT="Admin <admin@example.com>" \
+  labs.phundrak.com/phundrak/phundrak-dot-com-backend:latest
+```
+
+### Available Image Tags
+
+The following tags are automatically published:
+
+- `latest` - Latest stable release (from tagged commits on `main`)
+- `<version>` - Specific version (e.g., `1.0.0`, from tagged commits like `v1.0.0`)
+- `develop` - Latest development build (from `develop` branch)
+- `pr<number>` - Pull request preview builds (e.g., `pr12`)
+
+### Building Images Locally
+
+Build with Nix (recommended for reproducibility):
+```bash
+nix build .#backendDockerLatest
+docker load < result
+docker run -p 3100:3100 localhost/phundrak/backend-rust:latest
+```
+
+Build with Docker directly:
+```bash
+# Note: This requires a Dockerfile (not included in this project)
+# Use Nix builds for containerization
+```
+
+### Docker Compose Example
+
+```yaml
+version: '3.8'
+
+services:
+  backend:
+    image: labs.phundrak.com/phundrak/phundrak-dot-com-backend:latest
+    ports:
+      - "3100:3100"
+    environment:
+      APP__APPLICATION__PORT: 3100
+      APP__EMAIL__HOST: smtp.example.com
+      APP__EMAIL__PORT: 587
+      APP__EMAIL__USER: ${SMTP_USER}
+      APP__EMAIL__PASSWORD: ${SMTP_PASSWORD}
+      APP__EMAIL__FROM: "Contact Form <noreply@example.com>"
+      APP__EMAIL__RECIPIENT: "Admin <admin@example.com>"
+      APP__EMAIL__STARTTLS: true
+      APP__RATE_LIMIT__ENABLED: true
+      APP__RATE_LIMIT__BURST_SIZE: 10
+      APP__RATE_LIMIT__PER_SECONDS: 60
+    restart: unless-stopped
+```
+
+## CI/CD Pipeline
+
+### Automated Docker Publishing
+
+GitHub Actions automatically builds and publishes Docker images based on repository events:
+
+| Event Type      | Trigger                      | Published Tags                |
+|-----------------|------------------------------|-------------------------------|
+| Tag push        | `v*.*.*` tag on `main`       | `latest`, `<version>`         |
+| Branch push     | Push to `develop`            | `develop`                     |
+| Pull request    | PR opened/updated            | `pr<number>`                  |
+| Branch push     | Push to `main` (no tag)      | `latest`                      |
+
+### Workflow Details
+
+The CI/CD pipeline (`.github/workflows/publish-docker.yml`):
+
+1. **Checks out the repository**
+2. **Installs Nix** with flakes enabled
+3. **Builds the Docker image** using Nix for reproducibility
+4. **Authenticates** with the configured Docker registry
+5. **Tags and pushes** images based on the event type
+
+### Registry Configuration
+
+Images are published to the registry specified by the `DOCKER_REGISTRY` environment variable in the workflow (default: `labs.phundrak.com`).
+
+To use the published images, authenticate with the registry:
+
+```bash
+# For Phundrak Labs (labs.phundrak.com)
+echo $GITHUB_TOKEN | docker login labs.phundrak.com -u USERNAME --password-stdin
+
+# Pull the image
+docker pull labs.phundrak.com/phundrak/phundrak-dot-com-backend:latest
+```
+
+### Required Secrets
+
+The workflow requires these GitHub secrets:
+- `DOCKER_USERNAME` - Registry username
+- `DOCKER_PASSWORD` - Registry password or token
+- `CACHIX_AUTH_TOKEN` - (Optional) For Nix build caching
+
+See [.github/workflows/README.md](../.github/workflows/README.md) for detailed setup instructions.
 
 ## License
 

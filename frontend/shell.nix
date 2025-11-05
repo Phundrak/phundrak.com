@@ -18,6 +18,7 @@ inputs.devenv.lib.mkShell {
 
       packages = with pkgs; [
         # LSP
+        marksman
         nodePackages."@tailwindcss/language-server"
         vscode-langservers-extracted
         vue-language-server

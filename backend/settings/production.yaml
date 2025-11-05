@@ -6,3 +6,13 @@ application:
   protocol: https
   host: 0.0.0.0
   base_url: ""
+
+email:
+  host: ""
+  port: 0
+  user: ""
+  password: ""
+  from: ""
+  recipient: ""
+  tls: false
+  starttls: false

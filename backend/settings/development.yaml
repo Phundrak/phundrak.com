@@ -12,5 +12,7 @@ email:
   port: 1025
   user: ""
   password: ""
+  from: Contact Form <noreply@example.com>
+  recipient: Admin <user@example.com>
   tls: false
   starttls: false

@@ -17,8 +17,14 @@
   };
 
   nixConfig = {
-    extra-trusted-public-keys = "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw=";
-    extra-substituters = "https://devenv.cachix.org";
+    extra-trusted-public-keys = [
+      "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
+      "phundrak-dot-com.cachix.org-1:c02/xlCknJIDoaQPUzEWSJHPoXcmIXYzCa+hVRhbDgE="
+    ];
+    extra-substituters = [
+      "https://devenv.cachix.org"
+      "https://phundrak-dot-com.cachix.org"
+    ];
   };
 
   outputs = {
@@ -33,12 +39,12 @@
     forEachSystem = nixpkgs.lib.genAttrs (import systems);
   in {
     formatter = forEachSystem (system: alejandra.defaultPackage.${system});
-
+    packages = forEachSystem (system: import ./backend/nix/package.nix { inherit rust-overlay inputs system; });
     devShells = forEachSystem (
       system: let
         pkgs = nixpkgs.legacyPackages.${system};
       in {
-        backend = import ./backend/shell.nix {
+        backend = import ./backend/nix/shell.nix {
           inherit inputs pkgs system self rust-overlay;
         };
         frontend = import ./frontend/shell.nix {

@@ -1,0 +1,123 @@
+name: Publish Docker Images
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+    tags:
+      - 'v*.*.*'
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+env:
+  CACHIX_NAME: devenv
+  CACHIX_SKIP_PUSH: true
+  DOCKER_REGISTRY: labs.phundrak.com  # Override in repository settings if needed
+  IMAGE_NAME: phundrak/phundrak-dot-com-backend
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write  # Required for pushing to Phundrak Labs registry
+      pull-requests: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v27
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+
+      - name: Setup Cachix
+        uses: cachix/cachix-action@v15
+        with:
+          name: '${{ env.CACHIX_NAME }}'
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+          skipPush: ${{ env.CACHIX_SKIP_PUSH }}
+
+      - name: Build Docker image with Nix
+        run: |
+          echo "Building Docker image..."
+          nix build .#backendDockerLatest --accept-flake-config
+
+      - name: Load Docker image
+        run: |
+          echo "Loading Docker image into Docker daemon..."
+          docker load < result
+
+      - name: Log in to Docker Registry
+        run: |
+          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login ${{ env.DOCKER_REGISTRY }} -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+
+      - name: Determine tags and push images
+        run: |
+          set -euo pipefail
+
+          REGISTRY="${{ env.DOCKER_REGISTRY }}"
+          IMAGE_NAME="${{ env.IMAGE_NAME }}"
+
+          # The locally built image from Nix (name comes from Cargo.toml package.name)
+          LOCAL_IMAGE="phundrak/phundrak-dot-com-backend:latest"
+
+          echo "Event: ${{ github.event_name }}"
+          echo "Ref: ${{ github.ref }}"
+          echo "Ref type: ${{ github.ref_type }}"
+
+          # Determine which tags to push based on the event
+          if [[ "${{ github.event_name }}" == "push" && "${{ github.ref_type }}" == "tag" ]]; then
+            # Tag push on main branch → publish 'latest' and versioned tag
+            echo "Tag push detected"
+            TAG_VERSION="${{ github.ref_name }}"
+            # Remove 'v' prefix if present (v1.0.0 → 1.0.0)
+            TAG_VERSION="${TAG_VERSION#v}"
+
+            echo "Tagging and pushing: ${REGISTRY}/${IMAGE_NAME}:latest"
+            docker tag "${LOCAL_IMAGE}" "${REGISTRY}/${IMAGE_NAME}:latest"
+            docker push "${REGISTRY}/${IMAGE_NAME}:latest"
+
+            echo "Tagging and pushing: ${REGISTRY}/${IMAGE_NAME}:${TAG_VERSION}"
+            docker tag "${LOCAL_IMAGE}" "${REGISTRY}/${IMAGE_NAME}:${TAG_VERSION}"
+            docker push "${REGISTRY}/${IMAGE_NAME}:${TAG_VERSION}"
+
+          elif [[ "${{ github.event_name }}" == "push" && "${{ github.ref }}" == "refs/heads/develop" ]]; then
+            # Push on develop branch → publish 'develop' tag
+            echo "Push to develop branch detected"
+
+            echo "Tagging and pushing: ${REGISTRY}/${IMAGE_NAME}:develop"
+            docker tag "${LOCAL_IMAGE}" "${REGISTRY}/${IMAGE_NAME}:develop"
+            docker push "${REGISTRY}/${IMAGE_NAME}:develop"
+
+          elif [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            # Pull request → publish 'pr<number>' tag
+            echo "Pull request detected"
+            PR_NUMBER="${{ github.event.pull_request.number }}"
+
+            echo "Tagging and pushing: ${REGISTRY}/${IMAGE_NAME}:pr${PR_NUMBER}"
+            docker tag "${LOCAL_IMAGE}" "${REGISTRY}/${IMAGE_NAME}:pr${PR_NUMBER}"
+            docker push "${REGISTRY}/${IMAGE_NAME}:pr${PR_NUMBER}"
+
+          elif [[ "${{ github.event_name }}" == "push" && "${{ github.ref }}" == "refs/heads/main" ]]; then
+            # Push to main branch (not a tag) → publish 'latest'
+            echo "Push to main branch detected"
+
+            echo "Tagging and pushing: ${REGISTRY}/${IMAGE_NAME}:latest"
+            docker tag "${LOCAL_IMAGE}" "${REGISTRY}/${IMAGE_NAME}:latest"
+            docker push "${REGISTRY}/${IMAGE_NAME}:latest"
+
+          else
+            echo "Unknown event or ref, skipping push"
+            exit 1
+          fi
+
+      - name: Log out from Docker Registry
+        if: always()
+        run: docker logout ${{ env.DOCKER_REGISTRY }}
+
+      - name: Image published successfully
+        run: |
+          echo "✅ Docker image(s) published successfully to ${{ env.DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}"
