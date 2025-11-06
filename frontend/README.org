@@ -107,3 +107,28 @@ bun run preview
 #+end_src
 
 Check out the [[https://nuxt.com/docs/getting-started/deployment][deployment documentation]] for more information.
+
+* Known Issues
+** =better-sqlite3= self-registration error
+If you encounter an error stating that =better-sqlite3= does not
+self-register when running =pnpm run dev=, this is typically caused by
+the native module being compiled for a different Node.js version.
+
+*Solution:* Rebuild the native module for your current Node.js version:
+
+#+begin_src bash
+# Rebuild just better-sqlite3
+pnpm rebuild better-sqlite3
+
+# Or rebuild all native modules
+pnpm rebuild
+
+# Or reinstall everything (nuclear option)
+rm -rf node_modules
+pnpm install
+#+end_src
+
+*Why this happens:* =better-sqlite3= contains native C++ code that
+needs to be compiled for each specific Node.js version. When you
+update Node.js or switch between versions, native modules need to be
+rebuilt.

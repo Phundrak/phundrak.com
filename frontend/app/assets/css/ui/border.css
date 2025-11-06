@@ -1,0 +1,12 @@
+:root {
+  --ui-border: var(--background-200);
+  --ui-border-muted: var(--background-200);
+  --ui-border-accented: var(--background-300);
+  --ui-border-inverted: var(--background-900);
+}
+.dark {
+  --ui-border: var(--background-100);
+  --ui-border-muted: var(--background-200);
+  --ui-border-accented: var(--background-200);
+  --ui-border-inverted: var(--background-900);
+}

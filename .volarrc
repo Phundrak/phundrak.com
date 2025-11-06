@@ -1,0 +1,9 @@
+{
+  "vueCompilerOptions": {
+    "target": 3.5,
+    "extensions": [".vue"]
+  },
+  "typescript": {
+    "tsdk": "frontend/node_modules/typescript/lib"
+  }
+}

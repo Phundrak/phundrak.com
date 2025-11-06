@@ -8,16 +8,22 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/test-utils',
     '@nuxt/ui',
+    '@nuxt/content',
     '@vueuse/nuxt',
     '@nuxtjs/i18n',
     '@nuxtjs/turnstile',
+    '@nuxtjs/device',
+    '@nuxt/icon',
+    '@nuxt/fonts',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/tailwindcss',
   ],
 
+  css: ['~/assets/css/main.css'],
   content: {
     database: {
       type: 'sqlite',
@@ -26,15 +32,40 @@ export default defineNuxtConfig({
   },
   i18n: {
     locales: [
-      { code: 'en', name: 'English', language: 'en-UK' },
-      { code: 'fr', name: 'Français', language: 'fr-FR' },
-      { code: 'lfn', name: 'Lingua Franca Nova', language: 'lfn' },
+      { code: 'en', name: 'English', language: 'en-UK', file: 'en.json' },
+      { code: 'fr', name: 'Français', language: 'fr-FR', file: 'fr.json' },
+      // { code: 'lfn', name: 'Lingua Franca Nova', language: 'lfn', file: 'lfn.json' },
+      // { code: 'ei', name: 'Eittlandic', language: 'ei-ST', file: 'ei.json' },
     ],
-    strategy: 'prefix_except_default',
+    strategy: 'no_prefix',
     defaultLocale: 'en',
+  },
+  fonts: {
+    provider: 'google',
+    processCSSVariables: true,
+    defaults: {
+      weights: [400, 700],
+      styles: ['normal', 'italic'],
+    },
+    families: [
+      { name: 'Noto Sans', provider: 'google' },
+      { name: 'Wittgenstein', provider: 'google' }
+    ]
+  },
+  icon: {
+    serverBundle: {
+      collections: ['material-symbols']
+    }
+  },
+  postcss: {
+    plugins: {
+      '@tailwindcss/postcss': {},
+      'autoprefixer': {}
+    }
   },
   turnstile: {
     siteKey: '', // Overridden by NUXT_PUBLIC_TURNSTILE_SITE_KEY
+    addValidateEndpoint: true
   },
   runtimeConfig: {
     turnstile: {

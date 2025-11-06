@@ -13,11 +13,17 @@
   "dependencies": {
     "@nuxt/content": "3.8.0",
     "@nuxt/eslint": "1.10.0",
+    "@nuxt/fonts": "0.12.1",
+    "@nuxt/icon": "2.1.0",
     "@nuxt/image": "1.11.0",
     "@nuxt/scripts": "^0.12.2",
     "@nuxt/test-utils": "3.20.1",
     "@nuxt/ui": "4.1.0",
+    "@nuxtjs/color-mode": "3.5.2",
+    "@nuxtjs/device": "3.2.4",
+    "@nuxtjs/tailwindcss": "7.0.0-beta.0",
     "@nuxtjs/turnstile": "1.1.1",
+    "@vueuse/core": "^14.0.0",
     "@vueuse/nuxt": "14.0.0",
     "better-sqlite3": "^12.4.1",
     "eslint": "^9.39.1",
@@ -30,7 +36,14 @@
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
+    "@iconify-json/material-symbols": "^1.2.44",
+    "@iconify-json/material-symbols-light": "^1.2.44",
     "@nuxtjs/i18n": "^10.2.0",
+    "@tailwindcss/postcss": "^4.1.17",
+    "autoprefixer": "^10.4.22",
+    "less": "^4.4.2",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17",
     "zod": "^4.1.12"
   }
 }

@@ -19,9 +19,9 @@ inputs.devenv.lib.mkShell {
       packages = with pkgs; [
         # LSP
         marksman
-        nodePackages."@tailwindcss/language-server"
-        vscode-langservers-extracted
-        vue-language-server
+        # nodePackages."@tailwindcss/language-server"
+        # nodePackages."@vue/language-server"
+        # vscode-langservers-extracted
 
         rustywind
         nodePackages.prettier
@@ -31,9 +31,8 @@ inputs.devenv.lib.mkShell {
         nodejs_24
         nodePackages.pnpm
 
-        # Typescript
-        typescript
-        nodePackages.typescript-language-server
+        # typescript
+        # nodePackages.typescript-language-server
       ];
 
       enterShell = ''

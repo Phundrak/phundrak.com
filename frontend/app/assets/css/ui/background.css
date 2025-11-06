@@ -1,0 +1,14 @@
+:root {
+  --ui-bg: var(--background);
+  --ui-bg-muted: var(--background-300);
+  --ui-bg-elevated: var(--background-100);
+  --ui-bg-accented: var(--backgsound-200);
+  --ui-bg-inverted: var(--background-900);
+}
+.dark {
+  --ui-bg: var(--background);
+  --ui-bg-muted: var(--background-100);
+  --ui-bg-elevated: var(--background-200);
+  --ui-bg-accented: var(--background-300);
+  --ui-bg-inverted: var(--background-900);
+}

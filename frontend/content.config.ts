@@ -1,6 +1,5 @@
 import { defineCollection, defineContentConfig } from '@nuxt/content';
 import { z } from 'zod';
-z;
 
 const commonSchema = z.object({});
 

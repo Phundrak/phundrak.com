@@ -1,0 +1,37 @@
+{
+  "website": {
+    "name": "Lucien Cartier-Tilet",
+    "langSwitch": "Language"
+  },
+  "menu": {
+    "name": "Menu"
+  },
+  "theme": {
+    "name": "theme",
+    "dark": "Dark",
+    "light": "Light",
+    "system": "System"
+  },
+  "pages": {
+    "home": {
+      "name": "Home"
+    },
+    "resume": {
+      "name": "Resume"
+    },
+    "vocal-synthesis": {
+      "name": "Vocal Synthesis"
+    },
+    "languages": {
+      "name": "Languages & Worldbuilding"
+    },
+    "contact": {
+      "name": "Contact"
+    }
+  },
+  "footer": {
+    "links": {
+      "source": "Website’s source code"
+    }
+  }
+}
