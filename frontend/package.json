@@ -2,13 +2,17 @@
   "name": "frontend",
   "type": "module",
   "private": true,
+  "version": "0.1.0",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "cleanup": "nuxt cleanup"
+    "cleanup": "nuxt cleanup",
+    "lint": "eslint .",
+    "format": "prettier --write app/ i18n/ content/",
+    "format-check": "prettier --check app/ i18n/ content/"
   },
   "dependencies": {
     "@nuxt/content": "3.8.0",
@@ -23,8 +27,6 @@
     "@nuxtjs/device": "3.2.4",
     "@nuxtjs/tailwindcss": "7.0.0-beta.0",
     "@nuxtjs/turnstile": "1.1.1",
-    "@vueuse/core": "^14.0.0",
-    "@vueuse/nuxt": "14.0.0",
     "better-sqlite3": "^12.4.1",
     "eslint": "^9.39.1",
     "nitropack": "^2.12.9",
@@ -38,6 +40,7 @@
   "devDependencies": {
     "@iconify-json/material-symbols": "^1.2.44",
     "@iconify-json/material-symbols-light": "^1.2.44",
+    "@iconify-json/mdi": "^1.2.3",
     "@nuxtjs/i18n": "^10.2.0",
     "@tailwindcss/postcss": "^4.1.17",
     "autoprefixer": "^10.4.22",
@@ -45,5 +48,10 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.17",
     "zod": "^4.1.12"
+  },
+  "pnpm": {
+    "overrides": {
+      "sharp": "0.33.4"
+    }
   }
 }

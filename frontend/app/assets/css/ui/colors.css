@@ -1,15 +1,15 @@
 :root {
-  --ui-primary: var(--color-primary);
-  --ui-secondary: var(--color-secondary);
-  --ui-success: var(--color-accent);
+  --ui-primary: var(--primary);
+  --ui-secondary: var(--secondary);
+  --ui-success: var(--accent);
   --ui-info: var(--ui-color-info-500);
   --ui-warning: var(--ui-color-warning-500);
   --ui-error: var(--ui-color-error-500);
 }
 .dark {
-  --ui-primary: var(--color-primary-dark);
-  --ui-secondary: var(--color-secondary-dark);
-  --ui-success: var(--color-accent);
+  --ui-primary: var(--primary);
+  --ui-secondary: var(--secondary);
+  --ui-success: var(--accent);
   --ui-info: var(--ui-color-info-400);
   --ui-warning: var(--ui-color-warning-400);
   --ui-error: var(--ui-color-error-400);

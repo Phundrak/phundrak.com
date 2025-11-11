@@ -4,23 +4,35 @@
     "langSwitch": "Language"
   },
   "menu": {
-    "name": "Menu"
+    "name": "Menu",
+    "language": "Language Selector",
+    "theme": "Theme Selector"
   },
   "theme": {
     "name": "theme",
     "dark": "Dark",
     "light": "Light",
-    "system": "System"
+    "system": "Auto"
   },
   "pages": {
     "home": {
       "name": "Home"
     },
     "resume": {
-      "name": "Resume"
+      "name": "Resume",
+      "description": "",
+      "experience": "Experience",
+      "education": "Education",
+      "tools": "Tools",
+      "devops": "Devops Tools",
+      "os": "Operating Systems",
+      "programmingLanguages": "Programming Languages",
+      "frameworks": "Frameworks"
     },
     "vocal-synthesis": {
-      "name": "Vocal Synthesis"
+      "name": "Vocal Synthesis",
+      "projects": "Key Projects",
+      "tools": "Tools"
     },
     "languages": {
       "name": "Languages & Worldbuilding"
@@ -31,7 +43,13 @@
   },
   "footer": {
     "links": {
-      "source": "Website’s source code"
+      "source": "Website’s source code",
+      "nuxt": "Frontend made with Nuxt",
+      "rust": "Backend made with Rust"
+    },
+    "versions": {
+      "frontend": "Frontend Version",
+      "backend": "Backend Version"
     }
   }
 }

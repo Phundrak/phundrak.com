@@ -1,15 +1,15 @@
 :root {
-  --ui-text-dimmed: var(--text-400);
-  --ui-text-muted: var(--text-500);
+  --ui-text-dimmed: var(--text-800);
+  --ui-text-muted: var(--text-700);
   --ui-text-toned: var(--text-600);
   --ui-text: var(--text);
   --ui-text-highlighted: var(--text-900);
   --ui-text-inverted: var(--text-50);
 }
 .dark {
-  --ui-text-dimmed: var(--text-500);
-  --ui-text-muted: var(--text-400);
-  --ui-text-toned: var(--text-300);
+  --ui-text-dimmed: var(--text-800);
+  --ui-text-muted: var(--text-700);
+  --ui-text-toned: var(--text-600);
   --ui-text: var(--text);
   --ui-text-highlighted: var(--text);
   --ui-text-inverted: var(--text-50);

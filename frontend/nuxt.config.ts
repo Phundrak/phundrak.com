@@ -13,7 +13,6 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     '@nuxt/ui',
     '@nuxt/content',
-    '@vueuse/nuxt',
     '@nuxtjs/i18n',
     '@nuxtjs/turnstile',
     '@nuxtjs/device',
@@ -34,7 +33,7 @@ export default defineNuxtConfig({
     locales: [
       { code: 'en', name: 'English', language: 'en-UK', file: 'en.json' },
       { code: 'fr', name: 'Français', language: 'fr-FR', file: 'fr.json' },
-      // { code: 'lfn', name: 'Lingua Franca Nova', language: 'lfn', file: 'lfn.json' },
+      // { code: 'lfn', name: 'Elefen', language: 'lfn', file: 'lfn.json' },
       // { code: 'ei', name: 'Eittlandic', language: 'ei-ST', file: 'ei.json' },
     ],
     strategy: 'no_prefix',
@@ -54,7 +53,10 @@ export default defineNuxtConfig({
   },
   icon: {
     serverBundle: {
-      collections: ['material-symbols']
+      collections: ['material-symbols', 'mdi']
+    },
+    clientBundle: {
+      scan: true,
     }
   },
   postcss: {
@@ -71,5 +73,8 @@ export default defineNuxtConfig({
     turnstile: {
       secretKey: '', // Overriden by NUXT_TURNSTILE_SECRET_KEY
     },
+    public: {
+      apiBase: process.env.NUXT_PUBLIC_API_BASE || 'http://localhost:3100/api',
+    }
   },
 });

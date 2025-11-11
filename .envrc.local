@@ -1,5 +1,0 @@
-export NIX_SHELL_NAME=frontend
-
-# Local Variables:
-# mode: dotenv
-# End:

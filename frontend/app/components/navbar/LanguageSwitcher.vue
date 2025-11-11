@@ -1,10 +1,6 @@
 <template>
-  <UDropdownMenu
-    :key="locale"
-    :items="availableLocales"
-    :content="{ align: 'start' }"
-  >
-    <UButton color="neutral" variant="outline" icon="material-symbols:globe" />
+  <UDropdownMenu :key="locale" :items="availableLocales" :content="{ align: 'start' }">
+    <UButton color="neutral" variant="outline" icon="material-symbols:globe" :aria-label="$t('menu.language')" />
   </UDropdownMenu>
 </template>
 

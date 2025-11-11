@@ -1,0 +1,35 @@
+{
+  "projects": [
+    {
+      "title": "BSUP01 KEINE Tashi",
+      "icon": "mdi:microphone",
+      "description": "Sortie en octobre 2012. Ma deuxième bibliothèque vocale, enregistrée avec un équipement de meilleure qualité que ma première tentative. La série comprenait plusieurs bibliothèques vocales japonaises, la version Extend Power étant ma meilleure réalisation dans cette série.",
+      "link": "/keine-tashi"
+    },
+    {
+      "title": "Premières bibliothèques vocales tibétaines",
+      "icon": "mdi:earth",
+      "description": "BSUP01 KEINE Tashi et BSUP02 Drölma ont été les premières bibliothèques vocales tibétaines au monde dédiées à la synthèse vocale chantée.",
+      "link": "/keine-tashi"
+    },
+    {
+      "title": "Prototypes ALYS pour UTAU",
+      "icon": "mdi:flask",
+      "description": "Création des versions test ALYS 001 JPN, ALYS 001 FRA et ALYS 002 FRA chez VoxWave. Connue sous le nom d'ALYS4UTAU.",
+      "link": "https://alys.phundrak.com"
+    },
+    {
+      "title": "ALYS pour Alter/Ego",
+      "icon": "mdi:package",
+      "description": "La première bibliothèque vocale commerciale pour Alter/Ego, et la première bibliothèque vocale professionnelle en français. Son développement a pris plus d'un an, avec huit à neuf mois supplémentaires pour la première mise à jour majeure. Elle est désormais disponible gratuitement.",
+      "link": "https://alys.phundrak.com"
+    },
+    {
+      "title": "LEORA",
+      "description": "Une bibliothèque vocale française développée chez VoxWave en collaboration avec ALYS.",
+      "icon": "mdi:music",
+      "link": "https://alys.phundrak.com/faq#y-a-t-il-quelque-chose-de-prevu-pour-leora"
+    }
+  ],
+  "tools": ["Alter/Ego", "UTAU", "VOCALOID", "ChipSpeech", "FL Studio", "Audacity", "iZotope RX", "T-RackS CS", "C++"]
+}

@@ -1,12 +1,14 @@
 <template>
-  <UFooter>
+  <UFooter class="bg-background-200">
     <template #left>
-      <p class="text-300 txt-sm">
-        Copyright &copy; {{ new Date().getFullYear() }}
-      </p>
+      <div class="flex flex-col gap-2">
+        <p class="text-text-800 text-sm">Copyright &copy; {{ new Date().getFullYear() }}</p>
+        <p class="text-text-800 text-sm">{{ $t('footer.versions.frontend') }}: {{ version }}</p>
+        <p class="text-text-800 text-sm">{{ $t('footer.versions.backend') }}: {{ meta?.version }}</p>
+      </div>
     </template>
 
-    <UNavigationMenu :items="items" variant="link" />
+    <UNavigationMenu :items="items" variant="link" :orientation="orientation" />
 
     <template #right>
       <UButton
@@ -23,11 +25,24 @@
 
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui';
+import { version } from '../../package.json';
 
+const { isMobile } = useDevice();
+const orientation = computed(() => (isMobile ? 'vertical' : 'horizontal'));
+const { getMeta } = useBackend();
+const meta = await getMeta();
 const items = computed<NavigationMenuItem[]>(() => [
   {
     label: $t('footer.links.source'),
     to: 'https://labs.phundrak.com/phundrak/phundrak.com',
+  },
+  {
+    label: $t('footer.links.nuxt'),
+    to: 'https://nuxt.com/',
+  },
+  {
+    label: $t('footer.links.rust'),
+    to: 'https://rust-lang.org/',
   },
 ]);
 </script>

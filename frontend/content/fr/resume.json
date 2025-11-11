@@ -1,0 +1,66 @@
+{
+  "experience": [
+    {
+      "date": "Depuis septembre 2023",
+      "title": "Consultant – Aubay",
+      "description": "Consultant en développement web travaillant sur des applications d'entreprise. Je continue à me concentrer sur le développement front-end Angular et les services back-end Java Spring Boot avec des bases de données PostgreSQL.",
+      "tools": [
+        "Angular",
+        "TypeScript",
+        "Java Spring Boot",
+        "Java Spring Batch",
+        "PostgreSQL",
+        "VS Code",
+        "Eclipse",
+        "IntelliJ Idea",
+        "Git"
+      ],
+      "icon": "mdi:laptop"
+    },
+    {
+      "date": "Février 2023 – Août 2023",
+      "title": "Stagiaire – Aubay",
+      "description": "Stage en développement d'applications web axé sur le développement full-stack. J'ai travaillé sur des projets utilisant Angular pour le front-end et Java Spring Boot pour le back-end, avec des bases de données PostgreSQL.",
+      "tools": ["Angular", "TypeScript", "Java Spring Boot", "PostgreSQL", "VS Code", "Eclipse", "Git"],
+      "icon": "mdi:book"
+    },
+    {
+      "date": "Octobre 2014 – Juillet 2018",
+      "title": "Directeur technique – Voxwave",
+      "description": "Co-fondateur d'une start-up spécialisée dans la création de chanteurs virtuels français à l'aide de la synthèse vocale. Développement de banques vocales de synthèse chantée, recherche linguistique, assistance aux utilisateurs et formation des recrues au développement de banques vocales. Direction du développement technique d'ALYS, la première banques vocale professionnelle de chant en français.",
+      "tools": ["Alter/Ego", "UTAU", "FL Studio", "iZotope RX", "T-RackS CS"],
+      "icon": "mdi:waveform"
+    }
+  ],
+  "education": [
+    {
+      "date": "Septembre 2022 – Septembre 2023",
+      "title": "Master 2 Technologies de l’Hypermédia – Université Paris 8",
+      "description": "Obtention du diplôme Master 2 THYP le 11 septembre 2023. Redoublement pour causes de santé sans séquelles.",
+      "icon": "mdi:network"
+    },
+    {
+      "date": "Septembre 2020 – Septembre 2021",
+      "title": "Master 1 Informatique – Université Paris 8",
+      "description": "",
+      "icon": "mdi:code-tags"
+    },
+    {
+      "date": "Septembre 2016 – Juillet 2019",
+      "title": "Licence Informatique – Université Paris 8",
+      "description": "Licence d’Informatique obtenue en Juillet 2019",
+      "icon": "mdi:school-outline"
+    },
+    {
+      "date": "Septembre 2013 – Décembre 2014",
+      "title": "Anglais LLCE – Université Lyon 2",
+      "description": "Un an et demi d’études d’anglais littéraire en licence d’anglais LLCE. Études interrompues suite à la création de VoxWave.",
+      "icon": "mdi:book-open-page-variant"
+    }
+  ],
+  "otherTools": ["Emacs", "Vim", "jj", "PostgreSQL", "SQLite"],
+  "devops": ["GitHub", "Gitlab", "Gitea", "GitHub Actions", "Drone.io", "Docker", "Podman"],
+  "os": ["NixOS", "Debian", "Arch Linux", "Void Linux", "Alpine Linux", "Windows"],
+  "programmingLanguages": ["TypeScript", "Rust", "C", "EmacsLisp", "Bash/Zsh", "C++", "Python", "CommonLisp"],
+  "frameworks": ["Angular", "Vue", "Nuxt", "Spring Boot", "Poem (Rust)"]
+}

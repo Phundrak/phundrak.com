@@ -1,0 +1,35 @@
+{
+  "projects": [
+    {
+      "title": "BSUP01 KEINE Tashi series",
+      "icon": "mdi:microphone",
+      "description": "Released starting October 2012. My second vocal library, recorded with better equipment than my first attempt. The series included several Japanese vocal libraries, with the Extend Power version being my best work in this series.",
+      "link": "/keine-tashi"
+    },
+    {
+      "title": "First Tibetan vocal libraries",
+      "icon": "mdi:earth",
+      "description": "BSUP01 KEINE Tashi and BSUP02 Drölma were the first Tibetan vocal libraries for singing synthesis worldwide.",
+      "link": "/keine-tashi"
+    },
+    {
+      "title": "ALYS prototypes for UTAU",
+      "icon": "mdi:flask",
+      "description": "Created ALYS 001 JPN, ALYS 001 FRA, and ALYS 002 FRA as test versions while working at VoxWave. Known as ALYS4UTAU.",
+      "link": "https://alys.phundrak.com/en/"
+    },
+    {
+      "title": "ALYS for Alter/Ego",
+      "icon": "mdi:package",
+      "description": "The first commercial vocal library for Alter/Ego, and the first professional French singing vocal library. Development took well over a year, with eight to nine additional months for the first major update. Now available free of charge.",
+      "link": "https://alys.phundrak.com/en/"
+    },
+    {
+      "title": "LEORA",
+      "description": "A French singing vocal library developed at VoxWave alongside ALYS.",
+      "icon": "mdi:music",
+      "link": "https://alys.phundrak.com/en/faq#are-there-any-plans-for-leora"
+    }
+  ],
+  "tools": ["Alter/Ego", "UTAU", "VOCALOID", "ChipSpeech", "FL Studio", "Audacity", "iZotope RX", "T-RackS CS", "C++"]
+}

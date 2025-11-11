@@ -4,23 +4,35 @@
     "langSwitch": "Language"
   },
   "menu": {
-    "name": "Menu"
+    "name": "Menu",
+    "language": "Choix de la langue",
+    "theme": "Thème du site web"
   },
   "theme": {
     "name": "Thème",
     "dark": "Sombre",
     "light": "Clair",
-    "system": "Système"
+    "system": "Auto"
   },
   "pages": {
     "home": {
       "name": "Accueil"
     },
     "resume": {
-      "name": "CV"
+      "name": "CV",
+      "description": "",
+      "experience": "Expérience",
+      "education": "Éducation",
+      "tools": "Outils",
+      "devops": "Outils Devops",
+      "os": "Systèmes d’exploitation",
+      "programmingLanguages": "Langages de programmation",
+      "frameworks": "Frameworks"
     },
     "vocal-synthesis": {
-      "name": "Synthèse Vocale"
+      "name": "Synthèse Vocale",
+      "projects": "Projets principaux",
+      "tools": "Outils"
     },
     "languages": {
       "name": "Langues et Univers Fictifs"
@@ -31,7 +43,13 @@
   },
   "footer": {
     "links": {
-      "source": "Code source du site web "
+      "source": "Code source du site web",
+      "nuxt": "Frontend fait avec Nuxt",
+      "rust": "Backend fait avec Rust"
+    },
+    "versions": {
+      "frontend": "Frontend Version",
+      "backend": "Backend Version"
     }
   }
 }

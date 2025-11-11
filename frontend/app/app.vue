@@ -2,9 +2,7 @@
   <UApp :locale="locales[locale]">
     <AppNavbar />
     <UMain>
-      <NuxtLayout>
-        <NuxtPage />
-      </NuxtLayout>
+      <NuxtPage />
     </UMain>
     <AppFooter />
   </UApp>

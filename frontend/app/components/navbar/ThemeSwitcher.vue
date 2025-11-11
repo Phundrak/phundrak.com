@@ -1,10 +1,6 @@
 <template>
-  <UDropdownMenu
-    :key="colorMode.preference"
-    :items="themes"
-    :content="{ align: 'start' }"
-  >
-    <UButton color="neutral" variant="outline" :icon="icons[currentColor]" />
+  <UDropdownMenu :key="colorMode.preference" :items="themes" :content="{ align: 'start' }">
+    <UButton color="neutral" variant="outline" :icon="icons[currentColor]" :aria-label="$t('menu.theme')" />
   </UDropdownMenu>
 </template>
 

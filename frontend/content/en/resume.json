@@ -1,0 +1,66 @@
+{
+  "experience": [
+    {
+      "date": "Since Septembre 2023",
+      "title": "Consultant – Aubay",
+      "description": "Web development consultant working on enterprise applications. Continued focus on Angular front-end development and Java Spring Boot back-end services with PostgreSQL databases.",
+      "tools": [
+        "Angular",
+        "TypeScript",
+        "Java Spring Boot",
+        "Java Spring Batch",
+        "PostgreSQL",
+        "VS Code",
+        "Eclipse",
+        "IntelliJ Idea",
+        "Git"
+      ],
+      "icon": "mdi:laptop"
+    },
+    {
+      "date": "February 2023 – August 2023",
+      "title": "Intern – Aubay",
+      "description": "Web application development internship focused on full-stack development. Worked on projects using Angular for front-end and Java Spring Boot for back-end, with PostgreSQL databases.",
+      "tools": ["Angular", "TypeScript", "Java Spring Boot", "PostgreSQL", "VS Code", "Eclipse", "Git"],
+      "icon": "mdi:book"
+    },
+    {
+      "date": "October 2014 – July 2018",
+      "title": "CTO – Voxwave",
+      "description": "Co-founded a startup specialized in creating French virtual singers using vocal synthesis. Developed singing synthesis vocal libraries, conducted linguistic research, provided user support, and trained recruits in vocal library development. Led technical development of ALYS, the first professional French singing voice library.",
+      "tools": ["Alter/Ego", "UTAU", "FL Studio", "iZotope RX", "T-RackS CS"],
+      "icon": "mdi:waveform"
+    }
+  ],
+  "education": [
+    {
+      "date": "September 2022 – September 2023",
+      "title": "Master's Degree in Hypermedia Technologies – University of Paris 8",
+      "description": "Obtained Master's degree in THYP (Hypermedia Technologies) on 11 September 2023. Repeated the year for health reasons without any lasting effects.",
+      "icon": "mdi:network"
+    },
+    {
+      "date": "September 2020 – September 2021",
+      "title": "Master's Degree in Computer Science – University of Paris 8",
+      "description": "First year of my Master’s degree.",
+      "icon": "mdi:code-tags"
+    },
+    {
+      "date": "September 2016 – July 2019",
+      "title": "Bachelor's Degree in Computer Science – University of Paris 8",
+      "description": "Bachelor's degree in Computer Science obtained in July 2019",
+      "icon": "mdi:school-outline"
+    },
+    {
+      "date": "Septembre 2013 – Décembre 2014",
+      "title": "English Literature – Université Lyon 2",
+      "description": "One and a half years of literary English studies in an LLCE English degree. Studies interrupted following the creation of VoxWave.",
+      "icon": "mdi:book-open-page-variant"
+    }
+  ],
+  "otherTools": ["Emacs", "Vim", "jj", "PostgreSQL", "SQLite"],
+  "devops": ["GitHub", "Gitlab", "Gitea", "GitHub Actions", "Drone.io", "Docker", "Podman"],
+  "os": ["NixOS", "Debian", "Arch Linux", "Void Linux", "Alpine Linux", "Windows"],
+  "programmingLanguages": ["TypeScript", "Rust", "C", "EmacsLisp", "Bash/Zsh", "C++", "Python", "CommonLisp"],
+  "frameworks": ["Angular", "Vue", "Nuxt", "Spring Boot", "Poem (Rust)"]
+}

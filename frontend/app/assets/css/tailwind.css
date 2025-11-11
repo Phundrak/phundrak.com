@@ -1,4 +1,5 @@
-@layer base {
+@import 'tailwindcss';
+@theme {
   --color-text-50: var(--text-50);
   --color-text: var(--text);
   --color-text-100: var(--text-100);
@@ -76,9 +77,9 @@
   --text-weight-bold: 700;
 
   --font-sans:
-    Noto Sans, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    Noto Sans, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
   --font-title:
-    Wittgenstein, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    Wittgenstein, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
 }
